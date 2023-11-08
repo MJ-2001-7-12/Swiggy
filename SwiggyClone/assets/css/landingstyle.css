@@ -89,3 +89,16 @@ button{
     color: gray;
     margin: 5px;
 }
+/*The seconsd section*/
+.section2{
+    background-color: rgb(44, 14, 6);
+    display: flex;
+}
+.section2-1{
+    flex: 1; 
+    text-align: center; 
+    
+}
+.section3{
+    display: flex;
+}
