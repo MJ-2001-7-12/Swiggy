@@ -123,6 +123,225 @@ header {
 }
 
 
+
+/*=============MENU============ */
+
+
+
+#menu-box-container {
+    display: block;
+    margin: 100px 300px 0px 300px;
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+}
+
+
+#menu-box-container .menu-box {
+    display: flex;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    /*box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;*/
+    border-bottom: 1px solid rgba(100, 100, 111, 0.2);
+    position: relative;
+}
+
+#menu-box-container .menu-box .left-side {
+    max-width: 60%;
+}
+
+#menu-box-container .menu-box .left-side span {
+    background-color: #ff0b13;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 13px;
+
+}
+
+
+#menu-box-container .menu-box .left-side h3 {
+    margin: 0px;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    color: var(--dark, #211E1E);
+    
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+#menu-box-container .menu-box .left-side .other-info {
+    display: flex;
+}
+
+#menu-box-container .menu-box .left-side .other-info p {
+    margin-right: 20px;
+}
+
+
+
+
+#menu-box-container .menu-box .right-side {
+
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+
+}
+
+
+#menu-box-container .menu-box .right-side button {
+
+    background-color: white;
+    color:#60b246;
+    padding: 16px 25px;
+    font-size: .9rem;
+    font-weight: 600;
+    line-height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    left: 20%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border: 1px solid #d4d5d9;
+    box-shadow: 0 3px 8px #e9e9eb;
+
+
+}
+
+#menu-box-container img {
+    width: 100px; 
+    height: auto; 
+  }
+/*===========================================================*/
+
+#menu-headings-container {
+    display: block;
+    margin: 100px 300px 0px 300px;
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+}
+
+#menu-headings-container .menu-head {
+    display: flex;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+}
+
+#menu-headings-container .menu-head .head-left-side {
+    max-width: 60%;
+}
+
+#menu-headings-container .menu-head .head-left-side span {
+    background-color: #ff0b13;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 13px;
+
+}
+
+
+#menu-headings-container .menu-head .head-left-side h3 {
+    margin: 0px;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    color: var(--dark, #211E1E);
+    
+    font-style: normal;
+    font-weight: 800px;
+    font-size: 30px;
+    margin-bottom: 15px;
+
+}
+
+
+#menu-headings-container .menu-head .head-left-side p {
+    display: flex;
+    font-weight: 300px;
+    font-size: 20px;
+    color:#7e808c;
+    margin-right: 20px;
+}
+
+/* #menu-headings-container .menu-head .head-left-side p {
+    margin-right: 20px;
+    font-weight: 300px;
+    font-size: 30px;
+} */
+
+
+
+
+#menu-headings-container .menu-head .head-right-side button{
+
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    border: 1px solid #e9e9eb;
+    box-shadow: 0 1px 5px #f9f9f9;
+    border-radius: 6px;
+    text-align: center;
+    padding: 20px;
+    max-width: 100px;
+    float: right;
+    background-color: #fff;
+    color: rgb(61, 155, 109);
+
+}
+
+    
+
+/* 
+  #menu-headings-container .menu-head .head-left-side {
+    width: auto; 
+    height: auto; 
+    margin-left: 100px;
+    margin-top: 100px;
+  } */
+
+hr{
+    border: none; 
+    border-top: 1px dashed rgba(100, 100, 111, 0.2);
+    margin-left: 320px;
+    margin-right: 320px;
+
+}
+
+.footer{
+    background-color: #f1f1f6;
+    color: #93959f;
+    margin-left:320px;
+    margin-right: 320px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.footer-top {
+    display:flex;
+    margin-left:5px;
+    margin-bottom:30px;
+    padding:50px;
+    font-size: 25px;
+    border-bottom: 1px solid rgba(100, 100, 111, 0.2);
+}
+.footer-img{
+    flex:1;
+}
+.footer-license{
+    flex:7;
+}
+.footer-bottom{
+    margin-left:10px;
+    margin-bottom:30px;
+    font-size: 25px;
+    font-weight: 400;
+}
+=======
 /* ==============Offers========== */
 
 .offers {
@@ -448,3 +667,4 @@ header {
     font-size: 13.5px;
     color: var(--secondary-color);
 }
+
