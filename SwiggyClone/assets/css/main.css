@@ -142,9 +142,133 @@ header {
 
 .offer-container .offer-box .offer-img {
 
-    /* width: 450px; */
+    width: 400px;
     height: 250px;
     margin-right: 20px;
-    padding: 20px;
-    border-radius: 10px;
+    /* padding: 20px; */
+    border-radius: 20px;
+    /* background-color: #000000; */
+}
+
+
+
+
+
+
+/*============== Whats on your mind ===================*/
+
+
+.whats-on-container {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+.whats-on-title {
+    margin: 18px 0;
+    font-size: 23px;
+}
+
+
+.whats-on-container .whats-on-box {
+    display: block;
+    align-items: center;
+    /* text-align: center; */
+
+}
+
+
+.whats-on-container .whats-on-box img {
+
+    width: 120px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 60px;
+
+}
+
+
+.whats-on-container .whats-on-box .item-name {
+    margin-top: 3px;
+    font-size: 20px;
+    margin-left: 26px;
+    color: #282c3f;
+}
+
+
+
+
+
+/*================ Top Restaurants =================*/
+
+
+.top-rest-container {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+.top-rest-title {
+    margin: 18px 0;
+    font-size: 23px;
+}
+
+
+.top-rest-container .top-rest-box {
+    display: block;
+    align-items: center;
+    /* text-align: center; */
+
+}
+
+
+.top-rest-container .top-rest-box img {
+
+    width: 280px;
+    height: 160px;
+    border-radius: 15px;
+    margin-right: 30px;
+
+}
+
+
+.top-rest-container .top-rest-box .item-name {
+    margin-top: 3px;
+    font-size: 18px;
+    margin-left: 6px;
+    color: #404041;
+}
+
+.top-rest-container .top-rest-box p i {
+    background-color: rgb(2, 129, 36);
+    padding: 4px;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 550;
+    margin-left: 6px;
+
+}
+
+
+.top-rest-container .top-rest-box .rating {
+    font-size: 16px;
+    font-weight: 515;
+}
+
+
+.top-rest-container .top-rest-box .category {
+
+    font-size: 17px;
+    margin-left: 6px;
+    color: var(--secondary-color);
+
+}
+
+.top-rest-container .top-rest-box .location {
+
+    font-size: 17px;
+    margin-left: 6px;
+    color: var(--secondary-color);
+
 }
