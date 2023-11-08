@@ -10,12 +10,14 @@ button{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     cursor: pointer;
 }
+ul{
+    list-style: none;
+}
 /*The contents of the initial window*/
 .top{
     display: flex;
     margin-left: 20px;
     justify-content: center;
-    
 }
 
 .topleft{
@@ -51,6 +53,7 @@ button{
 }
 .topright{
     flex: 6;
+    margin: 0;
     
 }
 .location{
@@ -101,4 +104,33 @@ button{
 }
 .section3{
     display: flex;
+}
+.footer{
+    padding: 20px;
+    padding-top: 100px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    
+}
+.footer1{
+    display: flex;
+}
+.cList{
+    color: white;
+    background-color: black;
+    padding-top: 15px;
+    font-size:medium;
+    text-align: left;
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+    
+
+.footer-1List{
+    flex: 3;
+}
+.footer1-buttons{
+    flex:2
 }
