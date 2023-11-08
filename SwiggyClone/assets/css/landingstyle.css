@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+button{
+    border-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+}
+/*The contents of the initial window*/
+.top{
+    display: flex;
+    margin-left: 20px;
+    justify-content: center;
+    
+}
+
+.topleft{
+    margin-top: 50px;
+    flex: 7;
+    margin-left: 10px;
+}
+.toppest{
+    display: flex;
+    flex: 1;
+    margin-bottom: 50px;
+}
+
+.logo{
+    flex: 1;
+}
+.landsButton{
+    margin-left: 150px;
+    display: flex;
+    flex: 1;
+    
+}
+.signupButton{
+    background-color: black;
+    color: white;
+    width: 120px;
+    height: 50px;
+}
+.loginButton{
+    background-color: white;
+    width: 120px;
+    height: 50px;
+}
+.topright{
+    flex: 6;
+    
+}
+.location{
+    display: flex;
+    margin-bottom: 30px;
+}
+.locationEntry{
+    display: flex;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    
+}
+.deliveryLocation{
+    border-style: none;
+    flex: 2;
+    width: 200px;
+    margin-left: 5px;
+}
+.locateMe{
+    margin-left: 250px;
+    text-align: right;
+    border-style: none;
+    padding:5px;
+    background-color: white;
+    color: grey;
+}
+.findFood{
+    text-align: right;
+    background-color: #fc8019;
+    color: white;
+    padding: 20px;
+}
+.topPlace{
+    background-color: white;
+    color: gray;
+    margin: 5px;
+}

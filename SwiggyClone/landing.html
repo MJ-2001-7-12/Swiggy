@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swiggy Clone</title>
-    <link rel="stylesheet" href="landingstyle.css" />
+    <link rel="stylesheet" href="assets/css/landingstyle.css" />
   </head>
   <body>
     <div id="root">
       <div id="main">
+        <!--Top Section containing all the elements in the inital window-->
         <div id="top" class="top">
+          <!--Left side elements-->
           <div id="topleft" class="topleft">
             <div class="toppest">
               <div class="logo">
@@ -18,17 +20,76 @@
                   alt=""
                 />
               </div>
+              <!--login and signup button-->
               <div class="landsButton">
-                <button id="loginButton" class="loginButton">Login</button>
-                <button id="signupButton" class="signupButton">Signup</button>
+                <button
+                  id="loginButton"
+                  class="loginButton"
+                  onclick="redirectToLogin()"
+                >
+                  Login
+                </button>
+                <button
+                  id="signupButton"
+                  class="signupButton"
+                  onclick="redirectToSignup()"
+                >
+                  Signup
+                </button>
               </div>
             </div>
-            <h1 id="changingHeading">This is a changing heading</h1>
-          </div>
+            <!--Changing headings-->
+            <h1 style="font-size: xx-large" id="changingHeading">
+              This is a changing heading
+            </h1>
+            <p
+              style="
+                margin-top: 30px;
+                margin-bottom: 20px;
+                color: gray;
+                font-size: x-large;
+              "
+            >
+              Order food from favourite restaurants near you.
+            </p>
 
+            <!--Text-box for sharing location-->
+            <div class="location">
+              <div class="locationEntry">
+                <input
+                  class="deliveryLocation"
+                  type="text"
+                  placeholder="Enter your delivery location "
+                />
+
+                <button class="locateMe">Locate me</button>
+              </div>
+              <!--Button to goto homepage-->
+              <div style="display: flex; flex: 1">
+                <button class="findFood">FIND FOOD</button>
+              </div>
+            </div>
+
+            <h3 style="color: gray">Popular cities in India</h3>
+            <div style="display: flex">
+              <button class="topPlace">Ahmedabad</button>
+              <button class="topPlace">Banglore</button>
+              <button class="topPlace">Chennai</button>
+              <button class="topPlace">Delhi</button>
+              <button class="topPlace">Gurgaon</button>
+              <button class="topPlace">Hyderabad</button>
+              <button class="topPlace">Kolkata</button>
+              <button class="topPlace">Mumbai</button>
+            </div>
+            <div style="display: flex">
+              <button class="topPlace">Pune</button>
+              <button class="topPlace">&more</button>
+            </div>
+          </div>
+          <!--The image in the right side of the initial window-->
           <div class="topright">
             <img
-              style="width: 500px"
+              style="width: 100%"
               src="assets/img/landingpage/landingpage1.png"
               alt=""
             />
@@ -36,6 +97,6 @@
         </div>
       </div>
     </div>
-    <script src="landingscript.js"></script>
+    <script src="assets/js/landingscript.js"></script>
   </body>
 </html>
