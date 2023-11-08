@@ -43,12 +43,14 @@ getOfferImages(URL);
 //Get Restaurants
 // const URL2 = 'https://dummyjson.com/carts';
 
+//Temporary Function for testing
+
 async function getRestaurants(URL) {
 
     const response = await fetch(URL);
     let data = await response.json();
 
-    console.log(data)
+    //  console.log(data)
 
     const topRestContainer = document.getElementById('top-rest-container');
 
@@ -106,3 +108,153 @@ getRestaurants(URL);
 
 
 
+
+//Restaurants with online delivery
+
+async function displayRestaurantsWithOnlineDelivery(URL) {
+
+    const response = await fetch(URL);
+    let data = await response.json();
+
+    //console.log(data)
+
+
+
+    const restOnlineContainer = document.getElementById('rest-online-container');
+
+
+    for (let i = 0; i < 30; i++) {
+
+
+        //Dynamic  Elements
+        let restOnlineBox = document.createElement('div');
+        let restOnlineImg = document.createElement('img');
+        let restOnlineName = document.createElement('h4');
+        let restOnlineRating = document.createElement('p');
+        let restOnlineCategory = document.createElement('p');
+        let restOnlineLocation = document.createElement('p');
+
+
+        //Adding classes
+        restOnlineBox.classList.add('rest-online-box');
+        restOnlineName.classList.add('item-name');
+        restOnlineRating.classList.add('rating');
+        restOnlineCategory.classList.add('category');
+        restOnlineLocation.classList.add('location');
+
+        //Adding Data
+        restOnlineImg.src = `${data.products[i].thumbnail}`;
+        restOnlineName.textContent = data.products[i].title;
+        restOnlineRating.textContent = data.products[i].rating;
+        restOnlineCategory.textContent = data.products[i].category;
+        restOnlineLocation.textContent = data.products[i].brand;
+
+        //Appending Child
+        restOnlineContainer.appendChild(restOnlineBox);
+        restOnlineBox.appendChild(restOnlineImg);
+        restOnlineBox.appendChild(restOnlineName);
+        restOnlineBox.appendChild(restOnlineRating);
+        restOnlineBox.appendChild(restOnlineCategory);
+        restOnlineBox.appendChild(restOnlineLocation);
+
+    }
+
+
+}
+
+
+displayRestaurantsWithOnlineDelivery(URL);
+
+
+
+
+
+
+
+
+
+// Get City Names ==> Best Places to eat
+
+async function displayCityNames(URL) {
+
+    const response = await fetch(URL);
+    let data = await response.json();
+
+    //  console.log(data)
+
+
+    const bestPlacesContainer = document.getElementById('best-places-container');
+
+    for (let i = 0; i < 12; i++) {
+
+
+        //Dynamic Elements
+        let bestPlacesBox = document.createElement('div');
+        let bestPlaceName = document.createElement('a');
+
+
+        //Adding classes
+        bestPlacesBox.classList.add('best-places-box');
+
+        //Adding data
+        bestPlaceName.textContent = "Best Restaurants in " + data.products[i].brand;
+
+
+        //Append Child
+        bestPlacesContainer.appendChild(bestPlacesBox);
+        bestPlacesBox.appendChild(bestPlaceName);
+
+
+    }
+
+
+}
+
+
+displayCityNames(URL)
+
+
+
+
+
+
+
+// Get City Names ==> Best Places to eat
+
+async function displayCuisines(URL) {
+
+    const response = await fetch(URL);
+    let data = await response.json();
+
+    //  console.log(data)
+
+
+    const bestCuisinesContainer = document.getElementById('best-cuisines-container');
+
+    for (let i = 0; i < 12; i++) {
+
+
+        //Dynamic Elements
+        let bestCuisinesBox = document.createElement('div');
+        let bestCuisinesName = document.createElement('a');
+
+
+        //Adding classes
+        bestCuisinesBox.classList.add('best-cuisines-box');
+
+        //Adding data
+        bestCuisinesName.textContent = data.products[i].brand + " Restaurants Near Me";
+
+
+        //Append Child
+        bestCuisinesContainer.appendChild(bestCuisinesBox);
+        bestCuisinesBox.appendChild(bestCuisinesName);
+
+
+    }
+
+
+}
+
+
+displayCuisines(URL)
