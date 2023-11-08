@@ -121,3 +121,30 @@ header {
     color: var(--primary-color);
     cursor: pointer;
 }
+
+
+/* ==============Offers========== */
+
+.offers {
+    margin-top: 70px;
+}
+
+.offer-container {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+.offer-title {
+    margin: 18px 0;
+    font-size: 23px;
+}
+
+.offer-container .offer-box .offer-img {
+
+    /* width: 450px; */
+    height: 250px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
