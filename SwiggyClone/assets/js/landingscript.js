@@ -106,6 +106,7 @@ fetch("https://jsonplaceholder.typicode.com/posts")
   .catch((error) => console.error("Error:", error));
 
 //Best places section
+
 fetch("https://jsonplaceholder.typicode.com/posts")
   .then((response) => response.json())
   .then((data) => {

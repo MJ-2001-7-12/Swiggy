@@ -3,7 +3,11 @@
     padding: 0;
 }
 body{
+
     font-family: 'Poppins', sans-serif;
+    
+    margin: 0;
+    padding: 0;
     
 }
 button{
@@ -11,18 +15,20 @@ button{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     cursor: pointer;
 }
+
 ul{
     list-style: none;
 }
 /*The contents of the initial window*/
+
 .top{
     display: flex;
-    margin-left: 20px;
+    padding-left: 20px;
     justify-content: center;
 }
 
 .topleft{
-    margin-top: 50px;
+    margin-top: 70px;
     flex: 7;
     margin-left: 10px;
 }
@@ -36,7 +42,7 @@ ul{
     flex: 1;
 }
 .landsButton{
-    margin-left: 150px;
+    margin-left: 100px;
     display: flex;
     flex: 1;
     
@@ -46,57 +52,89 @@ ul{
     color: white;
     width: 120px;
     height: 50px;
+    font-size: large;
 }
 .loginButton{
     background-color: white;
     width: 120px;
     height: 50px;
+    font-size: large;
 }
 .topright{
     flex: 6;
-    margin: 0;
+    margin-left: 30px;
     
 }
 .location{
     display: flex;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
+
 .locationEntry{
     display: flex;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-    border-left: 1px solid gray;
     
 }
+
 .deliveryLocation{
-    border-style: none;
+    border: none;
+    border-top: 1px solid rgb(184, 184, 184);
+    border-left: 1px solid rgb(184, 184, 184);
+    border-bottom: 1px solid rgb(184, 184, 184);
     flex: 2;
-    width: 200px;
-    margin-left: 5px;
+    padding-left: 10px;
+    position: relative;
+    width: 470px;
+    color: gray;
+    font-size: medium;
+    font-weight: bold;
+}
+.deliveryLocation:focus{
+    outline: none;
+    border-top: 1px solid #fc8019;
+    border-bottom: 1px solid #fc8019;
+    border-left: 1px solid #fc8019;
 }
 .locateMe{
-    margin-left: 250px;
+    margin-left: 400px;
+    margin-top: 15px;
     text-align: right;
     border-style: none;
     padding:5px;
     background-color: white;
     color: grey;
+    position: absolute;
+    
 }
 .findFood{
-    text-align: right;
+    text-align: center;
     background-color: #fc8019;
     color: white;
     padding: 20px;
+    width: 130px;
+    font-size: medium;
+    font-weight: bold;
 }
-.topPlace{
+.topPlace1{
     background-color: white;
     color: gray;
     margin: 5px;
+    font-weight: bold;
+    font-size: medium;
+}
+.topPlace2{
+    background-color: white;
+    color: rgb(183, 181, 181);
+    margin: 5px;
+    font-size: medium;
 }
 /*The seconsd section*/
+
 .section2{
-    background-color: rgb(44, 14, 6);
+    background-color: rgb(43, 30, 22);
     display: flex;
+    margin-top: -4px;
+    padding-top: 5px;
 }
 .section2-1{
     flex: 1; 
@@ -105,12 +143,14 @@ ul{
 }
 .section3{
     display: flex;
+    
 }
 /*Footer section*/
+
 .footer{
     padding: 20px;
     padding-top: 100px;
-    width: 100%;
+    
     background-color: black;
     color: white;
     
@@ -119,6 +159,7 @@ ul{
     display: flex;
 }
 
+/*This class is used throughout the footer for buttons*/
 .cList{
     color: white;
     background-color: black;
@@ -128,7 +169,9 @@ ul{
     
     font-family: 'Poppins', sans-serif;
 }
-
+.cList:hover {
+    font-weight: bold;
+ }
     
 
 .footer-1List{
@@ -143,6 +186,7 @@ ul{
     display: flex;
     padding: 20px;
 }
+/*Bottom section*/
 .bottom{
     text-align: center;
     margin-top: 30px;
