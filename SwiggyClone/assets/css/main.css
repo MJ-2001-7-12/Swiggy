@@ -15,6 +15,7 @@
 
     --primary-color: #fc8019;
     --secondary-color: rgba(2, 6, 12, 0.6);
+    --third-color: rgba(255, 255, 255, 0.6);
 
 }
 
@@ -447,4 +448,167 @@ header {
 .best-cuisines-container .best-cuisines-box a {
     font-size: 13.5px;
     color: var(--secondary-color);
+}
+
+
+
+
+
+/* ==========Footer=========== */
+
+.footer .footer-container {
+    display: block;
+}
+
+
+.footer-container .top-section {
+
+    display: flex;
+    background-color: rgb(240, 240, 245);
+    position: relative;
+}
+
+
+.footer-container .top-section .top-left {
+
+    /* width: 60%; */
+    padding-left: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-container .top-section .top-left h3 {
+
+
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: rgba(2, 6, 12, 0.75);
+
+}
+
+
+.footer-container .top-section .top-right {
+
+    display: flex;
+    position: absolute;
+    right: 150px;
+    top: 20px
+}
+
+.footer-container .top-section .top-right img {
+
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+
+}
+
+
+
+/* bottom section */
+.footer-container .bottom-section {
+
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(2, 6, 12);
+    /* position: relative; */
+    padding-left: 170px;
+    padding-right: 170px;
+    padding-top: 60px;
+}
+
+
+.footer-container .bottom-section .bottom-1 .footer-branding {
+    display: flex;
+}
+
+.footer-container .bottom-section .bottom-1 img {
+    width: 30px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+
+.footer-container .bottom-section .bottom-1 h2 {
+
+    font-size: 27px;
+    color: #fff;
+
+}
+
+.footer-container .bottom-section .bottom-1 p {
+
+    font-size: 14px;
+    color: var(--third-color);
+
+}
+
+
+
+.footer-container .bottom-section .bottom-2 {
+    display: flex;
+    flex-direction: column;
+    /* margin: 40px; */
+}
+
+.footer-container .bottom-section .bottom-2 h3 {
+    color: #dadada;
+    font-size: 17px;
+}
+
+.footer-container .bottom-section .bottom-2 a {
+    font-size: 14px;
+
+    color: var(--third-color);
+    text-decoration: none;
+    margin: 5px 0px;
+}
+
+
+.footer-container .bottom-section .bottom-3 {
+    display: flex;
+    flex-direction: column;
+    /* margin: 40px; */
+}
+
+.footer-container .bottom-section .bottom-3 h3 {
+    color: #dadada;
+    font-size: 17px;
+}
+
+.footer-container .bottom-section .bottom-3 a {
+    font-size: 14px;
+
+    color: var(--third-color);
+    text-decoration: none;
+    margin: 5px 0px;
+}
+
+.footer-container .bottom-section .bottom-3 .top,
+.bottom {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+
+.footer-container .bottom-section .bottom-4 {
+    display: flex;
+    flex-direction: column;
+    /* margin: 40px; */
+}
+
+.footer-container .bottom-section .bottom-4 h3 {
+    color: #dadada;
+    font-size: 17px;
+}
+
+.footer-container .bottom-section .bottom-4 a {
+    font-size: 14px;
+
+    color: var(--third-color);
+    text-decoration: none;
+    margin: 5px 0px;
 }
