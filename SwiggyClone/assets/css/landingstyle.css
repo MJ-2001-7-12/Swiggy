@@ -4,6 +4,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
+    
 }
 button{
     border-style: none;
@@ -105,6 +106,7 @@ ul{
 .section3{
     display: flex;
 }
+/*Footer section*/
 .footer{
     padding: 20px;
     padding-top: 100px;
@@ -116,6 +118,7 @@ ul{
 .footer1{
     display: flex;
 }
+
 .cList{
     color: white;
     background-color: black;
@@ -133,4 +136,10 @@ ul{
 }
 .footer1-buttons{
     flex:2
+}
+
+/*We Deliver To Section*/
+.weDeliver{
+    display: flex;
+    padding: 20px;
 }
