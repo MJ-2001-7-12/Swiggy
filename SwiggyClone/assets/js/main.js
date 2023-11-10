@@ -79,6 +79,10 @@ async function getRestaurants(URL) {
         // topRestRatingSymbol.classList.add('fa-regular fa-star');
 
 
+        //Adding URL
+        // console.log("tEST " + topRestBox);
+        // topRestBox.href = "menu.html";
+
         //Adding Data
         topRestImg.src = `${data.products[i].thumbnail}`;
         topRestName.textContent = data.products[i].title;

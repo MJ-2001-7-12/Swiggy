@@ -1,6 +1,6 @@
-body {
+/* body {
   text-align: center;
-}
+} */
 
 button {
   padding: 10px 20px;
@@ -21,6 +21,7 @@ button {
   padding-right: 72px;
   width: 474px;
 }
+
 #loginContainer,
 #SignUpContainer {
   position: absolute;
@@ -32,6 +33,7 @@ button {
   z-index: 9999999;
   background-color: rgba(154, 154, 154, 0.628);
 }
+
 #loginContent {
   padding: 20px;
   text-align: left;
@@ -68,10 +70,12 @@ button {
   cursor: pointer;
   font-weight: 60;
 }
+
 .flexcontainer {
   display: flex;
   justify-content: space-between;
 }
+
 .separator {
   border-bottom: 1px solid black;
   width: 30px;
@@ -80,18 +84,22 @@ button {
   left: 0px;
   bottom: 0px;
 }
+
 .login-head {
   display: flex;
   justify-content: center;
   flex-direction: column;
   position: relative;
 }
+
 .signinLogin-button {
   background-color: #fc8019;
 }
+
 .switchLink {
   color: #fc8019;
 }
+
 form {
   margin-top: 20px;
 }
@@ -122,6 +130,7 @@ button {
   height: 50px;
   position: relative;
 }
+
 .form input {
   width: 100%;
   height: 100%;
@@ -133,6 +142,7 @@ button {
   font-size: 15px;
   margin-top: 10px;
 }
+
 .form label {
   position: absolute;
   top: 15px;
@@ -144,8 +154,9 @@ button {
   padding: 0 5px;
   pointer-events: none;
 }
-.form input:focus ~ label,
-input:not(:placeholder-shown) + label {
+
+.form input:focus~label,
+input:not(:placeholder-shown)+label {
   top: -9px;
   background-color: #ffffff;
 }

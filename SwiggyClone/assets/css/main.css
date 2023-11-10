@@ -607,3 +607,936 @@ header {
     text-decoration: none;
     margin: 5px 0px;
 }
+
+
+
+
+
+
+/* MELWIN CSS */
+
+/* *{
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    font-family: 'Poppins', sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    
+} */
+button {
+    border-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+/*The contents of the initial window*/
+
+.top {
+    display: flex;
+    padding-left: 20px;
+    justify-content: center;
+}
+
+.topleft {
+    margin-top: 70px;
+    flex: 7;
+    margin-left: 10px;
+}
+
+.toppest {
+    display: flex;
+    flex: 1;
+    margin-bottom: 50px;
+}
+
+.logo {
+    flex: 1;
+}
+
+.landsButton {
+    margin-left: 100px;
+    display: flex;
+    flex: 1;
+
+}
+
+.signupButton {
+    background-color: black;
+    color: white;
+    width: 120px;
+    height: 50px;
+    font-size: large;
+}
+
+.loginButton {
+    background-color: white;
+    width: 120px;
+    height: 50px;
+    font-size: large;
+}
+
+.topright {
+    flex: 6;
+    margin-left: 30px;
+
+}
+
+.location {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.locationEntry {
+    display: flex;
+
+}
+
+.deliveryLocation {
+    border: none;
+    border-top: 1px solid rgb(184, 184, 184);
+    border-left: 1px solid rgb(184, 184, 184);
+    border-bottom: 1px solid rgb(184, 184, 184);
+    flex: 2;
+    padding-left: 10px;
+    position: relative;
+    width: 470px;
+    color: gray;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.deliveryLocation:focus {
+    outline: none;
+    border-top: 1px solid #fc8019;
+    border-bottom: 1px solid #fc8019;
+    border-left: 1px solid #fc8019;
+}
+
+.locateMe {
+    margin-left: 400px;
+    margin-top: 15px;
+    text-align: right;
+    border-style: none;
+    padding: 5px;
+    background-color: white;
+    color: grey;
+    position: absolute;
+
+}
+
+.findFood {
+    text-align: center;
+    background-color: #fc8019;
+    color: white;
+    padding: 20px;
+    width: 130px;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.topPlace1 {
+    background-color: white;
+    color: gray;
+    margin: 5px;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.topPlace2 {
+    background-color: white;
+    color: rgb(183, 181, 181);
+    margin: 5px;
+    font-size: medium;
+}
+
+/*The seconsd section*/
+
+.section2 {
+    background-color: rgb(43, 30, 22);
+    display: flex;
+    margin-top: -4px;
+    padding-top: 5px;
+}
+
+.section2-1 {
+    flex: 1;
+    text-align: center;
+
+}
+
+.section3 {
+    display: flex;
+
+}
+
+/*Footer section*/
+
+/* .footer {
+    padding: 20px;
+    padding-top: 100px;
+    background-color: black;
+    color: white;
+
+}
+
+.footer1 {
+    display: flex;
+} */
+
+/*This class is used throughout the footer for buttons*/
+.cList {
+    color: white;
+    background-color: black;
+    padding-top: 15px;
+    font-size: medium;
+    text-align: left;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.cList:hover {
+    font-weight: bold;
+}
+
+
+.footer-1List {
+    flex: 3;
+}
+
+.footer1-buttons {
+    flex: 2
+}
+
+/*We Deliver To Section*/
+.weDeliver {
+    display: flex;
+    padding: 20px;
+}
+
+/*Bottom section*/
+.bottom {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+}
+
+/* MELWIN CSS ENDS*/
+
+
+
+
+
+
+
+
+
+/* GEEVARGHESE */
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+
+
+.login-signup-section button {
+    border-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+}
+
+.login-signup-section ul {
+    list-style: none;
+}
+
+/*The contents of the initial window*/
+
+.login-signup-section .top {
+    display: flex;
+    padding-left: 20px;
+    justify-content: center;
+}
+
+.login-signup-section .topleft {
+    margin-top: 70px;
+    flex: 7;
+    margin-left: 10px;
+}
+
+.login-signup-section .toppest {
+    display: flex;
+    flex: 1;
+    margin-bottom: 50px;
+}
+
+.login-signup-section .logo {
+    flex: 1;
+}
+
+.login-signup-section .landsButton {
+    margin-left: 100px;
+    display: flex;
+    flex: 1;
+
+}
+
+.login-signup-section .signupButton {
+    background-color: black;
+    color: white;
+    width: 120px;
+    height: 50px;
+    font-size: large;
+}
+
+.login-signup-section .loginButton {
+    background-color: white;
+    width: 120px;
+    height: 50px;
+    font-size: large;
+}
+
+.login-signup-section .topright {
+    flex: 6;
+    margin-left: 30px;
+
+}
+
+.login-signup-section .location {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.login-signup-section .locationEntry {
+    display: flex;
+
+}
+
+.login-signup-section .deliveryLocation {
+    border: none;
+    border-top: 1px solid rgb(184, 184, 184);
+    border-left: 1px solid rgb(184, 184, 184);
+    border-bottom: 1px solid rgb(184, 184, 184);
+    flex: 2;
+    padding-left: 10px;
+    position: relative;
+    width: 470px;
+    color: gray;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.login-signup-section .deliveryLocation:focus {
+    outline: none;
+    border-top: 1px solid #fc8019;
+    border-bottom: 1px solid #fc8019;
+    border-left: 1px solid #fc8019;
+}
+
+.login-signup-section .locateMe {
+    margin-left: 400px;
+    margin-top: 15px;
+    text-align: right;
+    border-style: none;
+    padding: 5px;
+    background-color: white;
+    color: grey;
+    position: absolute;
+
+}
+
+.login-signup-section .findFood {
+    text-align: center;
+    background-color: #fc8019;
+    color: white;
+    padding: 20px;
+    width: 130px;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.login-signup-section .topPlace1 {
+    background-color: white;
+    color: gray;
+    margin: 5px;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.login-signup-section .topPlace2 {
+    background-color: white;
+    color: rgb(183, 181, 181);
+    margin: 5px;
+    font-size: medium;
+}
+
+/*The seconsd section*/
+
+.login-signup-section .section2 {
+    background-color: rgb(43, 30, 22);
+    display: flex;
+    margin-top: -4px;
+    padding-top: 5px;
+}
+
+.login-signup-section .section2-1 {
+    flex: 1;
+    text-align: center;
+
+}
+
+.login-signup-section .section3 {
+    display: flex;
+
+}
+
+/*Footer section*/
+
+.login-signup-section .footer {
+    padding: 20px;
+    padding-top: 100px;
+
+    background-color: black;
+    color: white;
+
+}
+
+.login-signup-section .footer1 {
+    display: flex;
+}
+
+/*This class is used throughout the footer for buttons*/
+.login-signup-section .cList {
+    color: white;
+    background-color: black;
+    padding-top: 15px;
+    font-size: medium;
+    text-align: left;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-signup-section .cList:hover {
+    font-weight: bold;
+}
+
+
+.login-signup-section .footer-1List {
+    flex: 3;
+}
+
+.login-signup-section .footer1-buttons {
+    flex: 2
+}
+
+/*We Deliver To Section*/
+.login-signup-section .weDeliver {
+    display: flex;
+    padding: 20px;
+}
+
+/*Bottom section*/
+.login-signup-section .bottom {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+}
+
+/* GEEVARGHESE CSS ENDS */
+
+
+
+
+
+
+
+/* BIVINA */
+
+.mainDiv {
+    margin: 20px 100px;
+    align-items: center;
+}
+
+.foodDesc {
+    color: #282c3f;
+    font: 18px ProximaNova, arial, Helvetica Neue, sans-serif;
+    margin-top: 5px;
+}
+
+.foodsTitle {
+    font-family: "Basis Grotesque Pro";
+    font-size: 24px;
+    color: #02060CEB;
+}
+
+.foodCards {
+    border-radius: 20px;
+    background-color: white;
+    margin: 10px 10px;
+    /* box-shadow: 4px 29px #e8e8e8; */
+    /* background-image: linear-gradient(to bottom, #f2f2f2 0%, rgba(236, 236, 236, 0) 100%); */
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.1);
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.foodCards img {
+    height: 186.66px;
+    width: 280px;
+    border-radius: 20px;
+}
+
+.foodCardsFrame {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 10px;
+    background-color: #f5f6f8;
+    margin: 10px 100px;
+    padding: 10px 10px;
+}
+
+
+.imageRatingsDiv {
+    display: flex;
+}
+
+.nameRatingsArrow {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.ratingsFrame {
+    display: flex;
+    color: #3e4152;
+    justify-content: space-between;
+    margin: 5px;
+    border: 1px black;
+}
+
+.restaurantTitleBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurantTitleBar img {
+    width: 40px;
+    height: 20px;
+}
+
+.restaurantTitle {
+    flex: 5;
+}
+
+.restaurantRatings {
+
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.restaurantBody {
+    display: flex;
+    justify-content: space-between;
+}
+
+.restaurantBody h3 {
+    color: #282c3f;
+    font: 18px ProximaNova, arial, Helvetica Neue, sans-serif;
+}
+
+.restaurantBody img {
+    height: 96px;
+    width: 118px;
+}
+
+.searchBar {
+    width: 858px;
+    height: 48px;
+    border: 1px solid #3e4152;
+    color: #282c3f;
+    ;
+    font: 20px ProximaNova, arial, Helvetica Neue, sans-serif;
+    margin-top: 150px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.searchBar input:focus {
+    border: none;
+    outline: none;
+}
+
+.searchInput {
+    border: none;
+}
+
+.searchBarBack {
+    width: 40px;
+    height: 48px;
+    align-items: center;
+}
+
+.searchBarBack img {
+    width: 35px;
+    height: 40px;
+}
+
+.searchBarIcon {
+    margin-left: 600px;
+    width: 40px;
+    height: 48px;
+}
+
+.searchBarIcon img {
+    margin-top: 5px;
+    width: 25px;
+    height: 35px;
+}
+
+
+/* BIVINA CSS ENDS*/
+
+
+
+
+
+/* MERIN CSS STARTS */
+
+
+/*=============MENU============ */
+
+#menu-box-container {
+    display: block;
+    margin: 100px 300px 0px 300px;
+    font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
+}
+
+
+#menu-box-container .menu-box {
+    display: flex;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    /*box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;*/
+    border-bottom: 1px solid rgba(100, 100, 111, 0.2);
+    position: relative;
+}
+
+#menu-box-container .menu-box .left-side {
+    max-width: 60%;
+}
+
+#menu-box-container .menu-box .left-side span {
+    background-color: #ff0b13;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 13px;
+
+}
+
+
+#menu-box-container .menu-box .left-side h3 {
+    margin: 0px;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    color: var(--dark, #211E1E);
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+#menu-box-container .menu-box .left-side .other-info {
+    display: flex;
+}
+
+#menu-box-container .menu-box .left-side .other-info p {
+    margin-right: 20px;
+}
+
+
+
+
+#menu-box-container .menu-box .right-side {
+
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+
+}
+
+
+#menu-box-container .menu-box .right-side button {
+
+    background-color: white;
+    color: #60b246;
+    padding: 16px 25px;
+    font-size: .9rem;
+    font-weight: 600;
+    line-height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    left: 20%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border: 1px solid #d4d5d9;
+    box-shadow: 0 3px 8px #e9e9eb;
+
+
+}
+
+#menu-box-container img {
+    width: 100px;
+    height: auto;
+}
+
+/*===========================================================*/
+
+#menu-headings-container {
+    display: block;
+    margin: 100px 300px 0px 300px;
+    font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
+}
+
+#menu-headings-container .menu-head {
+    display: flex;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+}
+
+#menu-headings-container .menu-head .head-left-side {
+    max-width: 60%;
+}
+
+#menu-headings-container .menu-head .head-left-side span {
+    background-color: #ff0b13;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 13px;
+
+}
+
+
+#menu-headings-container .menu-head .head-left-side h3 {
+    margin: 0px;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    color: var(--dark, #211E1E);
+
+    font-style: normal;
+    font-weight: 800px;
+    font-size: 30px;
+    margin-bottom: 15px;
+
+}
+
+
+#menu-headings-container .menu-head .head-left-side p {
+    display: flex;
+    font-weight: 300px;
+    font-size: 20px;
+    color: #7e808c;
+    margin-right: 20px;
+}
+
+/* #menu-headings-container .menu-head .head-left-side p {
+    margin-right: 20px;
+    font-weight: 300px;
+    font-size: 30px;
+} */
+
+
+
+#menu-headings-container .menu-head .head-right-side button {
+
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    border: 1px solid #e9e9eb;
+    box-shadow: 0 1px 5px #f9f9f9;
+    border-radius: 6px;
+    text-align: center;
+    padding: 20px;
+    max-width: 100px;
+    float: right;
+    background-color: #fff;
+    color: rgb(61, 155, 109);
+
+}
+
+
+
+/* 
+  #menu-headings-container .menu-head .head-left-side {
+    width: auto; 
+    height: auto; 
+    margin-left: 100px;
+    margin-top: 100px;
+  } */
+
+hr {
+    border: none;
+    border-top: 1px dashed rgba(100, 100, 111, 0.2);
+    margin-left: 320px;
+    margin-right: 320px;
+
+}
+
+/* .footer {
+    background-color: #f1f1f6;
+    color: #93959f;
+    margin-left: 320px;
+    margin-right: 320px;
+    font-weight: 300;
+    line-height: 1.5;
+    padding-bottom: 50px;
+}
+
+.footer-top {
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    padding: 50px;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(100, 100, 111, 0.2);
+}
+
+.footer-img {
+    flex: 1;
+}
+
+.footer-license {
+    flex: 4;
+}
+
+.footer-bottom {
+    margin-left: 10px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 400;
+} */
+
+#browse-btn {
+    height: 40px;
+    /* outline: none; */
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+#btn-menu {
+    width: 170px;
+    height: 40px;
+    background: #5d8ed5;
+    border-radius: 30px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .3), 0 2px 1px 0 rgba(93, 141, 213, .2);
+    padding: 14px;
+    font-weight: 600;
+    font-size: .93rem;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.category-title {
+    padding: 5px;
+    margin-left: 35px;
+}
+
+.menu-popup {
+    display: none;
+    /* Initially hide the menu */
+    position: absolute;
+    bottom: 30px;
+    /* Adjust the top value to position it below the button */
+    z-index: 100;
+    /* control its stacking order */
+    max-height: 180px;
+    width: 350px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .3), 0 2px 1px 0 rgba(93, 141, 213, .2);
+    border-radius: 18px;
+    overflow: auto;
+    background: #fff;
+    text-align: left;
+}
+
+.menu-popup a {
+    display: block;
+    white-space: nowrap;
+    font-size: 1.15rem;
+    color: #3d4152;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.search-bar {
+    position: absolute;
+    top: 100px;
+    right: 300px;
+    display: flex;
+    background: none;
+    border: none;
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    outline: none;
+    color: rgb(40, 44, 63);
+    font-size: 14px;
+    padding: 2px;
+}
+
+.search-bar button {
+    margin-right: 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-button i {
+    font-size: 20px;
+    color: #fff;
+}
+
+
+/* MERIN CSS ENDS */
