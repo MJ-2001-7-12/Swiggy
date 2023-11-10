@@ -6,7 +6,7 @@ button {
   padding: 10px 20px;
 }
 
-#loginForm {
+.loginForm {
   position: fixed;
   top: 0;
   height: 100%;
