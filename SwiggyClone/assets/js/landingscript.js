@@ -5,7 +5,7 @@ const redirectToLogin = () => {
 const redirectToSignup = () => {
   window.location.href = "signup_page.html";
 };
-
+//Changing headings
 var changingHeading = document.getElementById("changingHeading"); //The array elements are headings that are displayed
 var texts = [
   "Late night at office?",
@@ -138,10 +138,3 @@ const scrollToTop = () => {
     behavior: "smooth",
   });
 };
-//Social media links
-const redirectToFacebook = () => {
-  window.location.href = "https://www.facebook.com/swiggy.in";
-};
-
-
-
