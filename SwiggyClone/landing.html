@@ -166,18 +166,28 @@
           </p>
           <div style="display: flex; margin-top: 50px; margin-right: 100px">
             <button id="playStore" style="margin: 10px">
-              <img
-                style="width: 170px"
-                src="assets/img/landingpage/play_ip0jfp.webp"
-                alt=""
-              />
+              <a
+                href="https://play.google.com/store/apps/details?id=in.swiggy.android&referrer=utm_source%3Dswiggy%26utm_medium%3Dheader"
+                target="_blank"
+              >
+                <img
+                  style="width: 170px"
+                  src="assets/img/landingpage/play_ip0jfp.webp"
+                  alt=""
+                />
+              </a>
             </button>
             <button id="appStore" style="margin: 10px">
-              <img
-                style="width: 170px"
-                src="assets/img/landingpage/iOS_ajgrty.webp"
-                alt=""
-              />
+              <a
+                href="https://itunes.apple.com/in/app/id989540920?referrer=utm_source%3Dswiggy%26utm_medium%3Dhomepage"
+                target="_blank"
+              >
+                <img
+                  style="width: 170px"
+                  src="assets/img/landingpage/iOS_ajgrty.webp"
+                  alt=""
+                />
+              </a>
             </button>
           </div>
         </div>
@@ -221,11 +231,15 @@
                 border-radius: 5px;
               "
             >
-              <img
-                style="width: 170px"
-                src="assets/img/landingpage/play_ip0jfp.webp"
-                alt=""
-              />
+              <a
+                href="https://play.google.com/store/apps/details?id=in.swiggy.android&referrer=utm_source%3Dswiggy%26utm_medium%3Dheader"
+                target="_blank"
+              >
+                <img
+                  style="width: 170px"
+                  src="assets/img/landingpage/play_ip0jfp.webp"
+                  alt=""
+              /></a>
             </button>
             <button
               id="appStore"
@@ -236,11 +250,15 @@
                 border-radius: 5px;
               "
             >
-              <img
-                style="width: 170px"
-                src="assets/img/landingpage/iOS_ajgrty.webp"
-                alt=""
-              />
+              <a
+                href="https://itunes.apple.com/in/app/id989540920?referrer=utm_source%3Dswiggy%26utm_medium%3Dhomepage"
+                target="_blank"
+              >
+                <img
+                  style="width: 170px"
+                  src="assets/img/landingpage/iOS_ajgrty.webp"
+                  alt=""
+              /></a>
             </button>
           </div>
         </div>
@@ -250,10 +268,10 @@
           WE DELIVER TO
         </h5>
         <div class="weDeliver">
-          <ul id="wedeliverList1"></ul>
-          <ul id="wedeliverList2"></ul>
-          <ul id="wedeliverList3"></ul>
-          <ul id="wedeliverList4"></ul>
+          <ul style="flex: 1" id="wedeliverList1"></ul>
+          <ul style="flex: 1" id="wedeliverList2"></ul>
+          <ul style="flex: 1" id="wedeliverList3"></ul>
+          <ul style="flex: 0.6" id="wedeliverList4"></ul>
         </div>
         <!--Best places to eat section-->
         <hr style="margin-top: 20px" />
@@ -261,10 +279,10 @@
           BEST PLACES TO EAT ACROSS CITIES
         </h5>
         <div class="weDeliver">
-          <ul id="bestPlacesList1"></ul>
-          <ul id="bestPlacesList2"></ul>
-          <ul id="bestPlacesList3"></ul>
-          <ul id="bestPlacesList4"></ul>
+          <ul style="flex: 1" id="bestPlacesList1"></ul>
+          <ul style="flex: 1" id="bestPlacesList2"></ul>
+          <ul style="flex: 1" id="bestPlacesList3"></ul>
+          <ul style="flex: 1" id="bestPlacesList4"></ul>
         </div>
         <!--Best Cuisines-->
         <hr style="margin-top: 20px" />
@@ -284,43 +302,50 @@
         <!--The bottom section-->
         <hr style="margin-top: 20px" />
         <div class="bottom">
-          <button style="flex: 1" class="cList">
+          <button style="flex: 1" class="cList" onclick="scrollToTop()">
             <img
               style="width: 30%"
               src="assets/img/landingpage/Logo_f5xzza.webp"
               alt=""
             />
           </button>
+
           <p style="flex: 1; margin-top: 20px">©2023 Swiggy</p>
           <div style="flex: 1; text-align: right">
             <!--Social Media Accounts-->
-            <button class="cList">
-              <img
-                style="width: 50%"
-                src="assets/img/landingpage/icon-facebook_tfqsuc.webp"
-                alt=""
-              />
+            <button id="redirectToFacebook" class="cList">
+              <a href="https://www.facebook.com/swiggy.in" target="_blank">
+                <img
+                  style="width: 50%"
+                  src="assets/img/landingpage/icon-facebook_tfqsuc.webp"
+                  alt=""
+                />
+              </a>
             </button>
             <button class="cList">
-              <img
-                style="width: 50%"
-                src="assets/img/landingpage/icon-pinterest_kmz2wd.webp"
-                alt=""
-              />
+              <a href="https://pinterest.com/swiggyindia" target="_blank">
+                <img
+                  style="width: 50%"
+                  src="assets/img/landingpage/icon-pinterest_kmz2wd.webp"
+                  alt=""
+              /></a>
             </button>
             <button class="cList">
-              <img
-                style="width: 50%"
-                src="assets/img/landingpage/icon-instagram_b7nubh.webp"
-                alt=""
-              />
+              <a href="https://instagram.com/swiggyindia/" target="_blank">
+                <img
+                  style="width: 50%"
+                  src="assets/img/landingpage/icon-instagram_b7nubh.webp"
+                  alt=""
+              /></a>
             </button>
             <button class="cList">
-              <img
-                style="width: 50%"
-                src="assets/img/landingpage/icon-twitter_gtq8dv.webp"
-                alt=""
-              />
+              <a href="https://twitter.com/swiggy" target="_blank">
+                <img
+                  style="width: 50%"
+                  src="assets/img/landingpage/icon-twitter_gtq8dv.webp"
+                  alt=""
+                />
+              </a>
             </button>
           </div>
         </div>

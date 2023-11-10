@@ -1,9 +1,10 @@
-function redirectToLogin() {
-  window.location.href = "target_page.html"; //Enter login page.html
-}
-function redirectToSignup() {
-  window.location.href = "target_page.html"; //Enter signup page.html
-}
+const redirectToLogin = () => {
+  window.location.href = "login_page.html";
+};
+
+const redirectToSignup = () => {
+  window.location.href = "signup_page.html";
+};
 
 var changingHeading = document.getElementById("changingHeading"); //The array elements are headings that are displayed
 var texts = [
@@ -84,10 +85,11 @@ for (let i = 0; i < legalListElements.length; i++) {
 }
 
 //We Deliver To section
-fetch("https://jsonplaceholder.typicode.com/posts")
+const numberOfPlaces = 100;
+fetch(`https://randomuser.me/api/?results=${numberOfPlaces}`)
   .then((response) => response.json())
   .then((data) => {
-    const placeNames = data.map((post) => post.title);
+    const placeNames = data.results.map((result) => result.name.first);
     console.log(placeNames);
     let y = 0;
     for (let i = 1; i <= 4; i++) {
@@ -107,10 +109,10 @@ fetch("https://jsonplaceholder.typicode.com/posts")
 
 //Best places section
 
-fetch("https://jsonplaceholder.typicode.com/posts")
+fetch(`https://randomuser.me/api/?results=${numberOfPlaces}`)
   .then((response) => response.json())
   .then((data) => {
-    const placeNames = data.map((post) => post.title);
+    const placeNames = data.results.map((result) => result.name.first);
     console.log(placeNames);
     let y = 0;
     for (let i = 1; i <= 4; i++) {
@@ -127,3 +129,19 @@ fetch("https://jsonplaceholder.typicode.com/posts")
     }
   })
   .catch((error) => console.error("Error:", error));
+
+//BOTTOM SECTION
+//Bottom swiggy logo
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+//Social media links
+const redirectToFacebook = () => {
+  window.location.href = "https://www.facebook.com/swiggy.in";
+};
+
+
+
