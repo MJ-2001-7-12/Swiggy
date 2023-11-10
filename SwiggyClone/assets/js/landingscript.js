@@ -1,9 +1,9 @@
 const redirectToLogin = () => {
-  window.location.href = "login_page.html";
+  window.location.href = "home.html";
 };
 
 const redirectToSignup = () => {
-  window.location.href = "signup_page.html";
+  window.location.href = "home.html";
 };
 //Changing headings
 var changingHeading = document.getElementById("changingHeading"); //The array elements are headings that are displayed
@@ -22,6 +22,16 @@ function changeHeading() {
   currentIndex = (currentIndex + 1) % texts.length;
 } // Set an interval to change the heading every 2 seconds (2000 milliseconds)
 setInterval(changeHeading, 2000);
+
+//Location sharing
+const submitForm = (event) => {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get the value from the input field
+  const deliveryLocation = document.getElementById("deliveryLocation").value;
+  const encodedLocation = encodeURIComponent(deliveryLocation);
+  window.location.href = "home.html?deliveryLocation=" + encodedLocation;
+};
 
 //Footer section
 //comapny section
