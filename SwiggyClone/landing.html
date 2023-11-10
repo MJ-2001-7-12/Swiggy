@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiggy Clone</title>
+    <link rel="stylesheet" href="assets/css/landingstyle.css" />
+  </head>
+  <body>
+    <div id="root">
+      <!--Top Section containing all the elements in the inital window-->
+      <div id="top" class="top">
+        <!--Left side elements-->
+        <div id="topleft" class="topleft">
+          <div class="toppest">
+            <div class="logo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/1/12/Swiggy_logo.svg"
+                alt=""
+              />
+            </div>
+            <!--login and signup button-->
+            <div class="landsButton">
+              <button
+                id="loginButton"
+                class="loginButton"
+                onclick="redirectToLogin()"
+              >
+                Login
+              </button>
+              <button
+                id="signupButton"
+                class="signupButton"
+                onclick="redirectToSignup()"
+              >
+                Signup
+              </button>
+            </div>
+          </div>
+          <!--Changing headings-->
+          <h1
+            style="font-size: xx-large; color: #343434"
+            id="changingHeading"
+          ></h1>
+          <p
+            style="
+              margin-top: 10px;
+              margin-bottom: 20px;
+              color: gray;
+              font-size: x-large;
+            "
+          >
+            Order food from favourite restaurants near you.
+          </p>
+
+          <!--Text-box for sharing location-->
+          <div class="location">
+            <div class="locationEntry">
+              <input
+                class="deliveryLocation"
+                type="text"
+                placeholder="Enter your delivery location "
+              />
+
+              <button class="locateMe">Locate me</button>
+            </div>
+            <!--Button to goto homepage-->
+            <div style="display: flex; flex: 1">
+              <button class="findFood">FIND FOOD</button>
+            </div>
+          </div>
+
+          <h5
+            style="
+              color: rgb(166, 162, 162);
+              font-weight: lighter;
+              margin-bottom: 10px;
+            "
+          >
+            POPLAR CITIES IN INDIA
+          </h5>
+          <div style="display: flex">
+            <button class="topPlace1">Ahmedabad</button>
+            <button class="topPlace2">Banglore</button>
+            <button class="topPlace1">Chennai</button>
+            <button class="topPlace2">Delhi</button>
+            <button class="topPlace1">Gurgaon</button>
+            <button class="topPlace2">Hyderabad</button>
+            <button class="topPlace1">Kolkata</button>
+            <button class="topPlace2">Mumbai</button>
+          </div>
+          <div style="display: flex">
+            <button class="topPlace1">Pune</button>
+            <button class="topPlace2">&more</button>
+          </div>
+        </div>
+        <!--The image in the right side of the initial window-->
+        <div class="topright">
+          <img
+            style="width: 100%"
+            src="assets/img/landingpage/landingpage1.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <!--Second section-->
+      <div class="section2">
+        <div class="section2-1">
+          <img
+            style="width: 25%"
+            src="assets/img/landingpage/nominimumorder.webp"
+            alt=""
+          />
+          <h3 style="color: white; margin-top: 30px; margin-bottom: 10px">
+            No Minimum Order
+          </h3>
+          <p style="color: rgb(245, 233, 211); font-size: small">
+            Order in for yourself or for the group, <br />with no restrictions
+            on order value
+          </p>
+        </div>
+        <div class="section2-1">
+          <img
+            style="width: 25%"
+            src="assets/img/landingpage/liveorder.webp"
+            alt=""
+          />
+          <h3 style="color: white; margin-top: 30px; margin-bottom: 10px">
+            Live Order Tracking
+          </h3>
+          <p
+            style="
+              color: rgb(245, 233, 211);
+              font-size: small;
+              padding-bottom: 100px;
+            "
+          >
+            Know where your order is at all times, <br />from the restaurant to
+            your doorstep
+          </p>
+        </div>
+        <div class="section2-1">
+          <img
+            style="width: 30%"
+            src="assets/img/landingpage/lightningfast.webp"
+            alt=""
+          />
+          <h3 style="color: white; margin-top: 30px; margin-bottom: 10px">
+            Ligtning-Fast Delivery
+          </h3>
+          <p style="color: rgb(245, 233, 211); font-size: small">
+            Experience Swiggy's superfast delivery <br />for food delivered
+            fresh & on time
+          </p>
+        </div>
+      </div>
+
+      <!--Section containing the playstore and appstore buttons-->
+
+      <div class="section3">
+        <div style="flex: 1; margin-top: 200px; margin-left: 30px">
+          <h1>Restaurants in <br />your pocket</h1>
+          <p style="color: gray; font-size: large; margin-top: 20px">
+            Order from your favorite restaurants & track <br />on the go, with
+            the all-new Swiggy app.
+          </p>
+          <div style="display: flex; margin-top: 50px; margin-right: 100px">
+            <button id="playStore" style="margin: 10px">
+              <a
+                href="https://play.google.com/store/apps/details?id=in.swiggy.android&referrer=utm_source%3Dswiggy%26utm_medium%3Dheader"
+                target="_blank"
+              >
+                <img
+                  style="width: 170px"
+                  src="assets/img/landingpage/play_ip0jfp.webp"
+                  alt=""
+                />
+              </a>
+            </button>
+            <button id="appStore" style="margin: 10px">
+              <a
+                href="https://itunes.apple.com/in/app/id989540920?referrer=utm_source%3Dswiggy%26utm_medium%3Dhomepage"
+                target="_blank"
+              >
+                <img
+                  style="width: 170px"
+                  src="assets/img/landingpage/iOS_ajgrty.webp"
+                  alt=""
+                />
+              </a>
+            </button>
+          </div>
+        </div>
+
+        <div style="flex: 1; display: flex">
+          <img
+            style="flex: 1; width: 360px; height: 500px"
+            src="assets/img/landingpage/pixel_wbdy4n.webp"
+            alt=""
+          />
+          <img
+            style="flex: 1; width: 360px; height: 500px; margin-top: 100px"
+            src="assets/img/landingpage/iPhone_wgconp_j0d1fn.webp"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!--Footer section-->
+      <div class="footer">
+        <div class="footer1">
+          <div id="company" class="footer-1List">
+            <h5 style="padding-bottom: 20px; color: gray">COMPANY</h5>
+            <ul id="companyList"></ul>
+          </div>
+          <div id="contact" class="footer-1List">
+            <h5 style="padding-bottom: 20px; color: gray">CONTACT</h5>
+            <ul id="contactList"></ul>
+          </div>
+          <div id="legal" class="footer-1List">
+            <h5 style="padding-bottom: 20px; color: gray">LEGAL</h5>
+            <ul id="legalList"></ul>
+          </div>
+          <div class="footer1-buttons">
+            <button
+              id="playStore"
+              style="
+                margin: 10px;
+                background-color: black;
+                border: 2px solid white;
+                border-radius: 5px;
+              "
+            >
+              <a
+                href="https://play.google.com/store/apps/details?id=in.swiggy.android&referrer=utm_source%3Dswiggy%26utm_medium%3Dheader"
+                target="_blank"
+              >
+                <img
+                  style="width: 170px"
+                  src="assets/img/landingpage/play_ip0jfp.webp"
+                  alt=""
+              /></a>
+            </button>
+            <button
+              id="appStore"
+              style="
+                margin: 10px;
+                background-color: black;
+                border: 2px solid white;
+                border-radius: 5px;
+              "
+            >
+              <a
+                href="https://itunes.apple.com/in/app/id989540920?referrer=utm_source%3Dswiggy%26utm_medium%3Dhomepage"
+                target="_blank"
+              >
+                <img
+                  style="width: 170px"
+                  src="assets/img/landingpage/iOS_ajgrty.webp"
+                  alt=""
+              /></a>
+            </button>
+          </div>
+        </div>
+        <hr style="margin-top: 20px" />
+        <!--We deliver to section-->
+        <h5 style="padding-top: 30px; padding-bottom: 20px; color: gray">
+          WE DELIVER TO
+        </h5>
+        <div class="weDeliver">
+          <ul style="flex: 1" id="wedeliverList1"></ul>
+          <ul style="flex: 1" id="wedeliverList2"></ul>
+          <ul style="flex: 1" id="wedeliverList3"></ul>
+          <ul style="flex: 0.6" id="wedeliverList4"></ul>
+        </div>
+        <!--Best places to eat section-->
+        <hr style="margin-top: 20px" />
+        <h5 style="padding-top: 30px; padding-bottom: 20px; color: gray">
+          BEST PLACES TO EAT ACROSS CITIES
+        </h5>
+        <div class="weDeliver">
+          <ul style="flex: 1" id="bestPlacesList1"></ul>
+          <ul style="flex: 1" id="bestPlacesList2"></ul>
+          <ul style="flex: 1" id="bestPlacesList3"></ul>
+          <ul style="flex: 1" id="bestPlacesList4"></ul>
+        </div>
+        <!--Best Cuisines-->
+        <hr style="margin-top: 20px" />
+        <h5 style="padding-top: 30px; padding-bottom: 20px; color: gray">
+          BEST CUISINES NEAR ME
+        </h5>
+        <hr style="margin-top: 20px" />
+        <h5 style="padding-top: 30px; padding-bottom: 20px; color: gray">
+          EXPLORE EVERY RESTAURANTS NEAR ME
+        </h5>
+        <div style="display: flex">
+          <button class="cList">Explore Restaurants Near Me</button>
+          <button class="cList" style="margin-left: 55%">
+            Explore Top Rated Restaurants Near Me
+          </button>
+        </div>
+        <!--The bottom section-->
+        <hr style="margin-top: 20px" />
+        <div class="bottom">
+          <button style="flex: 1" class="cList" onclick="scrollToTop()">
+            <img
+              style="width: 30%"
+              src="assets/img/landingpage/Logo_f5xzza.webp"
+              alt=""
+            />
+          </button>
+
+          <p style="flex: 1; margin-top: 20px">©2023 Swiggy</p>
+          <div style="flex: 1; text-align: right">
+            <!--Social Media Accounts-->
+            <button id="redirectToFacebook" class="cList">
+              <a href="https://www.facebook.com/swiggy.in" target="_blank">
+                <img
+                  style="width: 50%"
+                  src="assets/img/landingpage/icon-facebook_tfqsuc.webp"
+                  alt=""
+                />
+              </a>
+            </button>
+            <button class="cList">
+              <a href="https://pinterest.com/swiggyindia" target="_blank">
+                <img
+                  style="width: 50%"
+                  src="assets/img/landingpage/icon-pinterest_kmz2wd.webp"
+                  alt=""
+              /></a>
+            </button>
+            <button class="cList">
+              <a href="https://instagram.com/swiggyindia/" target="_blank">
+                <img
+                  style="width: 50%"
+                  src="assets/img/landingpage/icon-instagram_b7nubh.webp"
+                  alt=""
+              /></a>
+            </button>
+            <button class="cList">
+              <a href="https://twitter.com/swiggy" target="_blank">
+                <img
+                  style="width: 50%"
+                  src="assets/img/landingpage/icon-twitter_gtq8dv.webp"
+                  alt=""
+                />
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/landingscript.js"></script>
+  </body>
+</html>
