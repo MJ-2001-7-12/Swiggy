@@ -2,13 +2,6 @@
     margin: 20px 100px;
     align-items: center;
 }
-
-
-.foodName{
-    color: #282c3f;
-    font: 40px ProximaNova, arial,Helvetica Neue, sans-serif;
-    margin-top: 100px;
-    }
     
     .foodDesc{
         color: #282c3f;
@@ -27,10 +20,11 @@
         background-color: white;
         margin: 10px 10px;
         /* box-shadow: 4px 29px #e8e8e8; */
-        background-image: linear-gradient(to bottom, #f2f2f2 0%, rgba(236, 236, 236, 0) 100%);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /* background-image: linear-gradient(to bottom, #f2f2f2 0%, rgba(236, 236, 236, 0) 100%); */
+        box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.1);
         align-items: center;
         text-align: center;
+        padding: 20px 20px;
     }
     
     .foodCards img{
@@ -44,15 +38,13 @@
         grid-template-columns: repeat(2, 1fr);
         margin-top: 10px;
         background-color: #f5f6f8;
-        margin: 10px 150px;  
+        margin: 10px 100px;  
+        padding: 10px 10px;
     }
     
-    
-
 
     .imageRatingsDiv{
-        display: flex;
-        
+        display: flex;     
     }
 
     .nameRatingsArrow{
@@ -79,9 +71,9 @@
         width: 40px;
         height: 20px;
     }
+
     .restaurantTitle{
         flex: 5;
-
     }
 
     .restaurantRatings{
@@ -106,3 +98,46 @@
         width: 118px;
     }
     
+    .searchBar{
+        width: 858px;
+        height: 48px;
+        border: 1px solid #3e4152 ;
+        color: #282c3f;;
+        font: 20px ProximaNova, arial,Helvetica Neue, sans-serif;
+        margin-top: 150px;
+        margin-left: 150px;
+        margin-bottom: 50px;
+        display: flex;
+    }
+
+    .searchBar input:focus {
+      border: none;
+      outline: none;
+    }
+
+    .searchInput{
+        border: none;
+    }
+
+    .searchBarBack{
+        width: 40px;
+        height: 48px;
+        align-items: center;
+    }
+
+    .searchBarBack img{
+        width: 35px;
+        height: 40px;
+    }
+
+    .searchBarIcon{
+        margin-left: 600px;
+        width: 40px;
+        height: 48px;
+    }
+
+    .searchBarIcon img{
+        margin-top: 5px;    
+        width: 25px;
+        height: 35px;
+    }
