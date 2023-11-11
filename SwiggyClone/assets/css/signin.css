@@ -6,7 +6,7 @@ button {
   padding: 10px 20px;
 }
 
-.loginForm {
+.modal {
   position: fixed;
   top: 0;
   height: 100%;
@@ -43,7 +43,7 @@ button {
   display: none;
 }
 
-#closeLoginForm,
+#closemodal,
 #closeSignUpForm {
   /* position: absolute;
   top: 10px;
@@ -155,8 +155,8 @@ button {
   pointer-events: none;
 }
 
-.form input:focus~label,
-input:not(:placeholder-shown)+label {
+.form input:focus ~ label,
+input:not(:placeholder-shown) + label {
   top: -9px;
   background-color: #ffffff;
 }
