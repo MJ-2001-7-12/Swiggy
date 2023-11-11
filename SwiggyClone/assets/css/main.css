@@ -523,6 +523,8 @@ header {
     width: 30px;
     margin-right: 15px;
     margin-bottom: 5px;
+    filter: grayscale(100%);
+
 }
 
 
@@ -581,13 +583,21 @@ header {
     margin: 5px 0px;
 }
 
-.footer-container .bottom-section .bottom-3 .top,
-.bottom {
+.footer-container .bottom-section .bottom-3 .top {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+
 }
 
+.footer-container .bottom-section .bottom-3 .bottom {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    text-align: start;
+    margin-left: 20px;
+
+}
 
 .footer-container .bottom-section .bottom-4 {
     display: flex;
