@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./assets/css/landingstyle.css" />
     <!-- <link rel="stylesheet" href="./assets/css/main.css"> -->
     <!-- <link rel="stylesheet" href="./assets/css/signin.css"> -->
-
   </head>
   <body>
     <div id="root">
@@ -41,10 +40,9 @@
             </div>
           </div>
           <!--Changing headings-->
-          <h1
-            style="font-size: xx-large; color: #343434"
-            id="changingHeading"
-          ></h1>
+          <h1 style="font-size: xx-large; color: #343434" id="changingHeading">
+            Late night at office?
+          </h1>
           <p
             style="
               margin-top: 10px;
@@ -57,20 +55,23 @@
           </p>
 
           <!--Text-box for sharing location-->
-          <div class="location">
-            <div class="locationEntry">
+
+          <div style="display: flex; margin-top: 20px">
+            <form id="deliveryForm" onsubmit="submitForm(event)">
               <input
                 class="deliveryLocation"
                 type="text"
-                placeholder="Enter your delivery location "
+                id="deliveryLocation"
+                placeholder="Enter your delivery location"
               />
-
-              <button class="locateMe" onclick="window.location.href='home.html';">Locate me</button>
-            </div>
-            <!--Button to goto homepage-->
-            <div style="display: flex; flex: 1">
-              <button class="findFood" onclick="window.location.href='home.html';">FIND FOOD</button>
-            </div>
+              <input
+                id="findFood"
+                class="findFood"
+                type="submit"
+                value="FIND FOOD"
+              />
+            </form>
+            <button class="locateMe">Locate me</button>
           </div>
 
           <h5
@@ -78,6 +79,7 @@
               color: rgb(166, 162, 162);
               font-weight: lighter;
               margin-bottom: 10px;
+              margin-top: 30px;
             "
           >
             POPLAR CITIES IN INDIA
@@ -167,6 +169,7 @@
             Order from your favorite restaurants & track <br />on the go, with
             the all-new Swiggy app.
           </p>
+          <!--Playstore Button-->
           <div style="display: flex; margin-top: 50px; margin-right: 100px">
             <button id="playStore" style="margin: 10px">
               <a
@@ -180,6 +183,7 @@
                 />
               </a>
             </button>
+            <!--appstore button-->
             <button id="appStore" style="margin: 10px">
               <a
                 href="https://itunes.apple.com/in/app/id989540920?referrer=utm_source%3Dswiggy%26utm_medium%3Dhomepage"
@@ -194,7 +198,7 @@
             </button>
           </div>
         </div>
-
+        <!--Images of phone-->
         <div style="flex: 1; display: flex">
           <img
             style="flex: 1; width: 360px; height: 500px"
@@ -356,6 +360,5 @@
     </div>
     <script src="./assets/js/landingscript.js"></script>
     <!-- <script src="./assets/js/signin.js"></script> -->
-
   </body>
 </html>

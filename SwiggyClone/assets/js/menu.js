@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Define the search input and button elements
     const searchInput = document.getElementById('search-input');
-    const searchButton = document.getElementById('search-button');
+    const searchButton = document.getElementById('menu-search-button');
 
 
     searchButton.addEventListener('click', function () {
