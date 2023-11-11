@@ -1,80 +1,87 @@
-const closeLoginFormButton = document.getElementById("closeLoginForm");
+const closemodalButton = document.getElementById("closemodal");
 const closeSignUpFormButton = document.getElementById("closeSignUpForm");
 
-const loginForm = document.querySelector(".loginForm");
+const modal = document.querySelector(".modal");
 const loginContainer = document.getElementById("loginContainer");
 const SignUpContainer = document.getElementById("SignUpContainer");
 
 signInLink.addEventListener("click", (e) => {
   e.preventDefault();
-  // loginForm.classList.remove("hidden");
+  // modal.classList.remove("hidden");
   loginContainer.classList.remove("hidden");
-  loginForm.style.right = "0";
+  modal.style.right = "0";
 });
 
-closeLoginFormButton.addEventListener("click", () => {
-  loginForm.style.right = "-350px";
+closemodalButton.addEventListener("click", () => {
+  modal.style.right = "-350px";
   setTimeout(() => {
-    // loginForm.classList.add("hidden");
+    // modal.classList.add("hidden");
     loginContainer.classList.add("hidden");
     SignUpContainer.classList.add("hidden");
   }, 300);
 });
 closeSignUpFormButton.addEventListener("click", () => {
-  loginForm.style.right = "-350px";
+  modal.style.right = "-350px";
   setTimeout(() => {
-    // loginForm.classList.add("hidden");
+    // modal.classList.add("hidden");
     SignUpContainer.classList.add("hidden");
   }, 300);
 });
 
 // switchLink.addEventListener("click", (e) => {
 //   e.preventDefault();
-//   // loginForm.classList.remove("hidden");
+//   // modal.classList.remove("hidden");
 //   SignUpContainer.classList.remove("hidden");
 //   loginContainer.classList.add("hidden");
-//   loginForm.style.right = "0";
+//   modal.style.right = "0";
 // });
 function toggleToSignUp() {
   SignUpContainer.classList.remove("hidden");
   loginContainer.classList.add("hidden");
-  //   loginForm.style.right = "0";
+  //   modal.style.right = "0";
 }
 function toggleToLogin() {
   SignUpContainer.classList.add("hidden");
   loginContainer.classList.remove("hidden");
-  //   loginForm.style.right = "0";
+  //   modal.style.right = "0";
 }
 
 // function loginSubmit() {
-//   // Get the form element
-//   var loginForm = document.querySelector(".loginForm");
+// Get the form element
+var loginForm = document.querySelector(".loginForm");
 
-//   // Add an event listener to the form for the submit event
-//   loginForm.addEventListener("submit", function (event) {
-//     // Prevent the default form submission
-//     event.preventDefault();
+// Add an event listener to the form for the submit event
+loginForm.addEventListener("submit", function (event) {
+  // Prevent the default form submission
+  event.preventDefault();
 
-//     // Get the values from the username and password inputs
-//     var usernameValue = document.getElementById("username").value;
-//     var passwordValue = document.getElementById("password").value;
+  // Get the values from the username and password inputs
+  var usernameValue = document.getElementById("username").value;
+  var passwordValue = document.getElementById("password").value;
 
-//     // You can now use these variables as needed
-//     console.log("Username:", usernameValue);
-//     console.log("Password:", passwordValue);
+  // You can now use these variables as needed
+  console.log("Username:", usernameValue);
+  console.log("Password:", passwordValue);
 
-//     // Add your further logic here, such as sending the data to a server or performing other actions.
-//   });
+  // posting and authenticating username password
+  // valid credentials- username: 'kminchelle',password: '0lelplR',
+  fetch("https://dummyjson.com/auth/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username: usernameValue,
+      password: passwordValue,
+    }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      // Store the result in the variable
+      jsonData = data;
+      console.log(jsonData);
 
-//   fetch("https://dummyjson.com/auth/login", {
-//     method: "POST",
-//     headers: { "Content-Type": "application/json" },
-//     body: JSON.stringify({
-//       username: "kminchelle",
-//       password: "0lelplR",
-//       // expiresInMins: 60, // optional
-//     }),
-//   })
-//     .then((res) => res.json())
-//     .then(console.log);
+      document.cookie = `id=${jsonData.id};firstName=${jsonData.firstName};`;
+      console.log(`id=${jsonData.id}`);
+      console.log(`firstName=${jsonData.firstName}`);
+    });
+});
 // }
