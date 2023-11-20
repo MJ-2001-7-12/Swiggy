@@ -114,17 +114,8 @@ fetch(`https://randomuser.me/api/?results=${numberOfPlaces}`)
         weDeliverto.appendChild(wedeliverElement);
       }
     }
-  })
-  .catch((error) => console.error("Error:", error));
-
-//Best places section
-
-fetch(`https://randomuser.me/api/?results=${numberOfPlaces}`)
-  .then((response) => response.json())
-  .then((data) => {
-    const placeNames = data.results.map((result) => result.name.first);
-    console.log(placeNames);
-    let y = 0;
+    // Best Places section
+    y = 0;
     for (let i = 1; i <= 4; i++) {
       var bestPlaces = document.getElementById(`bestPlacesList${i}`);
       for (y; y < i * 25; y++) {
