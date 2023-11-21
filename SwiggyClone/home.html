@@ -6,7 +6,6 @@
     <title>Swiggy Clone</title>
 
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/signin.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -17,8 +16,8 @@
 
     <header class="nav-bar">
       <div class="nav-bar-container">
-        <div class="logo">
-          <img src="./assets/img/logo.svg" alt="" />
+        <div class="logo" >
+          <img src="./assets/img/logo.svg" alt="" onclick="window.location.href='home.html';"/>
         </div>
 
         <!--Nav Bar Location-->
@@ -35,7 +34,7 @@
             <i class="fa-solid fa-magnifying-glass"></i> Search
           </li>
           <li><i class="fa-solid fa-percent"></i> Offers</li>
-          <li><i class="fa-solid fa-circle-info"></i> Help</li>
+          <li onclick="window.location.href='contact.html';"><i class="fa-solid fa-circle-info"></i> Help</li>
           <li id="signInLink">
             <i class="fa-solid fa-solid fa-user"></i> Sign In
           </li>

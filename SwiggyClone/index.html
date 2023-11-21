@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swiggy Clone</title>
-    <link rel="stylesheet" href="./assets/css/landingstyle.css" />
-    <!-- <link rel="stylesheet" href="./assets/css/main.css"> -->
-    <!-- <link rel="stylesheet" href="./assets/css/signin.css"> -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
+
   <body>
-    <div id="root">
+
+
+  <div class="landing-page-root">
+
       <!--Top Section containing all the elements in the inital window-->
       <div id="top" class="top">
+
         <!--Left side elements-->
         <div id="topleft" class="topleft">
           <div class="toppest">
@@ -39,6 +44,7 @@
               </button>
             </div>
           </div>
+
           <!--Changing headings-->
           <h1 style="font-size: xx-large; color: #343434" id="changingHeading">
             Late night at office?
@@ -57,13 +63,14 @@
           <!--Text-box for sharing location-->
 
           <div style="display: flex; margin-top: 20px">
-            <form id="deliveryForm" onsubmit="submitForm(event)">
+            <form id="deliveryForm" class="delivery-form" onsubmit="submitForm(event)">
               <input
                 class="deliveryLocation"
                 type="text"
                 id="deliveryLocation"
-                placeholder="Enter your delivery location"
-                required
+
+                placeholder="Enter your delivery location" required
+
               />
               <input
                 id="findFood"
@@ -100,6 +107,7 @@
             <button class="topPlace2">&more</button>
           </div>
         </div>
+
         <!--The image in the right side of the initial window-->
         <div class="topright">
           <img
@@ -108,7 +116,11 @@
             alt=""
           />
         </div>
+      
+       <!-- Top Section Ends  -->
       </div>
+
+
       <!--Second section-->
       <div class="section2">
         <div class="section2-1">
@@ -170,11 +182,13 @@
             Order from your favorite restaurants & track <br />on the go, with
             the all-new Swiggy app.
           </p>
+
+          <!-- playStore appStore -->
+          <div class="play-store-app-store-container">
           <!--Playstore Button-->
-          <div style="display: flex; margin-top: 50px; margin-right: 100px">
-            <button id="playStore" style="margin: 10px">
-              <a
-                href="https://play.google.com/store/apps/details?id=in.swiggy.android&referrer=utm_source%3Dswiggy%26utm_medium%3Dheader"
+
+            <!-- <button id="playStore" class="play-store"> -->
+              <a class="play-store" href="https://play.google.com/store/apps/details?id=in.swiggy.android&referrer=utm_source%3Dswiggy%26utm_medium%3Dheader"
                 target="_blank"
               >
                 <img
@@ -183,10 +197,11 @@
                   alt=""
                 />
               </a>
-            </button>
+            <!-- </button> -->
+
             <!--appstore button-->
-            <button id="appStore" style="margin: 10px">
-              <a
+            <!-- <button id="appStore" class="app-store"> -->
+              <a class="app-store"
                 href="https://itunes.apple.com/in/app/id989540920?referrer=utm_source%3Dswiggy%26utm_medium%3Dhomepage"
                 target="_blank"
               >
@@ -196,7 +211,8 @@
                   alt=""
                 />
               </a>
-            </button>
+            <!-- </button> -->
+
           </div>
         </div>
         <!--Images of phone-->
@@ -215,15 +231,15 @@
       </div>
 
       <!--Footer section-->
-      <div class="footer">
+      <div class="landing-page-footer">
         <div class="footer1">
           <div id="company" class="footer-1List">
             <h5 style="padding-bottom: 20px; color: gray">COMPANY</h5>
-            <ul id="companyList"></ul>
+            <ul id="companyList" class="company-lit"></ul>
           </div>
           <div id="contact" class="footer-1List">
             <h5 style="padding-bottom: 20px; color: gray">CONTACT</h5>
-            <ul id="contactList"></ul>
+            <ul id="contactList" class="contact-list"></ul>
           </div>
           <div id="legal" class="footer-1List">
             <h5 style="padding-bottom: 20px; color: gray">LEGAL</h5>
@@ -271,95 +287,118 @@
           </div>
         </div>
         <hr style="margin-top: 20px" />
+
         <!--We deliver to section-->
         <h5 style="padding-top: 30px; padding-bottom: 20px; color: gray">
           WE DELIVER TO
         </h5>
+
         <div class="weDeliver">
           <ul style="flex: 1" id="wedeliverList1"></ul>
           <ul style="flex: 1" id="wedeliverList2"></ul>
           <ul style="flex: 1" id="wedeliverList3"></ul>
           <ul style="flex: 0.6" id="wedeliverList4"></ul>
         </div>
+
         <!--Best places to eat section-->
         <hr style="margin-top: 20px" />
         <h5 style="padding-top: 30px; padding-bottom: 20px; color: gray">
           BEST PLACES TO EAT ACROSS CITIES
         </h5>
+
         <div class="weDeliver">
           <ul style="flex: 1" id="bestPlacesList1"></ul>
           <ul style="flex: 1" id="bestPlacesList2"></ul>
           <ul style="flex: 1" id="bestPlacesList3"></ul>
           <ul style="flex: 1" id="bestPlacesList4"></ul>
         </div>
+
         <!--Best Cuisines-->
         <hr style="margin-top: 20px" />
         <h5 style="padding-top: 30px; padding-bottom: 20px; color: gray">
           BEST CUISINES NEAR ME
         </h5>
+
         <hr style="margin-top: 20px" />
         <h5 style="padding-top: 30px; padding-bottom: 20px; color: gray">
           EXPLORE EVERY RESTAURANTS NEAR ME
         </h5>
+
         <div style="display: flex">
           <button class="cList">Explore Restaurants Near Me</button>
           <button class="cList" style="margin-left: 55%">
             Explore Top Rated Restaurants Near Me
           </button>
         </div>
+
+
         <!--The bottom section-->
         <hr style="margin-top: 20px" />
         <div class="bottom">
-          <button style="flex: 1" class="cList" onclick="scrollToTop()">
-            <img
-              style="width: 30%"
-              src="./assets/img/landingpage/Logo_f5xzza.webp"
-              alt=""
-            />
-          </button>
+
+          <div class="left-section">
+            <button style="flex: 1" class="cList" onclick="scrollToTop()">
+              <img
+                style="width: 30%"
+                src="./assets/img/landingpage/Logo_f5xzza.webp"
+                alt=""
+              />
+            </button>
+  
+          </div>
 
           <p style="flex: 1; margin-top: 20px">©2023 Swiggy</p>
-          <div style="flex: 1; text-align: right">
+
+
+          <!-- Right Section -->
+          <div class="right-section">
+
             <!--Social Media Accounts-->
-            <button id="redirectToFacebook" class="cList">
-              <a href="https://www.facebook.com/swiggy.in" target="_blank">
+              <a href="https://www.facebook.com/swiggy.in" target="_blank" class="social-link">
                 <img
                   style="width: 50%"
                   src="./assets/img/landingpage/icon-facebook_tfqsuc.webp"
                   alt=""
                 />
               </a>
-            </button>
-            <button class="cList">
-              <a href="https://pinterest.com/swiggyindia" target="_blank">
+
+              <a href="https://pinterest.com/swiggyindia" target="_blank" class="social-link">
                 <img
                   style="width: 50%"
                   src="./assets/img/landingpage/icon-pinterest_kmz2wd.webp"
                   alt=""
               /></a>
-            </button>
-            <button class="cList">
-              <a href="https://instagram.com/swiggyindia/" target="_blank">
+
+              <a href="https://instagram.com/swiggyindia/" target="_blank" class="social-link">
                 <img
                   style="width: 50%"
                   src="./assets/img/landingpage/icon-instagram_b7nubh.webp"
                   alt=""
               /></a>
-            </button>
-            <button class="cList">
-              <a href="https://twitter.com/swiggy" target="_blank">
+
+              <a href="https://twitter.com/swiggy" target="_blank" class="social-link">
                 <img
                   style="width: 50%"
                   src="./assets/img/landingpage/icon-twitter_gtq8dv.webp"
                   alt=""
                 />
               </a>
-            </button>
+
           </div>
+
+
         </div>
+
+
       </div>
-    </div>
-    <script src="./assets/js/landingscript.js"></script>
-    <!-- <script src="./assets/js/signin.js"></script> -->
+
+     <!-- Root Ends  -->
+  </div>
+  
+  <script src="./assets/js/landingscript.js"></script>
+  
+  <!-- <script src="./assets/js/signin.js"></script> -->
+
+
   </body>
 </html>
