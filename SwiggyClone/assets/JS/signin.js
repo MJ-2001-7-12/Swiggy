@@ -79,9 +79,38 @@ loginForm.addEventListener("submit", function (event) {
       jsonData = data;
       console.log(jsonData);
 
-      document.cookie = `id=${jsonData.id};firstName=${jsonData.firstName};`;
+      document.cookie = `id=${jsonData.id};`;
+      document.cookie = `firstName=${jsonData.firstName};`;
       console.log(`id=${jsonData.id}`);
       console.log(`firstName=${jsonData.firstName}`);
+
+      console.log(`cookie= ${document.cookie}`);
+      if (jsonData.id != null) {
+        loginContainer.classList.add("hidden");
+      }
     });
 });
 // }
+showDataTable.addEventListener("dblclick", function () {
+  // Navigate to table.html on double click
+  window.location.href = "table.html";
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Check if the "firstName" cookie exists
+  const firstNameCookie = getCookie("firstName");
+
+  // If the "firstName" cookie exists, replace the "Sign In" text with the user's first name
+  if (firstNameCookie) {
+    const signInLink = document.getElementById("signInLink");
+    signInLink.innerHTML = `<i class="fa-solid fa-solid fa-user"></i> ${firstNameCookie}`;
+  }
+});
+
+function getCookie(name) {
+  const cookieValue = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith(name))
+    .split("=")[1];
+  return cookieValue ? decodeURIComponent(cookieValue) : null;
+}
