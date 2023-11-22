@@ -21,7 +21,7 @@ async function getData() {
         </tr>`;
       });
       document.getElementById("tbody").innerHTML = tab;
-      $("#userTable").DataTable({
+      $("#example").DataTable({
         data: data.users,
         columns: [
           { data: "firstName" },
@@ -31,6 +31,8 @@ async function getData() {
           { data: "email" },
           { data: "username" },
         ],
+        stateSave: true,
+        bDestroy: true,
       });
     })
     .catch((error) => {
