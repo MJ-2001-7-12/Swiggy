@@ -191,9 +191,13 @@ async function displayCuisines(URL) {
 
 displayCuisines(URL);
 
-//NAVBAR LOCATION RECEIVING THROUGH QUERY PARAMETERS
-const urlParams = new URLSearchParams(window.location.search);
-const deliveryLocation = urlParams.get("deliveryLocation");
-console.log(deliveryLocation);
+//NAVBAR LOCATION
 const navbarLocation = document.getElementById("navbarLocation");
-navbarLocation.textContent = deliveryLocation;
+navbarLocation.textContent = getCookie("deliveryLocation");
+function getCookie(name) {
+  const cookieValue = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith(name))
+    .split("=")[1];
+  return cookieValue ? decodeURIComponent(cookieValue) : null;
+}

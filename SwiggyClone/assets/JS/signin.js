@@ -84,4 +84,5 @@ loginForm.addEventListener("submit", function (event) {
       console.log(`firstName=${jsonData.firstName}`);
     });
 });
+
 // }

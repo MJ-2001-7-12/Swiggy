@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,13 +8,9 @@
   </head>
 
   <body>
-
-
-  <div class="landing-page-root">
-
+    <div class="landing-page-root">
       <!--Top Section containing all the elements in the inital window-->
       <div id="top" class="top">
-
         <!--Left side elements-->
         <div id="topleft" class="topleft">
           <div class="toppest">
@@ -28,13 +22,7 @@
             </div>
             <!--login and signup button-->
             <div class="landsButton">
-              <button
-                id="loginButton"
-                class="loginButton"
-                onclick="redirectToLogin()"
-              >
-                Login
-              </button>
+              <button id="signInLink" class="loginButton">Login</button>
               <button
                 id="signupButton"
                 class="signupButton"
@@ -63,14 +51,17 @@
           <!--Text-box for sharing location-->
 
           <div style="display: flex; margin-top: 20px">
-            <form id="deliveryForm" class="delivery-form" onsubmit="submitForm(event)">
+            <form
+              id="deliveryForm"
+              class="delivery-form"
+              onsubmit="submitForm(event)"
+            >
               <input
                 class="deliveryLocation"
                 type="text"
                 id="deliveryLocation"
-
-                placeholder="Enter your delivery location" required
-
+                placeholder="Enter your delivery location"
+                required
               />
               <input
                 id="findFood"
@@ -116,10 +107,9 @@
             alt=""
           />
         </div>
-      
-       <!-- Top Section Ends  -->
-      </div>
 
+        <!-- Top Section Ends  -->
+      </div>
 
       <!--Second section-->
       <div class="section2">
@@ -185,34 +175,36 @@
 
           <!-- playStore appStore -->
           <div class="play-store-app-store-container">
-          <!--Playstore Button-->
+            <!--Playstore Button-->
 
             <!-- <button id="playStore" class="play-store"> -->
-              <a class="play-store" href="https://play.google.com/store/apps/details?id=in.swiggy.android&referrer=utm_source%3Dswiggy%26utm_medium%3Dheader"
-                target="_blank"
-              >
-                <img
-                  style="width: 170px"
-                  src="./assets/img/landingpage/play_ip0jfp.webp"
-                  alt=""
-                />
-              </a>
+            <a
+              class="play-store"
+              href="https://play.google.com/store/apps/details?id=in.swiggy.android&referrer=utm_source%3Dswiggy%26utm_medium%3Dheader"
+              target="_blank"
+            >
+              <img
+                style="width: 170px"
+                src="./assets/img/landingpage/play_ip0jfp.webp"
+                alt=""
+              />
+            </a>
             <!-- </button> -->
 
             <!--appstore button-->
             <!-- <button id="appStore" class="app-store"> -->
-              <a class="app-store"
-                href="https://itunes.apple.com/in/app/id989540920?referrer=utm_source%3Dswiggy%26utm_medium%3Dhomepage"
-                target="_blank"
-              >
-                <img
-                  style="width: 170px"
-                  src="./assets/img/landingpage/iOS_ajgrty.webp"
-                  alt=""
-                />
-              </a>
+            <a
+              class="app-store"
+              href="https://itunes.apple.com/in/app/id989540920?referrer=utm_source%3Dswiggy%26utm_medium%3Dhomepage"
+              target="_blank"
+            >
+              <img
+                style="width: 170px"
+                src="./assets/img/landingpage/iOS_ajgrty.webp"
+                alt=""
+              />
+            </a>
             <!-- </button> -->
-
           </div>
         </div>
         <!--Images of phone-->
@@ -331,11 +323,9 @@
           </button>
         </div>
 
-
         <!--The bottom section-->
         <hr style="margin-top: 20px" />
         <div class="bottom">
-
           <div class="left-section">
             <button style="flex: 1" class="cList" onclick="scrollToTop()">
               <img
@@ -344,61 +334,168 @@
                 alt=""
               />
             </button>
-  
           </div>
 
           <p style="flex: 1; margin-top: 20px">©2023 Swiggy</p>
 
-
           <!-- Right Section -->
           <div class="right-section">
-
             <!--Social Media Accounts-->
-              <a href="https://www.facebook.com/swiggy.in" target="_blank" class="social-link">
-                <img
-                  style="width: 50%"
-                  src="./assets/img/landingpage/icon-facebook_tfqsuc.webp"
-                  alt=""
-                />
-              </a>
+            <a
+              href="https://www.facebook.com/swiggy.in"
+              target="_blank"
+              class="social-link"
+            >
+              <img
+                style="width: 50%"
+                src="./assets/img/landingpage/icon-facebook_tfqsuc.webp"
+                alt=""
+              />
+            </a>
 
-              <a href="https://pinterest.com/swiggyindia" target="_blank" class="social-link">
-                <img
-                  style="width: 50%"
-                  src="./assets/img/landingpage/icon-pinterest_kmz2wd.webp"
-                  alt=""
-              /></a>
+            <a
+              href="https://pinterest.com/swiggyindia"
+              target="_blank"
+              class="social-link"
+            >
+              <img
+                style="width: 50%"
+                src="./assets/img/landingpage/icon-pinterest_kmz2wd.webp"
+                alt=""
+            /></a>
 
-              <a href="https://instagram.com/swiggyindia/" target="_blank" class="social-link">
-                <img
-                  style="width: 50%"
-                  src="./assets/img/landingpage/icon-instagram_b7nubh.webp"
-                  alt=""
-              /></a>
+            <a
+              href="https://instagram.com/swiggyindia/"
+              target="_blank"
+              class="social-link"
+            >
+              <img
+                style="width: 50%"
+                src="./assets/img/landingpage/icon-instagram_b7nubh.webp"
+                alt=""
+            /></a>
 
-              <a href="https://twitter.com/swiggy" target="_blank" class="social-link">
-                <img
-                  style="width: 50%"
-                  src="./assets/img/landingpage/icon-twitter_gtq8dv.webp"
-                  alt=""
-                />
-              </a>
-
+            <a
+              href="https://twitter.com/swiggy"
+              target="_blank"
+              class="social-link"
+            >
+              <img
+                style="width: 50%"
+                src="./assets/img/landingpage/icon-twitter_gtq8dv.webp"
+                alt=""
+              />
+            </a>
           </div>
-
-
         </div>
-
-
       </div>
 
-     <!-- Root Ends  -->
-  </div>
-  
-  <script src="./assets/js/landingscript.js"></script>
-  
-  <!-- <script src="./assets/js/signin.js"></script> -->
+      <!-- gheevarghese starts -->
+      <!--Login-->
 
+      <section class="login-signup-section">
+        <div id="loginContainer" class="hidden">
+          <div class="modal">
+            <div id="loginContent">
+              <span class="close" id="closemodal">&times;</span>
 
+              <div class="flexcontainer">
+                <div class="login-head">
+                  <h2>Login</h2>
+                  <p>
+                    or
+                    <a class="switchLink" href="javascript:toggleToSignUp();"
+                      >create an account</a
+                    >
+                  </p>
+                  <div class="separator"></div>
+                </div>
+                <div>
+                  <img src="./assets/img/SignInSignUp/sign in.PNG" alt="" />
+                </div>
+              </div>
+
+              <form class="loginForm">
+                <div class="form">
+                  <input
+                    id="username"
+                    type="text"
+                    required
+                    placeholder="Type"
+                  />
+                  <label for="">Username</label>
+                </div>
+                <div class="form">
+                  <input
+                    id="password"
+                    type="text"
+                    required
+                    placeholder="Type"
+                  />
+
+                  <label for="">Password</label>
+                </div>
+                <button class="signinLogin-button" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Sign-Up -->
+        <div id="SignUpContainer" class="hidden">
+          <div class="modal">
+            <div id="loginContent">
+              <span class="close" id="closeSignUpForm">&times;</span>
+              <div class="flexcontainer">
+                <div class="login-head">
+                  <h2>Create an Account</h2>
+                  <p>
+                    or
+                    <a class="switchLink" href="javascript:toggleToLogin();"
+                      >Login</a
+                    >
+                  </p>
+                  <div class="separator"></div>
+                </div>
+                <div>
+                  <img src="./assets/img/SignInSignUp/sign in.PNG" alt="" />
+                </div>
+              </div>
+
+              <form>
+                <div class="form">
+                  <input type="text" required placeholder="Type" />
+                  <label for="">First Name</label>
+                </div>
+                <div class="form">
+                  <input type="text" required placeholder="Type" />
+                  <label for="">Last Name</label>
+                </div>
+                <div class="form">
+                  <input type="text" required placeholder="Type" />
+                  <label for="">Email</label>
+                </div>
+                <div class="form">
+                  <input type="text" required placeholder="Type" />
+                  <label for="">Username</label>
+                </div>
+                <div class="form">
+                  <input type="text" required placeholder="Type" />
+                  <label for="">Password</label>
+                </div>
+                <button class="signinLogin-button" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- gheevarghese ends -->
+
+      <!-- Root Ends  -->
+    </div>
+
+    <script src="./assets/js/landingscript.js"></script>
+    <!--<script src="./assets/js/main.js"></script>-->
+    <script src="./assets/js/signin.js"></script>
   </body>
 </html>
