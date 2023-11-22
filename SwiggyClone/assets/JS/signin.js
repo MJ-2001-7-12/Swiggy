@@ -90,6 +90,7 @@ loginForm.addEventListener("submit", function (event) {
       }
     });
 });
+
 // }
 showDataTable.addEventListener("dblclick", function () {
   // Navigate to table.html on double click
