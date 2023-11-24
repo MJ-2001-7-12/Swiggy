@@ -1001,8 +1001,7 @@ input:not(:placeholder-shown) + label {
 } */
 
 .login-signup-section .form input:focus ~ label,
-.login-signup-section .form input:valid ~ label,
-input:not(:placeholder-shown) + label {
+.login-signup-section input:not(:placeholder-shown) + label {
   top: -9px;
   background-color: #ffffff;
 }
