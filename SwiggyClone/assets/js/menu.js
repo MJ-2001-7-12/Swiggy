@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const menuBoxContainer = document.getElementById('menu-box-container');
     const menuHeadingsContainer = document.getElementById('menu-headings-container');
@@ -505,20 +504,3 @@ window.addEventListener('load', function() {
     console.error('Error clearing rows:', error);
   });
 });
-
-
-//NAVBAR LOCATION
-
-const navbarLocation = document.getElementById("navbarLocation");
-
-navbarLocation.textContent = getCookie("deliveryLocation");
-
-function getCookie(name) {
-  const cookieValue = document.cookie
-    .split("; ")
-    .find((row) => row.startsWith(name))
-    .split("=")[1];
-  return cookieValue ? decodeURIComponent(cookieValue) : null;
-}
-
-

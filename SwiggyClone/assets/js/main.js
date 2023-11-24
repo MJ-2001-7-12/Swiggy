@@ -37,7 +37,6 @@ async function getRestaurants(URL) {
 
   //  console.log(data)
 
-
   const topRestContainer = document.getElementById("top-rest-container");
 
   for (let i = 1; i < 10; i++) {
@@ -64,7 +63,6 @@ async function getRestaurants(URL) {
     //Adding URL
     // console.log("tEST " + topRestBox);
     // topRestBox.href = "menu.html";
-
 
     //Adding Data
     topRestImg.src = `${data.products[i].thumbnail}`;
@@ -140,7 +138,6 @@ async function displayCityNames(URL) {
 
   //  console.log(data)
 
-
   const bestPlacesContainer = document.getElementById("best-places-container");
 
   for (let i = 0; i < 12; i++) {
@@ -150,7 +147,6 @@ async function displayCityNames(URL) {
 
     //Adding classes
     bestPlacesBox.classList.add("best-places-box");
-
 
     //Adding data
     bestPlaceName.textContent = "Best Restaurants in " + data.products[i].brand;
@@ -195,15 +191,9 @@ async function displayCuisines(URL) {
 
 displayCuisines(URL);
 
-
-//NAVBAR LOCATION
+//NAVBAR LOCATION RECEIVING THROUGH QUERY PARAMETERS
+const urlParams = new URLSearchParams(window.location.search);
+const deliveryLocation = urlParams.get("deliveryLocation");
+console.log(deliveryLocation);
 const navbarLocation = document.getElementById("navbarLocation");
-navbarLocation.textContent = getCookie("deliveryLocation");
-function getCookie(name) {
-  const cookieValue = document.cookie
-    .split("; ")
-    .find((row) => row.startsWith(name))
-    .split("=")[1];
-  return cookieValue ? decodeURIComponent(cookieValue) : null;
-}
-
+navbarLocation.textContent = deliveryLocation;
