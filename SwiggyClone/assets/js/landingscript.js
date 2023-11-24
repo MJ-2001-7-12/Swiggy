@@ -1,3 +1,4 @@
+
 // const redirectToLogin = () => {
 //   loginContainer.classList.remove("hidden");
 //   modal.style.right = "0";
@@ -7,6 +8,7 @@
 const redirectToSignup = () => {
   SignUpContainer.classList.remove("hidden");
   modal.style.right = "0";
+
 };
 //Changing headings
 var changingHeading = document.getElementById("changingHeading"); //The array elements are headings that are displayed
@@ -32,9 +34,11 @@ const submitForm = (event) => {
 
   // Get the value from the input field
   const deliveryLocation = document.getElementById("deliveryLocation").value;
+
   //const encodedLocation = encodeURIComponent(deliveryLocation);
   document.cookie = `deliveryLocation=${deliveryLocation};`;
   window.location.href = "home.html";
+
 };
 
 //Footer section

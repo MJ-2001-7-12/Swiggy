@@ -1,3 +1,4 @@
+
 // Check if the "firstName" cookie exists
 
 const closemodalButton = document.getElementById("closemodal");
@@ -87,6 +88,7 @@ loginForm.addEventListener("submit", function (event) {
     .then((data) => {
       // Store the result in the variable
       jsonData = data;
+
       console.log(`jsondata.id=${jsonData.id}`);
 
       if (jsonData.id != null) {
@@ -98,6 +100,7 @@ loginForm.addEventListener("submit", function (event) {
         setFromCookie(jsonData.firstName);
         loginContainer.classList.add("hidden");
       }
+
     });
 });
 // }
