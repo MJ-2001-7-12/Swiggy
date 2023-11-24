@@ -1,610 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiggy Clone</title>
 
-    
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Swiggy Clone</title>
-    
-        <link rel="stylesheet" href="./assets/css/main.css">
-         <link rel="stylesheet" href="./assets/css/signin.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></head>
-    <body>
-        
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/signin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <!--============= Nav Bar ==========-->
-    
+
     <header class="nav-bar">
-    
-    <div class="nav-bar-container">
-    
+      <div class="nav-bar-container">
         <div class="logo">
-            <img src="./assets/img/logo.svg" alt="">
+          <img src="./assets/img/logo.svg" alt="" />
         </div>
-    
+
+        <!--Nav Bar Location-->
         <div class="address">
-            <p>Kazhakkottam</p>
-            <span>NH 66 Service Road <i class="fa-solid fa-chevron-down"></i></span>
+          <p id="navbarLocation"></p>
+
+          <span
+            >NH 66 Service Road <i class="fa-solid fa-chevron-down"></i
+          ></span>
         </div>
-    
+
         <div class="nav-items">
-            <li onclick="window.location.href='searchFood.html';"><i class="fa-solid fa-magnifying-glass"></i> Search</li>
-            <li><i class="fa-solid fa-percent"></i> Offers</li>
-            <li><i class="fa-solid fa-circle-info"></i> Help</li>
-            <li id="signInLink"><i class="fa-solid fa-solid fa-user"></i> Sign In</li>
-            <li><i class="fa-solid fa-cart-shopping"></i> Cart</li>
+          <li onclick="window.location.href='searchFood.html';">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </li>
+          <li><i class="fa-solid fa-percent"></i> Offers</li>
+          <li><i class="fa-solid fa-circle-info"></i> Help</li>
+          <li id="signInLink">
+            <i class="fa-solid fa-solid fa-user"></i> Sign In
+          </li>
+          <li><i class="fa-solid fa-cart-shopping"></i> Cart</li>
         </div>
-    
-    </div>
-    
+      </div>
     </header>
-      
 
     <!-- gheevarghese starts -->
-        <!--Login-->
+    <!--Login-->
 
-        <section class="login-signup-section">
+    <section class="login-signup-section">
+      <div id="loginContainer" class="hidden">
 
+        <div class="modal">
+          <div id="loginContent">
+            <span class="close" id="closemodal">&times;</span>
 
-        <div id="loginContainer" class="hidden">
-          <div id="loginForm" class="loginForm">
-            <div id="loginContent">
-              <span class="close" id="closeLoginForm">&times;</span>
-              <div class="flexcontainer">
-                <div class="login-head">
-                  <h2>Login</h2>
-                  <p>
-                    or
-                    <a class="switchLink" href="javascript:toggleToSignUp();"
-                      >create an account</a
-                    >
-                  </p>
-                  <div class="separator"></div>
-                </div>
-                <div>
-                  <img src="./assets/img/SignInSignUp/sign in.PNG" alt="" />
-                </div>
+            <div class="flexcontainer">
+              <div class="login-head">
+                <h2>Login</h2>
+                <p>
+                  or
+                  <a class="switchLink" href="javascript:toggleToSignUp();"
+                    >create an account</a
+                  >
+                </p>
+                <div class="separator"></div>
               </div>
-
-              <form>
-                <div class="form">
-                  <input type="text" required placeholder="Type" />
-                  <label for="">Username</label>
-                </div>
-                <div class="form">
-                  <input type="text" required placeholder="Type" />
-                  <label for="">Password</label>
-                </div>
-                <button class="signinLogin-button" type="submit">Submit</button>
-              </form>
+              <div>
+                <img src="./assets/img/SignInSignUp/sign in.PNG" alt="" />
+              </div>
             </div>
+
+
+            <form class="loginForm">
+              <div class="form">
+                <input id="username" type="text" required placeholder="Type" />
+                <label for="">Username</label>
+              </div>
+              <div class="form">
+                <input id="password" type="text" required placeholder="Type" />
+
+                <label for="">Password</label>
+              </div>
+              <button class="signinLogin-button" type="submit">Submit</button>
+            </form>
           </div>
         </div>
-        <!-- Sign-Up -->
-        <div id="SignUpContainer" class="hidden">
-          <div id="loginForm" class="loginForm">
-            <div id="loginContent">
-              <span class="close" id="closeSignUpForm">&times;</span>
-              <div class="flexcontainer">
-                <div class="login-head">
-                  <h2>Create an Account</h2>
-                  <p>
-                    or
-                    <a class="switchLink" href="javascript:toggleToLogin();"
-                      >Login</a
-                    >
-                  </p>
-                  <div class="separator"></div>
-                </div>
-                <div>
-                  <img src="./assets/img/SignInSignUp/sign in.PNG" alt="" />
-                </div>
-              </div>
+      </div>
+      <!-- Sign-Up -->
+      <div id="SignUpContainer" class="hidden">
 
-              <form>
-                <div class="form">
-                  <input type="text" required placeholder="Type" />
-                  <label for="">First Name</label>
-                </div>
-                <div class="form">
-                  <input type="text" required placeholder="Type" />
-                  <label for="">Last Name</label>
-                </div>
-                <div class="form">
-                  <input type="text" required placeholder="Type" />
-                  <label for="">Email</label>
-                </div>
-                <div class="form">
-                  <input type="text" required placeholder="Type" />
-                  <label for="">Username</label>
-                </div>
-                <div class="form">
-                  <input type="text" required placeholder="Type" />
-                  <label for="">Password</label>
-                </div>
-                <button class="signinLogin-button" type="submit">Submit</button>
-              </form>
+        <div class="modal">
+
+          <div id="loginContent">
+            <span class="close" id="closeSignUpForm">&times;</span>
+            <div class="flexcontainer">
+              <div class="login-head">
+                <h2>Create an Account</h2>
+                <p>
+                  or
+                  <a class="switchLink" href="javascript:toggleToLogin();"
+                    >Login</a
+                  >
+                </p>
+                <div class="separator"></div>
+              </div>
+              <div>
+                <img src="./assets/img/SignInSignUp/sign in.PNG" alt="" />
+              </div>
             </div>
+
+            <form>
+              <div class="form">
+                <input type="text" required placeholder="Type" />
+                <label for="">First Name</label>
+              </div>
+              <div class="form">
+                <input type="text" required placeholder="Type" />
+                <label for="">Last Name</label>
+              </div>
+              <div class="form">
+                <input type="text" required placeholder="Type" />
+                <label for="">Email</label>
+              </div>
+              <div class="form">
+                <input type="text" required placeholder="Type" />
+                <label for="">Username</label>
+              </div>
+              <div class="form">
+                <input type="text" required placeholder="Type" />
+                <label for="">Password</label>
+              </div>
+              <button class="signinLogin-button" type="submit">Submit</button>
+            </form>
           </div>
         </div>
-
-            
+      </div>
     </section>
 
-
-        <!-- gheevarghese ends -->
-
-
-
+    <!-- gheevarghese ends -->
 
     <!--============= Offers ==========-->
     <section class="offers section">
+      <h3 class="offer-title">Best offers for you</h3>
 
-    <h3 class="offer-title">Best offers for you</h3>
-
-
-    <div class="offer-container" id="offer-container">
-
-
-         <div class="offer-box">
-            <img class="offer-img" src="./assets/img/offers/offer-1.webp" alt="">
+      <div class="offer-container" id="offer-container">
+        <div class="offer-box">
+          <img
+            class="offer-img"
+            src="./assets/img/offers/offer-1.webp"
+            alt=""
+          />
         </div>
 
         <div class="offer-box">
-            <img class="offer-img"  src="./assets/img/offers/offer-2.webp" alt="">
-        </div>        
-        
-        <div class="offer-box">
-            <img class="offer-img"  src="./assets/img/offers/offer-3.webp" alt="">
-        </div>        
-        
-        <div class="offer-box">
-            <img class="offer-img"  src="./assets/img/offers/offer-4.webp" alt="">
-        </div>        
-        
-        <div class="offer-box">
-            <img class="offer-img"  src="./assets/img/offers/offer-5.webp" alt="">
+          <img
+            class="offer-img"
+            src="./assets/img/offers/offer-2.webp"
+            alt=""
+          />
         </div>
 
+        <div class="offer-box">
+          <img
+            class="offer-img"
+            src="./assets/img/offers/offer-3.webp"
+            alt=""
+          />
+        </div>
 
-    </div>
+        <div class="offer-box">
+          <img
+            class="offer-img"
+            src="./assets/img/offers/offer-4.webp"
+            alt=""
+          />
+        </div>
 
-
+        <div class="offer-box">
+          <img
+            class="offer-img"
+            src="./assets/img/offers/offer-5.webp"
+            alt=""
+          />
+        </div>
+      </div>
     </section>
-
 
     <!--============= What's on you mind ==========-->
     <section class="whats-on section">
+      <h3 class="whats-on-title">What's on your mind?</h3>
 
-    <h3 class="whats-on-title">What's on your mind?</h3>
-
-
-    <div class="whats-on-container">
-
-
+      <div class="whats-on-container">
         <div class="whats-on-box">
-            <img src="./assets/img/categories/biriyani.webp" alt="">
-            <!-- <p class="item-name">Pizza</p> -->
+          <img src="./assets/img/categories/biriyani.webp" alt="" />
+          <!-- <p class="item-name">Pizza</p> -->
         </div>
 
         <div class="whats-on-box">
-            <img src="./assets/img/categories/burger.webp" alt="">
-            <!-- <p class="item-name">Pizza</p> -->
+          <img src="./assets/img/categories/burger.webp" alt="" />
+          <!-- <p class="item-name">Pizza</p> -->
         </div>
 
         <div class="whats-on-box">
-            <img src="./assets/img/categories/cakes.webp" alt="">
-            <!-- <p class="item-name">Pizza</p> -->
+          <img src="./assets/img/categories/cakes.webp" alt="" />
+          <!-- <p class="item-name">Pizza</p> -->
         </div>
 
         <div class="whats-on-box">
-            <img src="./assets/img/categories/chinese.webp" alt="">
-            <!-- <p class="item-name">Pizza</p> -->
-        </div>
-        
-        
-
-        <div class="whats-on-box">
-            <img src="./assets/img/categories/desserts.webp" alt="">
-            <!-- <p class="item-name">Pizza</p> -->
-        </div>
-        
-        
-        <div class="whats-on-box">
-            <img src="./assets/img/categories/dosa.webp" alt="">
-        </div>
-        
-        <div class="whats-on-box">
-            <img src="./assets/img/categories/poori.webp" alt="">
-        </div>        
-
-        <div class="whats-on-box">
-            <img src="./assets/img/categories/rolls.webp" alt="">
+          <img src="./assets/img/categories/chinese.webp" alt="" />
+          <!-- <p class="item-name">Pizza</p> -->
         </div>
 
-    </div>
+        <div class="whats-on-box">
+          <img src="./assets/img/categories/desserts.webp" alt="" />
+          <!-- <p class="item-name">Pizza</p> -->
+        </div>
 
+        <div class="whats-on-box">
+          <img src="./assets/img/categories/dosa.webp" alt="" />
+        </div>
 
+        <div class="whats-on-box">
+          <img src="./assets/img/categories/poori.webp" alt="" />
+        </div>
+
+        <div class="whats-on-box">
+          <img src="./assets/img/categories/rolls.webp" alt="" />
+        </div>
+      </div>
     </section>
-
-
 
     <!--============= Top Restaurants ==========-->
     <section class="top-rest section">
+      <h3 class="top-rest-title">
+        Top restaurant chains in Thiruvananthapuram
+      </h3>
 
-    <h3 class="top-rest-title">Top restaurant chains in Thiruvananthapuram</h3>
-
-
-    <div class="top-rest-container" id="top-rest-container">
-
-
+      <div class="top-rest-container" id="top-rest-container">
         <div class="top-rest-box" onclick="window.location.href='menu.html';">
+          <img src="./assets/img/restaurants/r3.webp" alt="" />
 
-            <img src="./assets/img/restaurants/r3.webp" alt="">
-
-            <h4 class="item-name">Pizza Hut</h4>
-            <p class="rating"><i class="fa-regular fa-star"></i> 4.3 <span class="time"> . 24 mins</span></p>
-            <p class="category">Pizza</p>
-            <p class="location">Location</p>
-            
+          <h4 class="item-name">Pizza Hut</h4>
+          <p class="rating">
+            <i class="fa-regular fa-star"></i> 4.3
+            <span class="time"> . 24 mins</span>
+          </p>
+          <p class="category">Pizza</p>
+          <p class="location">Location</p>
         </div>
-
 
         <div class="top-rest-box">
+          <img src="./assets/img/restaurants/r2.webp" alt="" />
 
-            <img src="./assets/img/restaurants/r2.webp" alt="">
-
-            <h4 class="item-name">MISHTI & MORE</h4>
-            <p class="rating"><i class="fa-regular fa-star"></i> 4.3 <span class="time"> . 24 mins</span></p>
-            <p class="category">Pizza</p>
-            <p class="location">Location</p>
-            
+          <h4 class="item-name">MISHTI & MORE</h4>
+          <p class="rating">
+            <i class="fa-regular fa-star"></i> 4.3
+            <span class="time"> . 24 mins</span>
+          </p>
+          <p class="category">Pizza</p>
+          <p class="location">Location</p>
         </div>
-
 
         <div class="top-rest-box">
+          <img src="./assets/img/restaurants/r4.webp" alt="" />
 
-            <img src="./assets/img/restaurants/r4.webp" alt="">
-
-            <h4 class="item-name">Supreme Bakers</h4>
-            <p class="rating"><i class="fa-regular fa-star"></i> 4.3 <span class="time"> . 24 mins</span></p>
-            <p class="category">Pizza</p>
-            <p class="location">Location</p>
-            
+          <h4 class="item-name">Supreme Bakers</h4>
+          <p class="rating">
+            <i class="fa-regular fa-star"></i> 4.3
+            <span class="time"> . 24 mins</span>
+          </p>
+          <p class="category">Pizza</p>
+          <p class="location">Location</p>
         </div>
-
-
 
         <div class="top-rest-box">
-            <img src="./assets/img/restaurants/r5.webp" alt="">
-            <h4 class="item-name">Pizza Hut</h4>
-            <p class="rating"><i class="fa-regular fa-star"></i> 4.3 <span class="time"> . 24 mins</span></p>
-            <p class="category">Pizza</p>
-            <p class="location">Location</p>
-            
+          <img src="./assets/img/restaurants/r5.webp" alt="" />
+          <h4 class="item-name">Pizza Hut</h4>
+          <p class="rating">
+            <i class="fa-regular fa-star"></i> 4.3
+            <span class="time"> . 24 mins</span>
+          </p>
+          <p class="category">Pizza</p>
+          <p class="location">Location</p>
         </div>
-       
+
         <div class="top-rest-box">
-            <img src="./assets/img/restaurants/r6.webp" alt="">
-            <h4 class="item-name">Pizza Hut</h4>
-            <p class="rating"><i class="fa-regular fa-star"></i> 4.3 <span class="time"> . 24 mins</span></p>
-            <p class="category">Pizza</p>
-            <p class="location">Location</p>
-            
+          <img src="./assets/img/restaurants/r6.webp" alt="" />
+          <h4 class="item-name">Pizza Hut</h4>
+          <p class="rating">
+            <i class="fa-regular fa-star"></i> 4.3
+            <span class="time"> . 24 mins</span>
+          </p>
+          <p class="category">Pizza</p>
+          <p class="location">Location</p>
         </div>
-
-
-
-    </div>
-
-
+      </div>
     </section>
-
 
     <!--============= Restaurants with Online Delivery ==========-->
     <section class="rest-online section">
+      <h3 class="rest-online-title">
+        Restaurants with online food delivery in Thiruvananthapuram
+      </h3>
 
-    <h3 class="rest-online-title">Restaurants with online food delivery in Thiruvananthapuram</h3>
+      <div class="filter-container">
+        <div class="filter-btn">Filter <i class="fa-solid fa-filter"></i></div>
 
-
-    <div class="filter-container">
 
         <div class="filter-btn">
-            Filter <i class="fa-solid fa-filter"></i>
+          Sort By <i class="fa-solid fa-chevron-down"></i>
         </div>
 
-        <div class="filter-btn">
-            Sort By <i class="fa-solid fa-chevron-down"></i>
-        </div>        
+        <div class="filter-btn">Fast Delivery</div>
 
-        <div class="filter-btn">
-            Fast Delivery
-        </div>           
+        <div class="filter-btn">New on Swiggy</div>
 
-        <div class="filter-btn">
-            New on Swiggy
-        </div>
-        
-        <div class="filter-btn">
-            Ratings 4.0+
-        </div>       
+        <div class="filter-btn">Ratings 4.0+</div>
 
-        <div class="filter-btn">
-            Pure Veg
-        </div>  
+        <div class="filter-btn">Pure Veg</div>
 
-        <div class="filter-btn">
-            Offers
-        </div>  
+        <div class="filter-btn">Offers</div>
 
-        <div class="filter-btn">
-           Rs. 300 - 600
-        </div>  
+        <div class="filter-btn">Rs. 300 - 600</div>
 
-        <div class="filter-btn">
-            Less than 300
-        </div>  
+        <div class="filter-btn">Less than 300</div>
+      </div>
+
+      <div class="rest-online-container" id="rest-online-container">
+        <div
+          class="rest-online-box"
+          onclick="window.location.href='menu.html';"
+        >
+          <img src="./assets/img/restaurants/r3.webp" alt="" />
 
 
-
-    </div>
-
-
-    <div class="rest-online-container" id="rest-online-container">
-
-
-        <div class="rest-online-box" onclick="window.location.href='menu.html';">
-
-            <img src="./assets/img/restaurants/r3.webp" alt="">
-
-            <h4 class="item-name">Pizza Hut</h4>
-            <p class="rating"><i class="fa-regular fa-star"></i> 4.3 <span class="time"> . 24 mins</span></p>
-            <p class="category">Pizza</p>
-            <p class="location">Location</p>
-            
+          <h4 class="item-name">Pizza Hut</h4>
+          <p class="rating">
+            <i class="fa-regular fa-star"></i> 4.3
+            <span class="time"> . 24 mins</span>
+          </p>
+          <p class="category">Pizza</p>
+          <p class="location">Location</p>
         </div>
 
         <div class="rest-online-box">
+          <img src="./assets/img/restaurants/r5.webp" alt="" />
 
-            <img src="./assets/img/restaurants/r5.webp" alt="">
-
-            <h4 class="item-name">Pizza Hut</h4>
-            <p class="rating"><i class="fa-regular fa-star"></i> 4.3 <span class="time"> . 24 mins</span></p>
-            <p class="category">Pizza</p>
-            <p class="location">Location</p>
-            
-        </div>
-
-
-        <div class="rest-online-box">
-
-            <img src="./assets/img/restaurants/r2.webp" alt="">
-
-            <h4 class="item-name">Pizza Hut</h4>
-            <p class="rating"><i class="fa-regular fa-star"></i> 4.3 <span class="time"> . 24 mins</span></p>
-            <p class="category">Pizza</p>
-            <p class="location">Location</p>
-            
-        </div>
-
-
-        <div class="rest-online-box">
-
-            <img src="./assets/img/restaurants/r4.webp" alt="">
-
-            <h4 class="item-name">Pizza Hut</h4>
-            <p class="rating"><i class="fa-regular fa-star"></i> 4.3 <span class="time"> . 24 mins</span></p>
-            <p class="category">Pizza</p>
-            <p class="location">Location</p>
-            
+          <h4 class="item-name">Pizza Hut</h4>
+          <p class="rating">
+            <i class="fa-regular fa-star"></i> 4.3
+            <span class="time"> . 24 mins</span>
+          </p>
+          <p class="category">Pizza</p>
+          <p class="location">Location</p>
         </div>
 
         <div class="rest-online-box">
+          <img src="./assets/img/restaurants/r2.webp" alt="" />
 
-            <img src="./assets/img/restaurants/r6.webp" alt="">
-
-            <h4 class="item-name">Pizza Hut</h4>
-            <p class="rating"><i class="fa-regular fa-star"></i> 4.3 <span class="time"> . 24 mins</span></p>
-            <p class="category">Pizza</p>
-            <p class="location">Location</p>
-            
+          <h4 class="item-name">Pizza Hut</h4>
+          <p class="rating">
+            <i class="fa-regular fa-star"></i> 4.3
+            <span class="time"> . 24 mins</span>
+          </p>
+          <p class="category">Pizza</p>
+          <p class="location">Location</p>
         </div>
 
         <div class="rest-online-box">
+          <img src="./assets/img/restaurants/r4.webp" alt="" />
 
-            <img src="./assets/img/restaurants/r7.webp" alt="">
-
-            <h4 class="item-name">Pizza Hut</h4>
-            <p class="rating"><i class="fa-regular fa-star"></i> 4.3 <span class="time"> . 24 mins</span></p>
-            <p class="category">Pizza</p>
-            <p class="location">Location</p>
-            
+          <h4 class="item-name">Pizza Hut</h4>
+          <p class="rating">
+            <i class="fa-regular fa-star"></i> 4.3
+            <span class="time"> . 24 mins</span>
+          </p>
+          <p class="category">Pizza</p>
+          <p class="location">Location</p>
         </div>
-
 
         <div class="rest-online-box">
+          <img src="./assets/img/restaurants/r6.webp" alt="" />
 
-            <img src="./assets/img/restaurants/r3.webp" alt="">
-
-            <h4 class="item-name">Pizza Hut</h4>
-            <p class="rating"><i class="fa-regular fa-star"></i> 4.3 <span class="time"> . 24 mins</span></p>
-            <p class="category">Pizza</p>
-            <p class="location">Location</p>
-            
+          <h4 class="item-name">Pizza Hut</h4>
+          <p class="rating">
+            <i class="fa-regular fa-star"></i> 4.3
+            <span class="time"> . 24 mins</span>
+          </p>
+          <p class="category">Pizza</p>
+          <p class="location">Location</p>
         </div>
 
+        <div class="rest-online-box">
+          <img src="./assets/img/restaurants/r7.webp" alt="" />
 
+          <h4 class="item-name">Pizza Hut</h4>
+          <p class="rating">
+            <i class="fa-regular fa-star"></i> 4.3
+            <span class="time"> . 24 mins</span>
+          </p>
+          <p class="category">Pizza</p>
+          <p class="location">Location</p>
+        </div>
 
-    </div>
+        <div class="rest-online-box">
+          <img src="./assets/img/restaurants/r3.webp" alt="" />
 
-
+          <h4 class="item-name">Pizza Hut</h4>
+          <p class="rating">
+            <i class="fa-regular fa-star"></i> 4.3
+            <span class="time"> . 24 mins</span>
+          </p>
+          <p class="category">Pizza</p>
+          <p class="location">Location</p>
+        </div>
+      </div>
     </section>
-
 
     <!--============= Best Places to Eat ==========-->
     <section class="best-places section">
+      <h3 class="best-places-title">Best Places to Eat Across Cities</h3>
 
-    <h3 class="best-places-title">Best Places to Eat Across Cities</h3>
-
-
-    <div class="best-places-container" id="best-places-container">
-
-
+      <div class="best-places-container" id="best-places-container">
         <div class="best-places-box">
-            <a>Best Restaurants in Bangalore</a>
+          <a>Best Restaurants in Bangalore</a>
         </div>
 
         <div class="best-places-box">
-            <a>Best Restaurants in Bangalore</a>
+          <a>Best Restaurants in Bangalore</a>
         </div>
-
 
         <div class="best-places-box">
-            <a>Best Restaurants in Bangalore</a>
+          <a>Best Restaurants in Bangalore</a>
         </div>
-
 
         <div class="best-places-box">
-            <a>Best Restaurants in Bangalore</a>
+          <a>Best Restaurants in Bangalore</a>
         </div>
-
-
-    </div>
-
-
+      </div>
     </section>
-
 
     <!--============= Best Cuisines Near Me ==========-->
     <section class="best-cuisines section">
+      <h3 class="best-cuisines-title">Best Cuisines Near Me</h3>
 
-    <h3 class="best-cuisines-title">Best Cuisines Near Me</h3>
-
-
-    <div class="best-cuisines-container" id="best-cuisines-container">
-
-
+      <div class="best-cuisines-container" id="best-cuisines-container">
         <div class="best-cuisines-box">
-            <a>Chinese Restaurant Near Me</a>
+          <a>Chinese Restaurant Near Me</a>
         </div>
         <div class="best-cuisines-box">
-            <a>Chinese Restaurant Near Me</a>
+          <a>Chinese Restaurant Near Me</a>
         </div>
 
         <div class="best-cuisines-box">
-            <a>Chinese Restaurant Near Me</a>
+          <a>Chinese Restaurant Near Me</a>
         </div>
         <div class="best-cuisines-box">
-            <a>Chinese Restaurant Near Me</a>
-        </div>      
+          <a>Chinese Restaurant Near Me</a>
+        </div>
 
-       
         <div class="best-cuisines-box">
-            <a>Chinese Restaurant Near Me</a>
+          <a>Chinese Restaurant Near Me</a>
         </div>
         <div class="best-cuisines-box">
-            <a>Chinese Restaurant Near Me</a>
-        </div>   
-        
+          <a>Chinese Restaurant Near Me</a>
+        </div>
+
         <div class="best-cuisines-box">
-            <a>Chinese Restaurant Near Me</a>
+          <a>Chinese Restaurant Near Me</a>
         </div>
         <div class="best-cuisines-box">
-            <a>Chinese Restaurant Near Me</a>
-        </div>        
-
-
-    </div>
-
-
+          <a>Chinese Restaurant Near Me</a>
+        </div>
+      </div>
     </section>
 
     <!-- ==============Footer================= -->
 
-    <footer >
+    <footer>
+      <div class="footer-container">
+        <!-- top -->
+        <div class="top-section">
+          <div class="top-left">
+            <h3>
+              For better experience,download<br />
+              the Swiggy app now
+            </h3>
+          </div>
 
-        <div class="footer-container">
-
-            <!-- top -->
-            <div class="top-section">
-
-                <div class="top-left">
-                    <h3>For better experience,download<br> the Swiggy app now</h3>
-                </div>
-
-                <div class="top-right">
-                    <img src="./assets/img/gplay.png" alt="">
-                    <img src="./assets/img/app_store.webp" alt="">
-                </div>
-
-            </div>
-
-
-            <!-- bottom -->
-            <div class="bottom-section">
-
-                <div class="bottom-1">
-                    
-                    <div class="footer-branding">
-                        <img src="./assets/img/logo.svg" alt="">
-                        <h2>Swiggy</h2>
-
-                    </div>
-
-                    <p>2023 Bundle<br> Technologies Pvt. Ltd</p>
-                </div>
-
-                <div class="bottom-2">
-                    <h3>Company</h3>
-                    <a href="">About</a>
-                    <a href="">Careers</a>
-                    <a href="">Team</a>
-                    <a href="">Swiggy One</a>
-
-                </div>
-
-
-                <div class="bottom-3">
-
-                    <div class="top">
-                        <h3>Contact Us</h3>
-                        <a href="">Help & Support</a>
-                        <a href="">Partner with Us</a>
-                        <a href="">Ride with US</a>
-                    </div>
-
-                    <div class="bottom">
-                        <h3>Legal</h3>
-                        <a href="">Terms & Conditions</a>
-                        <a href="">Cookie Policy</a>
-                        <a href="">Privacy Policy</a>
-                    </div>
-
-                </div>
-
-                <div class="bottom-4">
-
-                    <h3>We deliver to</h3>
-                    <a href="">Bangalore</a>
-                    <a href="">Gurgaon</a>
-                    <a href="">Hyderabad</a>
-                    <a href="">Delhi</a>
-                    <a href="">Mumbai</a>
-                    <a href="">Pune</a>
-
-                </div>
-
-            </div>
-
+          <div class="top-right">
+            <img src="./assets/img/gplay.png" alt="" />
+            <img src="./assets/img/app_store.webp" alt="" />
+          </div>
         </div>
 
+        <!-- bottom -->
+        <div class="bottom-section">
+          <div class="bottom-1">
+            <div class="footer-branding">
+              <img src="./assets/img/logo.svg" alt="" />
+              <h2>Swiggy</h2>
+            </div>
+
+            <p>
+              2023 Bundle<br />
+              Technologies Pvt. Ltd
+            </p>
+          </div>
+
+          <div class="bottom-2">
+            <h3>Company</h3>
+            <a href="">About</a>
+            <a href="">Careers</a>
+            <a href="">Team</a>
+            <a href="">Swiggy One</a>
+          </div>
+
+          <div class="bottom-3">
+            <div class="top">
+              <h3>Contact Us</h3>
+              <a href="">Help & Support</a>
+              <a href="">Partner with Us</a>
+              <a href="">Ride with US</a>
+            </div>
+
+            <div class="bottom">
+              <h3>Legal</h3>
+              <a href="">Terms & Conditions</a>
+              <a href="">Cookie Policy</a>
+              <a href="">Privacy Policy</a>
+            </div>
+          </div>
+
+          <div class="bottom-4">
+            <h3>We deliver to</h3>
+            <a href="">Bangalore</a>
+            <a href="">Gurgaon</a>
+            <a href="">Hyderabad</a>
+            <a href="">Delhi</a>
+            <a href="">Mumbai</a>
+            <a href="">Pune</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
-           
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/signin.js"></script>
 
     <!-- <script src="./sign in .js"></script> -->
-      </body>
-    </html>
- 
+  </body>
+</html>

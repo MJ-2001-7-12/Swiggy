@@ -1,11 +1,11 @@
 const redirectToLogin = () => {
-  window.location.href = "login_page.html";
+  window.location.href = "home.html";
 };
 
 const redirectToSignup = () => {
-  window.location.href = "signup_page.html";
+  window.location.href = "home.html";
 };
-
+//Changing headings
 var changingHeading = document.getElementById("changingHeading"); //The array elements are headings that are displayed
 var texts = [
   "Late night at office?",
@@ -22,6 +22,16 @@ function changeHeading() {
   currentIndex = (currentIndex + 1) % texts.length;
 } // Set an interval to change the heading every 2 seconds (2000 milliseconds)
 setInterval(changeHeading, 2000);
+
+//Location sharing
+const submitForm = (event) => {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get the value from the input field
+  const deliveryLocation = document.getElementById("deliveryLocation").value;
+  const encodedLocation = encodeURIComponent(deliveryLocation);
+  window.location.href = "home.html?deliveryLocation=" + encodedLocation;
+};
 
 //Footer section
 //comapny section
@@ -104,17 +114,8 @@ fetch(`https://randomuser.me/api/?results=${numberOfPlaces}`)
         weDeliverto.appendChild(wedeliverElement);
       }
     }
-  })
-  .catch((error) => console.error("Error:", error));
-
-//Best places section
-
-fetch(`https://randomuser.me/api/?results=${numberOfPlaces}`)
-  .then((response) => response.json())
-  .then((data) => {
-    const placeNames = data.results.map((result) => result.name.first);
-    console.log(placeNames);
-    let y = 0;
+    // Best Places section
+    y = 0;
     for (let i = 1; i <= 4; i++) {
       var bestPlaces = document.getElementById(`bestPlacesList${i}`);
       for (y; y < i * 25; y++) {
@@ -138,10 +139,3 @@ const scrollToTop = () => {
     behavior: "smooth",
   });
 };
-//Social media links
-const redirectToFacebook = () => {
-  window.location.href = "https://www.facebook.com/swiggy.in";
-};
-
-
-
