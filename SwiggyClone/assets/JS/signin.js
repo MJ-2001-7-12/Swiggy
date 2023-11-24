@@ -1,9 +1,20 @@
+
+// Check if the "firstName" cookie exists
+
 const closemodalButton = document.getElementById("closemodal");
 const closeSignUpFormButton = document.getElementById("closeSignUpForm");
 
 const modal = document.querySelector(".modal");
 const loginContainer = document.getElementById("loginContainer");
 const SignUpContainer = document.getElementById("SignUpContainer");
+
+function onLoad() {
+  const firstNameCookie = getCookie("firstName");
+  console.log(`firstNameCookie: ${firstNameCookie}`);
+  setFromCookie(firstNameCookie);
+}
+
+window.onload = onLoad;
 
 signInLink.addEventListener("click", (e) => {
   e.preventDefault();
@@ -77,11 +88,40 @@ loginForm.addEventListener("submit", function (event) {
     .then((data) => {
       // Store the result in the variable
       jsonData = data;
-      console.log(jsonData);
 
-      document.cookie = `id=${jsonData.id};firstName=${jsonData.firstName};`;
-      console.log(`id=${jsonData.id}`);
-      console.log(`firstName=${jsonData.firstName}`);
+      console.log(`jsondata.id=${jsonData.id}`);
+
+      if (jsonData.id != null) {
+        document.cookie = `id=${jsonData.id};`;
+        document.cookie = `firstName=${jsonData.firstName};`;
+        console.log(`id=${jsonData.id}`);
+        console.log(`firstName=${jsonData.firstName}`);
+        console.log(`cookie= ${document.cookie}`);
+        setFromCookie(jsonData.firstName);
+        loginContainer.classList.add("hidden");
+      }
+
     });
 });
 // }
+showDataTable.addEventListener("dblclick", function () {
+  // Navigate to table.html on double click
+  window.location.href = "table.html";
+});
+
+// If the "firstName" cookie exists, replace the "Sign In" text with the user's first name
+function setFromCookie(firstNameCookie) {
+  if (typeof firstNameCookie === "undefined") {
+  } else {
+    const signInLink = document.getElementById("signInLink");
+    signInLink.innerHTML = `<i class="fa-solid fa-solid fa-user"></i> ${firstNameCookie}`;
+  }
+  return 0;
+}
+function getCookie(name) {
+  const cookieValue = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith(name))
+    .split("=")[1];
+  return cookieValue ? decodeURIComponent(cookieValue) : null;
+}

@@ -18,7 +18,9 @@
     <header class="nav-bar">
       <div class="nav-bar-container">
         <div class="logo">
-          <img src="./assets/img/logo.svg" alt="" />
+
+          <img id="showDataTable" src="./assets/img/logo.svg" alt="" />
+
         </div>
 
         <!--Nav Bar Location-->
@@ -35,7 +37,11 @@
             <i class="fa-solid fa-magnifying-glass"></i> Search
           </li>
           <li><i class="fa-solid fa-percent"></i> Offers</li>
-          <li><i class="fa-solid fa-circle-info"></i> Help</li>
+
+          <li onclick="window.location.href='contact.html';">
+            <i class="fa-solid fa-circle-info"></i> Help
+          </li>
+
           <li id="signInLink">
             <i class="fa-solid fa-solid fa-user"></i> Sign In
           </li>
@@ -77,7 +83,13 @@
                 <label for="">Username</label>
               </div>
               <div class="form">
-                <input id="password" type="text" required placeholder="Type" />
+
+                <input
+                  id="password"
+                  type="password"
+                  required
+                  placeholder="Type"
+                />
 
                 <label for="">Password</label>
               </div>
@@ -111,23 +123,29 @@
 
             <form>
               <div class="form">
-                <input type="text" required placeholder="Type" />
+
+                <input id="signUp firstName" type="text" placeholder="Type" />
                 <label for="">First Name</label>
               </div>
               <div class="form">
-                <input type="text" required placeholder="Type" />
+                <input id="signUp lastName" type="text" placeholder="Type" />
                 <label for="">Last Name</label>
               </div>
               <div class="form">
-                <input type="text" required placeholder="Type" />
+                <input id="signUp email" type="text" placeholder="Type" />
                 <label for="">Email</label>
               </div>
               <div class="form">
-                <input type="text" required placeholder="Type" />
+                <input id="signUp username" type="text" placeholder="Type" />
                 <label for="">Username</label>
               </div>
               <div class="form">
-                <input type="text" required placeholder="Type" />
+                <input
+                  id="signUp password"
+                  type="password"
+                  placeholder="Type"
+                />
+
                 <label for="">Password</label>
               </div>
               <button class="signinLogin-button" type="submit">Submit</button>
@@ -315,6 +333,7 @@
 
         <div class="filter-btn">New on Swiggy</div>
 
+
         <div class="filter-btn">Ratings 4.0+</div>
 
         <div class="filter-btn">Pure Veg</div>
@@ -326,13 +345,13 @@
         <div class="filter-btn">Less than 300</div>
       </div>
 
+
       <div class="rest-online-container" id="rest-online-container">
         <div
           class="rest-online-box"
           onclick="window.location.href='menu.html';"
         >
           <img src="./assets/img/restaurants/r3.webp" alt="" />
-
 
           <h4 class="item-name">Pizza Hut</h4>
           <p class="rating">
@@ -547,7 +566,7 @@
 
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/signin.js"></script>
+    <script src="./assets/js/login.js"></script>
 
-    <!-- <script src="./sign in .js"></script> -->
   </body>
 </html>

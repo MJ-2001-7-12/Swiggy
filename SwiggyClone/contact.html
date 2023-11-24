@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiggy Clone</title>
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--============= Nav Bar ==========-->
+
+    <header class="nav-bar">
+      <div class="nav-bar-container">
+        <div class="logo" >
+          <img src="./assets/img/logo.svg" alt="" onclick="window.location.href='home.html';"/>
+        </div>
+
+        <!--Nav Bar Location-->
+        <div class="address">
+          <p id="navbarLocation"></p>
+
+          <span
+            >NH 66 Service Road <i class="fa-solid fa-chevron-down"></i
+          ></span>
+        </div>
+
+        <div class="nav-items">
+          <li onclick="window.location.href='searchFood.html';">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </li>
+          <li><i class="fa-solid fa-percent"></i> Offers</li>
+          <li onclick="window.location.href='contact.html';"><i class="fa-solid fa-circle-info"></i> Help</li>
+          <li id="signInLink">
+            <i class="fa-solid fa-solid fa-user"></i> Sign In
+          </li>
+          <li><i class="fa-solid fa-cart-shopping"></i> Cart</li>
+        </div>
+      </div>
+    </header>
+
+    <!-- gheevarghese starts -->
+    <!--Login-->
+
+    <section class="login-signup-section">
+      <div id="loginContainer" class="hidden">
+
+        <div class="modal">
+          <div id="loginContent">
+            <span class="close" id="closemodal">&times;</span>
+
+            <div class="flexcontainer">
+              <div class="login-head">
+                <h2>Login</h2>
+                <p>
+                  or
+                  <a class="switchLink" href="javascript:toggleToSignUp();"
+                    >create an account</a
+                  >
+                </p>
+                <div class="separator"></div>
+              </div>
+              <div>
+                <img src="./assets/img/SignInSignUp/sign in.PNG" alt="" />
+              </div>
+            </div>
+
+
+            <form class="loginForm">
+              <div class="form">
+                <input id="username" type="text" required placeholder="Type" />
+                <label for="">Username</label>
+              </div>
+              <div class="form">
+                <input id="password" type="text" required placeholder="Type" />
+
+                <label for="">Password</label>
+              </div>
+              <button class="signinLogin-button" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Sign-Up -->
+      <div id="SignUpContainer" class="hidden">
+
+        <div class="modal">
+
+          <div id="loginContent">
+            <span class="close" id="closeSignUpForm">&times;</span>
+            <div class="flexcontainer">
+              <div class="login-head">
+                <h2>Create an Account</h2>
+                <p>
+                  or
+                  <a class="switchLink" href="javascript:toggleToLogin();"
+                    >Login</a
+                  >
+                </p>
+                <div class="separator"></div>
+              </div>
+              <div>
+                <img src="./assets/img/SignInSignUp/sign in.PNG" alt="" />
+              </div>
+            </div>
+
+            <form>
+              <div class="form">
+                <input type="text" required placeholder="Type" />
+                <label for="">First Name</label>
+              </div>
+              <div class="form">
+                <input type="text" required placeholder="Type" />
+                <label for="">Last Name</label>
+              </div>
+              <div class="form">
+                <input type="text" required placeholder="Type" />
+                <label for="">Email</label>
+              </div>
+              <div class="form">
+                <input type="text" required placeholder="Type" />
+                <label for="">Username</label>
+              </div>
+              <div class="form">
+                <input type="text" required placeholder="Type" />
+                <label for="">Password</label>
+              </div>
+              <button class="signinLogin-button" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- gheevarghese ends -->
+
+
+    <!--========Contact section========-->
+    <section class="contact section" id="contact">
+        <div class="container flex-center">
+            <!-- <h2 class="section-title-02">Contact Us</h2> -->
+            <div class="content">
+                <div class="contact-left">
+                    <h2>Get in Touch:</h2>
+                    <ul class="contact-list">
+
+                        <li>
+                            <h3 class="item-title"><i class="fa-brands fa-twitter"></i>Twitter</h3>
+                            <span><a href="#" target="_blank">Swiggy</a></span>
+
+                        </li>
+                        <li>
+                            <h3 class="item-title"><i class="fas fa-envelope"></i>Email Address</h3>
+                            <span><a href="#" target="_blank">contact@swiggyclone.com</a></span>
+                        </li>
+
+                        <li>
+                            <h3 class="item-title"><i class="fa-brands fa-instagram"></i>Instagram</h3>
+                            <span><a href="#" target="_blank">swiggy</a></span>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="contact-right">
+                    <p>"Your Feedback, Our Secret Sauce:<br><span>"Reach Out Today"</span></p>
+                
+                    <form action="" class="contact-form">
+                        <div class="first-row">
+                            <input type="text" placeholder="Name">
+                        </div>
+                        <div class="second-row">
+                            <input type="email" placeholder="Email">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="third-row">
+                            <textarea name="message" id="" rows="7" placeholder="Message"></textarea>
+                        </div>
+                        <button class="btn" type="submit">Shoot <i class="fas fa-paper-plane"></i></button>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!--============= Best Places to Eat ==========-->
+    <section class="best-places section">
+      <h3 class="best-places-title">Best Places to Eat Across Cities</h3>
+
+      <div class="best-places-container" id="best-places-container">
+        <div class="best-places-box">
+          <a>Best Restaurants in Bangalore</a>
+        </div>
+
+        <div class="best-places-box">
+          <a>Best Restaurants in Bangalore</a>
+        </div>
+
+        <div class="best-places-box">
+          <a>Best Restaurants in Bangalore</a>
+        </div>
+
+        <div class="best-places-box">
+          <a>Best Restaurants in Bangalore</a>
+        </div>
+      </div>
+    </section>
+
+    <!--============= Best Cuisines Near Me ==========-->
+    <section class="best-cuisines section">
+      <h3 class="best-cuisines-title">Best Cuisines Near Me</h3>
+
+      <div class="best-cuisines-container" id="best-cuisines-container">
+        <div class="best-cuisines-box">
+          <a>Chinese Restaurant Near Me</a>
+        </div>
+        <div class="best-cuisines-box">
+          <a>Chinese Restaurant Near Me</a>
+        </div>
+
+        <div class="best-cuisines-box">
+          <a>Chinese Restaurant Near Me</a>
+        </div>
+        <div class="best-cuisines-box">
+          <a>Chinese Restaurant Near Me</a>
+        </div>
+
+        <div class="best-cuisines-box">
+          <a>Chinese Restaurant Near Me</a>
+        </div>
+        <div class="best-cuisines-box">
+          <a>Chinese Restaurant Near Me</a>
+        </div>
+
+        <div class="best-cuisines-box">
+          <a>Chinese Restaurant Near Me</a>
+        </div>
+        <div class="best-cuisines-box">
+          <a>Chinese Restaurant Near Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============Footer================= -->
+
+    <footer>
+      <div class="footer-container">
+        <!-- top -->
+        <div class="top-section">
+          <div class="top-left">
+            <h3>
+              For better experience,download<br />
+              the Swiggy app now
+            </h3>
+          </div>
+
+          <div class="top-right">
+            <img src="./assets/img/gplay.png" alt="" />
+            <img src="./assets/img/app_store.webp" alt="" />
+          </div>
+        </div>
+
+        <!-- bottom -->
+        <div class="bottom-section">
+          <div class="bottom-1">
+            <div class="footer-branding">
+              <img src="./assets/img/logo.svg" alt="" />
+              <h2>Swiggy</h2>
+            </div>
+
+            <p>
+              2023 Bundle<br />
+              Technologies Pvt. Ltd
+            </p>
+          </div>
+
+          <div class="bottom-2">
+            <h3>Company</h3>
+            <a href="">About</a>
+            <a href="">Careers</a>
+            <a href="">Team</a>
+            <a href="">Swiggy One</a>
+          </div>
+
+          <div class="bottom-3">
+            <div class="top">
+              <h3>Contact Us</h3>
+              <a href="">Help & Support</a>
+              <a href="">Partner with Us</a>
+              <a href="">Ride with US</a>
+            </div>
+
+            <div class="bottom">
+              <h3>Legal</h3>
+              <a href="">Terms & Conditions</a>
+              <a href="">Cookie Policy</a>
+              <a href="">Privacy Policy</a>
+            </div>
+          </div>
+
+          <div class="bottom-4">
+            <h3>We deliver to</h3>
+            <a href="">Bangalore</a>
+            <a href="">Gurgaon</a>
+            <a href="">Hyderabad</a>
+            <a href="">Delhi</a>
+            <a href="">Mumbai</a>
+            <a href="">Pune</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/signin.js"></script>
+
+    <!-- <script src="./sign in .js"></script> -->
+  </body>
+</html>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
