@@ -6,6 +6,7 @@
     <title>Swiggy Clone</title>
 
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/signin.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -16,12 +17,8 @@
 
     <header class="nav-bar">
       <div class="nav-bar-container">
-
-
-        <div class="logo" >
-          <img id="showDataTable" src="./assets/img/logo.svg" alt="" onclick="window.location.href='home.html';"/>
-
-
+        <div class="logo">
+          <img id="showDataTable" src="./assets/img/logo.svg" alt="" />
         </div>
 
         <!--Nav Bar Location-->
@@ -80,7 +77,12 @@
                 <label for="">Username</label>
               </div>
               <div class="form">
-                <input id="password" type="text" required placeholder="Type" />
+                <input
+                  id="password"
+                  type="password"
+                  required
+                  placeholder="Type"
+                />
 
                 <label for="">Password</label>
               </div>
@@ -112,23 +114,27 @@
 
             <form>
               <div class="form">
-                <input type="text" required placeholder="Type" />
+                <input id="signUp firstName" type="text" placeholder="Type" />
                 <label for="">First Name</label>
               </div>
               <div class="form">
-                <input type="text" required placeholder="Type" />
+                <input id="signUp lastName" type="text" placeholder="Type" />
                 <label for="">Last Name</label>
               </div>
               <div class="form">
-                <input type="text" required placeholder="Type" />
+                <input id="signUp email" type="text" placeholder="Type" />
                 <label for="">Email</label>
               </div>
               <div class="form">
-                <input type="text" required placeholder="Type" />
+                <input id="signUp username" type="text" placeholder="Type" />
                 <label for="">Username</label>
               </div>
               <div class="form">
-                <input type="text" required placeholder="Type" />
+                <input
+                  id="signUp password"
+                  type="password"
+                  placeholder="Type"
+                />
                 <label for="">Password</label>
               </div>
               <button class="signinLogin-button" type="submit">Submit</button>
@@ -547,6 +553,6 @@
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/signin.js"></script>
 
-    <!-- <script src="./sign in .js"></script> -->
+    <script src="./assets/js/login.js"></script>
   </body>
 </html>
