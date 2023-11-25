@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
               videoElement.setAttribute("height", "280px");
               videoElement.setAttribute("controls", "controls");
               videoElement.setAttribute("autoplay", "");
-
+              
               // Create source element for the video
               let sourceElement = document.createElement("source");
               sourceElement.setAttribute("src", "assets/img/restaurants/Cook with me.mp4");
