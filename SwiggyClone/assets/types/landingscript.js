@@ -3,12 +3,8 @@ var SignUpContainer = document.getElementById("SignUpContainer");
 var modal = document.getElementById("modal");
 // Functions
 var redirectToSignup = function () {
-    if (SignUpContainer) {
-        SignUpContainer.classList.remove("hidden");
-    }
-    if (modal) {
-        modal.style.right = "0";
-    }
+    SignUpContainer.classList.remove("hidden");
+    modal.style.right = "0";
 };
 // Changing headings
 var changingHeading = document.getElementById("changingHeading");
@@ -22,9 +18,7 @@ var texts = [
 ];
 var currentIndex = 0;
 function changeHeading() {
-    if (changingHeading) {
-        changingHeading.textContent = texts[currentIndex];
-    }
+    changingHeading.textContent = texts[currentIndex];
     currentIndex = (currentIndex + 1) % texts.length;
 }
 // Set an interval to change the heading every 2 seconds (2000 milliseconds)
@@ -32,12 +26,12 @@ setInterval(changeHeading, 2000);
 // Location sharing
 var submitForm = function (event) {
     event.preventDefault(); // Prevent the default form submission
+    // Get the value from the input field
     var deliveryLocationInput = document.getElementById("deliveryLocation");
-    var deliveryLocation = deliveryLocationInput === null || deliveryLocationInput === void 0 ? void 0 : deliveryLocationInput.value;
-    if (deliveryLocation) {
-        document.cookie = "deliveryLocation=".concat(deliveryLocation, ";");
-        window.location.href = "home.html";
-    }
+    var deliveryLocation = deliveryLocationInput.value;
+    // Set cookie and redirect
+    document.cookie = "deliveryLocation=".concat(deliveryLocation, ";");
+    window.location.href = "home.html";
 };
 // Footer section
 // Company section
@@ -60,9 +54,7 @@ for (var i = 0; i < companyListElements.length; i++) {
     companyListButton.textContent = companyListElements[i];
     companyListButton.classList.add("cList");
     company.appendChild(companyListButton);
-    if (companyList) {
-        companyList.appendChild(company);
-    }
+    companyList.appendChild(company);
 }
 // Contact section
 var contactList = document.getElementById("contactList");
@@ -73,9 +65,7 @@ for (var i = 0; i < contactListElements.length; i++) {
     contactListButton.textContent = contactListElements[i];
     contactListButton.classList.add("cList");
     contact.appendChild(contactListButton);
-    if (contactList) {
-        contactList.appendChild(contact);
-    }
+    contactList.appendChild(contact);
 }
 // Legal section
 var legalList = document.getElementById("legalList");
@@ -95,9 +85,7 @@ for (var i = 0; i < legalListElements.length; i++) {
     legalListButton.textContent = legalListElements[i];
     legalListButton.classList.add("cList");
     legal.appendChild(legalListButton);
-    if (legalList) {
-        legalList.appendChild(legal);
-    }
+    legalList.appendChild(legal);
 }
 // We Deliver To section
 var numberOfPlaces = 100;
@@ -115,9 +103,7 @@ fetch("https://randomuser.me/api/?results=".concat(numberOfPlaces))
             wedeliverListButton.textContent = placeNames[y];
             wedeliverListButton.classList.add("cList");
             wedeliverElement.appendChild(wedeliverListButton);
-            if (weDeliverTo) {
-                weDeliverTo.appendChild(wedeliverElement);
-            }
+            weDeliverTo.appendChild(wedeliverElement);
         }
     }
     // Best Places section
@@ -130,9 +116,7 @@ fetch("https://randomuser.me/api/?results=".concat(numberOfPlaces))
             bestPlacesListButton.textContent = "Best Restaurants In ".concat(placeNames[y]);
             bestPlacesListButton.classList.add("cList");
             bestPlacesElement.appendChild(bestPlacesListButton);
-            if (bestPlaces) {
-                bestPlaces.appendChild(bestPlacesElement);
-            }
+            bestPlaces.appendChild(bestPlacesElement);
         }
     }
 })

@@ -255,3 +255,15 @@ document.addEventListener('DOMContentLoaded', function () {
       console.error('An error occurred:', error);
   }
 });
+
+//NAVBAR LOCATION
+const navbarLocation = document.getElementById("navbarLocation");
+navbarLocation.textContent = getCookie("deliveryLocation");
+function getCookie(name) {
+  const cookieValue = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith(name))
+    .split("=")[1];
+  return cookieValue ? decodeURIComponent(cookieValue) : null;
+}
+
