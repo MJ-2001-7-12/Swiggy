@@ -1,3 +1,13 @@
+showDataTable.addEventListener("dblclick", function () {
+  // Check if there is a cookie with id=1
+  const idCookie = getCookie("id");
+
+  if (idCookie && idCookie === "1") {
+    // Navigate to table.html on double click
+    window.location.href = "table.html";
+  }
+});
+
 async function getData() {
   fetch("https://dummyjson.com/users/")
     .then((response) => {
@@ -21,7 +31,7 @@ async function getData() {
         </tr>`;
       });
       document.getElementById("tbody").innerHTML = tab;
-      $("#userTable").DataTable({
+      $("#example").DataTable({
         data: data.users,
         columns: [
           { data: "firstName" },
@@ -31,6 +41,8 @@ async function getData() {
           { data: "email" },
           { data: "username" },
         ],
+        stateSave: true,
+        bDestroy: true,
       });
     })
     .catch((error) => {
