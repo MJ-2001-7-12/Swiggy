@@ -1,10 +1,20 @@
-const redirectToLogin = () => {
-  window.location.href = "home.html";
-};
-
 const redirectToSignup = () => {
-  window.location.href = "home.html";
+  SignUpContainer.classList.remove("hidden");
+  modal.style.right = "0";
+  document.getElementById("username").value = "";
+  document.getElementById("password").value = "";
+  document.getElementById("signUp firstName").value = "";
+  document.getElementById("signUp lastName").value = "";
+  document.getElementById("signUp email").value = "";
+  document.getElementById("signUp username").value = "";
+  document.getElementById("signUp password").value = "";
 };
+function deleteCookie(name) {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+}
+deleteCookie("id");
+deleteCookie("firstName");
+
 //Changing headings
 var changingHeading = document.getElementById("changingHeading"); //The array elements are headings that are displayed
 var texts = [
@@ -29,8 +39,9 @@ const submitForm = (event) => {
 
   // Get the value from the input field
   const deliveryLocation = document.getElementById("deliveryLocation").value;
-  const encodedLocation = encodeURIComponent(deliveryLocation);
-  window.location.href = "home.html?deliveryLocation=" + encodedLocation;
+  //const encodedLocation = encodeURIComponent(deliveryLocation);
+  document.cookie = `deliveryLocation=${deliveryLocation};`;
+  window.location.href = "home.html";
 };
 
 //Footer section

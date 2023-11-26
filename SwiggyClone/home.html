@@ -18,9 +18,7 @@
     <header class="nav-bar">
       <div class="nav-bar-container">
         <div class="logo">
-
           <img id="showDataTable" src="./assets/img/logo.svg" alt="" />
-
         </div>
 
         <!--Nav Bar Location-->
@@ -55,7 +53,6 @@
 
     <section class="login-signup-section">
       <div id="loginContainer" class="hidden">
-
         <div class="modal">
           <div id="loginContent">
             <span class="close" id="closemodal">&times;</span>
@@ -76,23 +73,23 @@
               </div>
             </div>
 
-
             <form class="loginForm">
               <div class="form">
                 <input id="username" type="text" required placeholder="Type" />
                 <label for="">Username</label>
               </div>
               <div class="form">
-
                 <input
                   id="password"
                   type="password"
                   required
                   placeholder="Type"
                 />
-
                 <label for="">Password</label>
               </div>
+              <p id="wrongCredentials" style="color: #ff4444; display: none">
+                Wrong Credentials !!!
+              </p>
               <button class="signinLogin-button" type="submit">Submit</button>
             </form>
           </div>
@@ -100,9 +97,7 @@
       </div>
       <!-- Sign-Up -->
       <div id="SignUpContainer" class="hidden">
-
         <div class="modal">
-
           <div id="loginContent">
             <span class="close" id="closeSignUpForm">&times;</span>
             <div class="flexcontainer">
@@ -123,21 +118,20 @@
 
             <form>
               <div class="form">
-
                 <input id="signUp firstName" type="text" placeholder="Type" />
-                <label for="">First Name</label>
+                <label for="" data-original-text="First Name">First Name</label>
               </div>
               <div class="form">
                 <input id="signUp lastName" type="text" placeholder="Type" />
-                <label for="">Last Name</label>
+                <label for="" data-original-text="Last Name">Last Name</label>
               </div>
               <div class="form">
                 <input id="signUp email" type="text" placeholder="Type" />
-                <label for="">Email</label>
+                <label for="" data-original-text="Email">Email</label>
               </div>
               <div class="form">
                 <input id="signUp username" type="text" placeholder="Type" />
-                <label for="">Username</label>
+                <label for="" data-original-text="Username">Username</label>
               </div>
               <div class="form">
                 <input
@@ -145,8 +139,7 @@
                   type="password"
                   placeholder="Type"
                 />
-
-                <label for="">Password</label>
+                <label for="" data-original-text="Password">Password</label>
               </div>
               <button class="signinLogin-button" type="submit">Submit</button>
             </form>
@@ -324,7 +317,6 @@
       <div class="filter-container">
         <div class="filter-btn">Filter <i class="fa-solid fa-filter"></i></div>
 
-
         <div class="filter-btn">
           Sort By <i class="fa-solid fa-chevron-down"></i>
         </div>
@@ -332,7 +324,6 @@
         <div class="filter-btn">Fast Delivery</div>
 
         <div class="filter-btn">New on Swiggy</div>
-
 
         <div class="filter-btn">Ratings 4.0+</div>
 
@@ -344,7 +335,6 @@
 
         <div class="filter-btn">Less than 300</div>
       </div>
-
 
       <div class="rest-online-container" id="rest-online-container">
         <div
@@ -565,8 +555,6 @@
     </footer>
 
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/signin.js"></script>
-    <script src="./assets/js/login.js"></script>
-
+    <script src="./assets/js/signinLogin.js"></script>
   </body>
 </html>

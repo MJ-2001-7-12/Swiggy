@@ -16,8 +16,12 @@
 
     <header class="nav-bar">
       <div class="nav-bar-container">
-        <div class="logo" >
-          <img src="./assets/img/logo.svg" alt="" onclick="window.location.href='home.html';"/>
+        <div class="logo">
+          <img
+            src="./assets/img/logo.svg"
+            alt=""
+            onclick="window.location.href='home.html';"
+          />
         </div>
 
         <!--Nav Bar Location-->
@@ -34,7 +38,9 @@
             <i class="fa-solid fa-magnifying-glass"></i> Search
           </li>
           <li><i class="fa-solid fa-percent"></i> Offers</li>
-          <li onclick="window.location.href='contact.html';"><i class="fa-solid fa-circle-info"></i> Help</li>
+          <li onclick="window.location.href='contact.html';">
+            <i class="fa-solid fa-circle-info"></i> Help
+          </li>
           <li id="signInLink">
             <i class="fa-solid fa-solid fa-user"></i> Sign In
           </li>
@@ -48,7 +54,6 @@
 
     <section class="login-signup-section">
       <div id="loginContainer" class="hidden">
-
         <div class="modal">
           <div id="loginContent">
             <span class="close" id="closemodal">&times;</span>
@@ -69,17 +74,23 @@
               </div>
             </div>
 
-
             <form class="loginForm">
               <div class="form">
                 <input id="username" type="text" required placeholder="Type" />
                 <label for="">Username</label>
               </div>
               <div class="form">
-                <input id="password" type="text" required placeholder="Type" />
-
+                <input
+                  id="password"
+                  type="password"
+                  required
+                  placeholder="Type"
+                />
                 <label for="">Password</label>
               </div>
+              <p id="wrongCredentials" style="color: #ff4444; display: none">
+                Wrong Credentials !!!
+              </p>
               <button class="signinLogin-button" type="submit">Submit</button>
             </form>
           </div>
@@ -87,9 +98,7 @@
       </div>
       <!-- Sign-Up -->
       <div id="SignUpContainer" class="hidden">
-
         <div class="modal">
-
           <div id="loginContent">
             <span class="close" id="closeSignUpForm">&times;</span>
             <div class="flexcontainer">
@@ -110,24 +119,28 @@
 
             <form>
               <div class="form">
-                <input type="text" required placeholder="Type" />
-                <label for="">First Name</label>
+                <input id="signUp firstName" type="text" placeholder="Type" />
+                <label for="" data-original-text="First Name">First Name</label>
               </div>
               <div class="form">
-                <input type="text" required placeholder="Type" />
-                <label for="">Last Name</label>
+                <input id="signUp lastName" type="text" placeholder="Type" />
+                <label for="" data-original-text="Last Name">Last Name</label>
               </div>
               <div class="form">
-                <input type="text" required placeholder="Type" />
-                <label for="">Email</label>
+                <input id="signUp email" type="text" placeholder="Type" />
+                <label for="" data-original-text="Email">Email</label>
               </div>
               <div class="form">
-                <input type="text" required placeholder="Type" />
-                <label for="">Username</label>
+                <input id="signUp username" type="text" placeholder="Type" />
+                <label for="" data-original-text="Username">Username</label>
               </div>
               <div class="form">
-                <input type="text" required placeholder="Type" />
-                <label for="">Password</label>
+                <input
+                  id="signUp password"
+                  type="password"
+                  placeholder="Type"
+                />
+                <label for="" data-original-text="Password">Password</label>
               </div>
               <button class="signinLogin-button" type="submit">Submit</button>
             </form>
@@ -138,57 +151,68 @@
 
     <!-- gheevarghese ends -->
 
-
     <!--========Contact section========-->
     <section class="contact section" id="contact">
-        <div class="container flex-center">
-            <!-- <h2 class="section-title-02">Contact Us</h2> -->
-            <div class="content">
-                <div class="contact-left">
-                    <h2>Get in Touch:</h2>
-                    <ul class="contact-list">
+      <div class="container flex-center">
+        <!-- <h2 class="section-title-02">Contact Us</h2> -->
+        <div class="content">
+          <div class="contact-left">
+            <h2>Get in Touch:</h2>
+            <ul class="contact-list">
+              <li>
+                <h3 class="item-title">
+                  <i class="fa-brands fa-twitter"></i>Twitter
+                </h3>
+                <span><a href="#" target="_blank">Swiggy</a></span>
+              </li>
+              <li>
+                <h3 class="item-title">
+                  <i class="fas fa-envelope"></i>Email Address
+                </h3>
+                <span
+                  ><a href="#" target="_blank">contact@swiggyclone.com</a></span
+                >
+              </li>
 
-                        <li>
-                            <h3 class="item-title"><i class="fa-brands fa-twitter"></i>Twitter</h3>
-                            <span><a href="#" target="_blank">Swiggy</a></span>
+              <li>
+                <h3 class="item-title">
+                  <i class="fa-brands fa-instagram"></i>Instagram
+                </h3>
+                <span><a href="#" target="_blank">swiggy</a></span>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-right">
+            <p>
+              "Your Feedback, Our Secret Sauce:<br /><span
+                >"Reach Out Today"</span
+              >
+            </p>
 
-                        </li>
-                        <li>
-                            <h3 class="item-title"><i class="fas fa-envelope"></i>Email Address</h3>
-                            <span><a href="#" target="_blank">contact@swiggyclone.com</a></span>
-                        </li>
-
-                        <li>
-                            <h3 class="item-title"><i class="fa-brands fa-instagram"></i>Instagram</h3>
-                            <span><a href="#" target="_blank">swiggy</a></span>
-                        </li>
-
-
-                    </ul>
-                </div>
-                <div class="contact-right">
-                    <p>"Your Feedback, Our Secret Sauce:<br><span>"Reach Out Today"</span></p>
-                
-                    <form action="" class="contact-form">
-                        <div class="first-row">
-                            <input type="text" placeholder="Name">
-                        </div>
-                        <div class="second-row">
-                            <input type="email" placeholder="Email">
-                            <input type="text" placeholder="Subject">
-                        </div>
-                        <div class="third-row">
-                            <textarea name="message" id="" rows="7" placeholder="Message"></textarea>
-                        </div>
-                        <button class="btn" type="submit">Shoot <i class="fas fa-paper-plane"></i></button>
-                    </form> 
-                </div>
-            </div>
+            <form action="" class="contact-form">
+              <div class="first-row">
+                <input type="text" placeholder="Name" />
+              </div>
+              <div class="second-row">
+                <input type="email" placeholder="Email" />
+                <input type="text" placeholder="Subject" />
+              </div>
+              <div class="third-row">
+                <textarea
+                  name="message"
+                  id=""
+                  rows="7"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <button class="btn" type="submit">
+                Shoot <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
-
-
-
 
     <!--============= Best Places to Eat ==========-->
     <section class="best-places section">
@@ -319,26 +343,8 @@
     </footer>
 
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/signin.js"></script>
+    <script src="./assets/js/signinLogin.js"></script>
 
     <!-- <script src="./sign in .js"></script> -->
   </body>
 </html>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
