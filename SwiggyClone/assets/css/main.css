@@ -604,7 +604,7 @@ header {
 }
 
 /* MELWIN CSS */
-.index-body{
+.index-body {
   margin: 0;
   padding: 0;
 }
@@ -648,7 +648,6 @@ header {
   padding-right: 50px;
   margin-top: 10px;
   display: flex;
-  
 }
 
 .landing-page-root .signupButton {
@@ -662,7 +661,7 @@ header {
 
 .landing-page-root .loginButton {
   background-color: white;
-  
+
   width: 120px;
   height: 40px;
   font-size: medium;
@@ -721,7 +720,7 @@ header {
   /* background-color: rgb(175, 175, 175); */
   color: grey;
   position: absolute;
-  
+
   /* top: 2px; */
   width: 100px;
   background: none;
@@ -1168,10 +1167,13 @@ table.dataTable tbody tr:hover td {
 /* MERIN CSS STARTS */
 
 /*=============MENU============ */
+/* MERIN CSS STARTS */
+
+/*=============MENU============ */
 
 #menu-box-container {
   display: block;
-  margin: 50px 300px 0px 300px;
+  margin: 50px 100px 0px 150px;
   font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
 }
 
@@ -1241,24 +1243,21 @@ table.dataTable tbody tr:hover td {
   box-shadow: 0 3px 8px #e9e9eb;
 }
 
-
-    width: 150px;
-    height: 150px;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
+#menu-box-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
 }
 #menu-box-container img:hover {
   transform: scale(1.1); /* Scale up the image on hover */
-
 }
 /*===========================================================*/
 
 #menu-headings-container {
-
-    display: block;
-    margin: 120px 10px 0px 200px;
-    font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
-
+  display: block;
+  margin: 120px 10px 0px 200px;
+  font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
 }
 
 #menu-headings-container .menu-head {
@@ -1268,24 +1267,23 @@ table.dataTable tbody tr:hover td {
   margin: 20px;
   position: relative;
 }
-
-.menu-head .text-container, .menu-head .video-container{
-    flex:1;
+.menu-head .text-container,
+.menu-head .video-container {
+  flex: 1;
 }
- .video-element-container{
-    border-radius: 10%;
-    /* margin-left: 40px; */
-    background-color: transparent;
-  }
-  .video-element-container:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  .text-container{
-    margin-right: 40px;
-  }
-
+.video-element-container {
+  border-radius: 10%;
+  /* margin-left: 40px; */
+  background-color: transparent;
+}
+.video-element-container:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.text-container {
+  margin-right: 40px;
+}
 #menu-headings-container .menu-head .head-left-side {
-  max-width: 60%;
+  max-width: 50%;
 }
 
 #menu-headings-container .menu-head .head-left-side span {
@@ -1314,104 +1312,65 @@ table.dataTable tbody tr:hover td {
   font-size: 20px;
   color: #7e808c;
   margin-right: 20px;
-  line-height: 0.75;
+  line-height: 1.75;
 }
 
 /* #menu-headings-container .menu-head .head-left-side p {
-    margin-right: 20px;
-    font-weight: 300px;
-    font-size: 30px;
+  margin-right: 20px;
+  font-weight: 300px;
+  font-size: 30px;
 } */
 
 #menu-headings-container .menu-head .head-right-side button {
   position: absolute;
-  right: 20px;
-  bottom: 40px;
+  /* right: 400px; */
+  margin-left: 550px;
+  bottom: 200px;
   border: 1px solid #e9e9eb;
   box-shadow: 0 1px 5px #f9f9f9;
   border-radius: 6px;
   text-align: center;
-  padding: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
   max-width: 100px;
-  float: right;
+  /* float: right; */
   background-color: #fff;
   color: rgb(61, 155, 109);
 }
 
-
-    position: absolute;
-    /* right: 400px; */
-    margin-left: 550px;
-    bottom: 250px;
-    border: 1px solid #e9e9eb;
-    box-shadow: 0 1px 5px #f9f9f9;
-    border-radius: 6px;
-    text-align: center;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 2px;
-    max-width: 100px;
-    /* float: right; */
-    background-color: #fff;
-    color: rgb(61, 155, 109);
-
+.coupons-container {
+  /* margin-left: 200px; */
+  width: 650px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  display: flex;
 }
- 
-.coupons-container{
-    /* margin-left: 200px; */
-    width:650px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    display:flex;
+.coupons img {
+  width: 20px;
+  height: 15px;
 }
-.coupons img{
-    width:20px;
-    height:15px;
+.coupon-p {
+  font-weight: 600;
+  font-size: 0.7rem;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  padding-left: 4px;
+  text-align: center;
+  color: rgb(228, 109, 71);
+  border-left: 1px solid #e9e9eb;
+  float: left;
+  margin-right: 10px;
 }
-.coupon-p{
-    font-weight: 600;
-    font-size: .7rem;
-    -ms-writing-mode: tb-lr;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    padding-left: 4px;
-    text-align: center;
-    color: rgb(228, 109, 71);
-    border-left: 1px solid #e9e9eb;
-    float: left;
-    margin-right: 10px;
-}
-.coupon-1{
-    flex:1;
-    border: 1px solid #d3d3d7;
-    margin-right: 20px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 1px;
-    border-radius: 5%;
-    color:#93959f;
-}
-
-.coupon-2{
-    flex:1;
-    border: 1px solid #d3d3d7;
-    margin-right: 20px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    border-radius: 5%;
-    color:#93959f;
-
-}
-
 .coupon-1 {
   flex: 1;
   border: 1px solid #d3d3d7;
-  margin-right: 80px;
+  margin-right: 20px;
   padding-top: 10px;
-  padding-bottom: 10px;
   padding-left: 10px;
+  padding-bottom: 1px;
   border-radius: 5%;
   color: #93959f;
 }
@@ -1419,41 +1378,50 @@ table.dataTable tbody tr:hover td {
 .coupon-2 {
   flex: 1;
   border: 1px solid #d3d3d7;
+  margin-right: 20px;
   padding-top: 10px;
-  padding-bottom: 10px;
   padding-left: 10px;
+  padding-bottom: 10px;
+  border-radius: 5%;
+  color: #93959f;
+}
+.coupon-3 {
+  flex: 1;
+  border: 1px solid #d3d3d7;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
   border-radius: 5%;
   color: #93959f;
 }
 
 /* 
-  #menu-headings-container .menu-head .head-left-side {
-    width: auto; 
-    height: auto; 
-    margin-left: 100px;
-    margin-top: 100px;
-  } */
+#menu-headings-container .menu-head .head-left-side {
+  width: auto; 
+  height: auto; 
+  margin-left: 100px;
+  margin-top: 100px;
+} */
 
 .menu-headings-above-hr {
   border: none;
   border-top: 1px dashed rgba(100, 100, 111, 0.2);
-  margin-left: 320px;
-  margin-right: 320px;
+  margin-left: 5px;
+  margin-top: 50px;
 }
 
 .menu-headings-under-hr {
   border-top: 1px solid rgba(100, 100, 111, 0.2);
-  margin-left: 320px;
-  margin-right: 320px;
+  margin-left: 190px;
+  margin-right: 225px;
   margin-top: 25px;
 }
-
 
 #browse-btn {
   height: 40px;
   /* outline: none; */
-  background-color:transparent;
-  border:none;
+  background-color: transparent;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1499,8 +1467,8 @@ table.dataTable tbody tr:hover td {
   /* Initially hide the menu */
   position: absolute;
   bottom: 30px;
-  /* Adjust the top value to position it below the button */
-  z-index: 100;
+  /* Adjust the top value to position wrt the button */
+  z-index: -100;
   /* control its stacking order */
   max-height: 180px;
   width: 350px;
@@ -1524,13 +1492,12 @@ table.dataTable tbody tr:hover td {
 }
 
 .menu-search-bar-container {
-
-    position: absolute;
-    top: 100px;
-    right: 350px;
-    display: flex;
-    background: none;
-    border: none;
+  position: absolute;
+  top: 100px;
+  right: 350px;
+  display: flex;
+  background: none;
+  border: none;
 }
 
 .menu-search-bar-container input {
@@ -1555,39 +1522,37 @@ table.dataTable tbody tr:hover td {
   color: #fff;
 }
 
-
-
 .cart-modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1;
-    right: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    overflow: auto;
-    background: linear-gradient(to top, #60b246, #FFFFFF);
-    animation: gradientAnimation 5s ease infinite;
-    background-size: 100% 200%;
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+  background: linear-gradient(to top, #60b246, #ffffff);
+  animation: gradientAnimation 5s ease infinite;
+  background-size: 100% 200%;
+  background-position: 50% 50%;
+}
+
+/* Create the moving gradient effect */
+@keyframes gradientAnimation {
+  0% {
+    background-size: 100% 100%;
     background-position: 50% 50%;
   }
-  
-  /* Create the moving gradient effect */
-  @keyframes gradientAnimation {
-    0% {
-      background-size: 100% 100%;
-      background-position: 50% 50%;
-    }
-    50% {
-      background-size: 100% 200%;
-      background-position: 50% 0%;
-    }
-    100% {
-      background-size: 100% 200%;
-      background-position: 50% 100%;
-    }
+  50% {
+    background-size: 100% 200%;
+    background-position: 50% 0%;
   }
-  .cart-modal-content {
+  100% {
+    background-size: 100% 200%;
+    background-position: 50% 100%;
+  }
+}
+.cart-modal-content {
   background-color: #fefefe;
   margin: 30% auto;
   padding: 20px;
@@ -1596,124 +1561,123 @@ table.dataTable tbody tr:hover td {
   max-width: 600px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .cart-close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .cart-close:hover,
-  .cart-close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .cart-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .cart-table th,
-  .cart-table td {
-    border: 1px solid #dddddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .cart-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    color:rgb(228, 109, 71);
-  }
-  
-  /* Alternate row colors */
-  .cart-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  /* Hover effect on rows */
-  .cart-table tr:hover {
-    background-color: #e9e9e9;
-  }
-  .total-price{
-    font-weight: 700;
-  }
-  #viewCartBtn{
-    color: var(--secondary-color);
-    font-family: Poppins, sans-serif;
-    font-size: 16px;
-    background: white;
-    border:none;
-  }
-  #viewCartBtn:hover {
-    color: var(--primary-color);
-    cursor: pointer;
+}
+
+.cart-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.cart-close:hover,
+.cart-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.cart-table th,
+.cart-table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.cart-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: rgb(228, 109, 71);
+}
+
+/* Alternate row colors */
+.cart-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect on rows */
+.cart-table tr:hover {
+  background-color: #e9e9e9;
+}
+.total-price {
+  font-weight: 700;
+}
+#viewCartBtn {
+  color: var(--secondary-color);
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  background: white;
+  border: none;
+}
+#viewCartBtn:hover {
+  color: var(--primary-color);
+  cursor: pointer;
 }
 /* CSS for the moving cart animation */
 @keyframes moveCart {
-    0% {
-      transform: translateX(500%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
+  0% {
+    transform: translateX(500%);
   }
-  
-  .cart-heading{
-    color:#60b246;
-    text-align: center;
+  100% {
+    transform: translateX(0%);
   }
-  /* Styling for the cart icon */
-  .moving-cart {
-    position: absolute;
-    bottom: 350px;
-    right: 500px;
-    width: 100px; /* Adjust the width as needed */
-    height: auto;
-    background-color: transparent;
-    animation: moveCart 10s infinite alternate; /* Adjust animation duration and properties */
-  }
-  .delete-cart-item-button{
-    color:white;
-    background: white;
-    border:none;
-    font-size: larger;
-    align-items: center;
-    margin-left: 10px;
-    float:right;
-    padding-left:10px;
-    padding-right:10px;
-    padding-top:1px;
-    padding-bottom:1px;
-    background-color: #60b246;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+}
 
-  .menu-footer {
-    background-color: #f1f1f6;
-    color: #93959f;
-    margin-left: 180px;
-    margin-right: 180px;
-    font-weight: 300;
-    line-height: 1.5;
-    padding-bottom: 50px;
+.cart-heading {
+  color: #60b246;
+  text-align: center;
+}
+/* Styling for the cart icon */
+.moving-cart {
+  position: absolute;
+  bottom: 350px;
+  right: 500px;
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+  background-color: transparent;
+  animation: moveCart 10s infinite alternate; /* Adjust animation duration and properties */
+}
+.delete-cart-item-button {
+  color: white;
+  background: white;
+  border: none;
+  font-size: larger;
+  align-items: center;
+  margin-left: 10px;
+  float: right;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #60b246;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-footer {
+  background-color: #f1f1f6;
+  color: #93959f;
+  margin-left: 180px;
+  margin-right: 180px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding-bottom: 50px;
 }
 
 .menu-footer .menu-footer-top {
-    display:flex;
-    margin-left:10px;
-    margin-bottom:30px;
-    padding:30px;
-    font-size: 15px;
-    border-bottom: 1px solid rgba(100, 100, 111, 0.2);
-    align-items: center;
-
+  display: flex;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  padding: 30px;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(100, 100, 111, 0.2);
+  align-items: center;
 }
 
 .menu-footer .menu-footer-img {
@@ -1731,6 +1695,5 @@ table.dataTable tbody tr:hover td {
   font-size: 20px;
   font-weight: 400;
 }
- 
 
 /* MERIN CSS ENDS */
