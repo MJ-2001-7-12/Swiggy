@@ -364,103 +364,32 @@ header {
 }
 
 /*========Contact section========*/
-
-.contact {
+#contact{
   margin-top: 8em;
 }
-
-.contact .container .content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+.contactus-bg {
+  height: 50vh;
+  background-image: url('https://labs.swiggy.in/assets/contact-banner.jpg');
+  background-size: cover;
+  background-position:calc(70% + 5px) center;
 }
-
-.contact-left h2 {
-  font-size: 2.1em;
-  font-weight: 800;
-  margin-bottom: 40px;
-}
-
-.contact-list li {
-  margin-bottom: 40px;
-  list-style: none;
-}
-
-.contact-list li h3 {
-  font-size: 1.3em;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.contact-list li h3 i {
-  color: var(--primary-color);
-  font-size: 1.3em;
-  margin-right: 10px;
-}
-
-.contact-list li span {
-  color: var(--secondary-color);
-  margin-left: 40px;
-}
-
-.contact-list li span a {
-  color: var(--primary-color);
+.list-unstyled a {
   text-decoration: none;
 }
-
-.contact-right p {
-  color: var(--primary-color);
-  font-size: 1.6em;
-  margin-bottom: 30px;
+.contactus-font {
+  font-family:"Poppins", sans-serif;
 }
-
-.contact-right p span {
-  color: var(--primary-color);
-  font-weight: 700;
+.orange-text::placeholder,.orange-text,.orange-text:focus,.orange-text:active {
+  color: #fc8019;
 }
-
-.contact-form input,
-.contact-form textarea {
-  border: none;
-  color: var(--primary-color);
-  background: var(--footer-bg-color);
-  font-size: var(--normal-font-size);
-  margin-bottom: 20px;
-  padding: 15px 40px 40px 20px;
-  border-radius: 5px;
-  outline: var(--primary-color);
+.contactus-btn-orange {
+  color: #fff;
 }
-
-.contact-form textarea {
-  width: 100%;
-  resize: none;
+.contactus-btn-orange, .contactus-btn-orange:hover,
+.contactus-btn-orange:focus {
+  background-color: #fc8019;
+  border-color: #fc8019;
 }
-
-::placeholder {
-  color: var(--primary-color);
-}
-
-.contact-form .first-row input {
-  width: 100%;
-}
-
-.contact-form .second-row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.contact-form .second-row input {
-  width: 48%;
-}
-
-.contact-form .btn {
-  border: none;
-  margin-top: 0;
-  border-radius: 5px;
-  cursor: pointer;
-  background: var(--primary-color);
-}
-
 /* ==========Contact Ends=========== */
 
 /* ==========Footer=========== */
@@ -1023,6 +952,9 @@ table.dataTable tbody tr:hover td {
 
 .mainDiv {
   margin: 20px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -1035,19 +967,25 @@ table.dataTable tbody tr:hover td {
 .foodsTitle {
   font-family: "Basis Grotesque Pro";
   font-size: 24px;
-  color: #02060ceb;
+  color: #02060CEB;
 }
 
 .foodCards {
   border-radius: 20px;
   background-color: white;
-  margin: 10px 10px;
   /* box-shadow: 4px 29px #e8e8e8; */
   /* background-image: linear-gradient(to bottom, #f2f2f2 0%, rgba(236, 236, 236, 0) 100%); */
   box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.1);
   align-items: center;
   text-align: center;
   padding: 20px 20px;
+  width: 47%;
+  margin: 10px;
+}
+
+.foodCards hr{
+  border-top: dotted 1px;
+  margin-bottom: 5px;
 }
 
 .foodCards img {
@@ -1057,13 +995,17 @@ table.dataTable tbody tr:hover td {
 }
 
 .foodCardsFrame {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* grid-template-columns: repeat(2, 1fr); */
   margin-top: 10px;
   background-color: #f5f6f8;
-  margin: 10px 100px;
+
   padding: 10px 10px;
 }
+
 
 .imageRatingsDiv {
   display: flex;
@@ -1073,6 +1015,7 @@ table.dataTable tbody tr:hover td {
   display: flex;
   justify-content: space-between;
 }
+
 
 .ratingsFrame {
   display: flex;
@@ -1098,6 +1041,7 @@ table.dataTable tbody tr:hover td {
 }
 
 .restaurantRatings {
+
   display: flex;
   align-items: center;
   border: 1px solid black;
@@ -1119,13 +1063,13 @@ table.dataTable tbody tr:hover td {
 }
 
 .searchBar {
-  width: 858px;
+  width: 820px;
   height: 48px;
   border: 1px solid #3e4152;
+  border-radius: 5px;
   color: #282c3f;
   font: 20px ProximaNova, arial, Helvetica Neue, sans-serif;
   margin-top: 150px;
-  margin-left: 150px;
   margin-bottom: 50px;
   display: flex;
 }
@@ -1140,33 +1084,30 @@ table.dataTable tbody tr:hover td {
 }
 
 .searchBarBack {
-  width: 40px;
-  height: 48px;
+  height: 100%;
+  display: flex;
   align-items: center;
+  margin-left: 5px;
 }
 
 .searchBarBack img {
-  width: 35px;
-  height: 40px;
+height: 60%;
 }
 
 .searchBarIcon {
-  margin-left: 600px;
+  margin-left: 510px;
   width: 40px;
-  height: 48px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .searchBarIcon img {
-  margin-top: 5px;
-  width: 25px;
-  height: 35px;
+  height: 50%;
 }
 
 /* BIVINA CSS ENDS*/
 
-/* MERIN CSS STARTS */
-
-/*=============MENU============ */
 /* MERIN CSS STARTS */
 
 /*=============MENU============ */
