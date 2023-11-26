@@ -1,32 +1,48 @@
-// Elements
-const SignUpContainer: HTMLElement | null = document.getElementById("SignUpContainer");
-const modal: HTMLElement | null = document.getElementById("modal");
-
-// Functions
 const redirectToSignup = (): void => {
-  if (SignUpContainer) {
-    SignUpContainer.classList.remove("hidden");
-  }
-  if (modal) {
-    modal.style.right = "0";
-  }
+  const signUpContainer = document.getElementById('SignUpContainer') as HTMLDivElement;
+  const modal = document.getElementById('modal') as HTMLDivElement;
+  const usernameInput = document.getElementById('username') as HTMLInputElement;
+  const passwordInput = document.getElementById('password') as HTMLInputElement;
+  const signUpFirstNameInput = document.getElementById('signUp firstName') as HTMLInputElement;
+  const signUpLastNameInput = document.getElementById('signUp lastName') as HTMLInputElement;
+  const signUpEmailInput = document.getElementById('signUp email') as HTMLInputElement;
+  const signUpUsernameInput = document.getElementById('signUp username') as HTMLInputElement;
+  const signUpPasswordInput = document.getElementById('signUp password') as HTMLInputElement;
+
+  signUpContainer.classList.remove('hidden');
+  modal.style.right = '0';
+  usernameInput.value = '';
+  passwordInput.value = '';
+  signUpFirstNameInput.value = '';
+  signUpLastNameInput.value = '';
+  signUpEmailInput.value = '';
+  signUpUsernameInput.value = '';
+  signUpPasswordInput.value = '';
 };
 
+function deleteCookie(name: string): void {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+}
+
+deleteCookie('id');
+deleteCookie('firstName');
+
 // Changing headings
-const changingHeading: HTMLElement | null = document.getElementById("changingHeading");
+
+const changingHeadingElement = document.getElementById('changingHeading') as HTMLHeadingElement;
 const texts: string[] = [
-  "Late night at office?",
-  "Hungry?",
-  "Unexpected Guests?",
-  "Cooking gone wrong?",
-  "Movie marathon?",
-  "Game night?",
+  'Late night at office?',
+  'Hungry?',
+  'Unexpected Guests?',
+  'Cooking gone wrong?',
+  'Movie marathon?',
+  'Game night?',
 ];
-let currentIndex: number = 0;
+let currentIndex = 0;
 
 function changeHeading(): void {
-  if (changingHeading) {
-    changingHeading.textContent = texts[currentIndex];
+  if (changingHeadingElement) {
+    changingHeadingElement.textContent = texts[currentIndex];
   }
   currentIndex = (currentIndex + 1) % texts.length;
 }
@@ -37,96 +53,97 @@ setInterval(changeHeading, 2000);
 // Location sharing
 const submitForm = (event: Event): void => {
   event.preventDefault(); // Prevent the default form submission
-  const deliveryLocationInput: HTMLInputElement | null = document.getElementById("deliveryLocation") as HTMLInputElement;
-  const deliveryLocation: string | undefined = deliveryLocationInput?.value;
+  const deliveryLocationInput = document.getElementById('deliveryLocation') as HTMLInputElement;
+  const deliveryLocation: string | undefined = deliveryLocationInput ? deliveryLocationInput.value : undefined;
+
   if (deliveryLocation) {
-    document.cookie = `deliveryLocation=${deliveryLocation};`;
-    window.location.href = "home.html";
+    document.cookie = `deliveryLocation=${deliveryLocation}`;
+    window.location.href = 'home.html';
   }
 };
 
 // Footer section
+
 // Company section
-const companyList: HTMLElement | null = document.getElementById("companyList");
+const companyList: HTMLUListElement = document.getElementById('companyList') as HTMLUListElement;
 const companyListElements: string[] = [
-  "About us",
-  "Team",
-  "Careers",
-  "Swiggy Blog",
-  "Bug Bounty",
-  "Swiggy One",
-  "Swiggy Corporate",
-  "Swiggy Instamart",
-  "Swiggy Genie",
-  "Swiggy HDFC Bank Credit Card",
+  'About us',
+  'Team',
+  'Careers',
+  'Swiggy Blog',
+  'Bug Bounty',
+  'Swiggy One',
+  'Swiggy Corporate',
+  'Swiggy Instamart',
+  'Swiggy Genie',
+  'Swiggy HDFC Bank Credit Card',
 ];
 
 for (let i = 0; i < companyListElements.length; i++) {
-  const company: HTMLLIElement = document.createElement("li");
-  const companyListButton: HTMLButtonElement = document.createElement("button");
+  const company = document.createElement('li') as HTMLLIElement;
+  const companyListButton = document.createElement('button') as HTMLButtonElement;
   companyListButton.textContent = companyListElements[i];
-  companyListButton.classList.add("cList");
+  companyListButton.classList.add('cList');
   company.appendChild(companyListButton);
-  if (companyList) {
-    companyList.appendChild(company);
-  }
+
+  companyList.appendChild(company);
 }
 
 // Contact section
-const contactList: HTMLElement | null = document.getElementById("contactList");
-const contactListElements: string[] = ["Help & Support", "Partner with us", "Ride with us"];
+const contactList: HTMLUListElement = document.getElementById('contactList') as HTMLUListElement;
+const contactListElements: string[] = ['Help & Support', 'Partner with us', 'Ride with us'];
 
 for (let i = 0; i < contactListElements.length; i++) {
-  const contact: HTMLLIElement = document.createElement("li");
-  const contactListButton: HTMLButtonElement = document.createElement("button");
+  const contact = document.createElement('li') as HTMLLIElement;
+  const contactListButton = document.createElement('button') as HTMLButtonElement;
   contactListButton.textContent = contactListElements[i];
-  contactListButton.classList.add("cList");
+  contactListButton.classList.add('cList');
   contact.appendChild(contactListButton);
-  if (contactList) {
-    contactList.appendChild(contact);
-  }
+
+  contactList.appendChild(contact);
 }
 
 // Legal section
-const legalList: HTMLElement | null = document.getElementById("legalList");
+const legalList: HTMLUListElement = document.getElementById('legalList') as HTMLUListElement;
 const legalListElements: string[] = [
-  "Terms & Conditions",
-  "Refund & Cancellation",
-  "Privacy Policy",
-  "Cookie Policy",
-  "Offer Terms",
-  "Phishing & Fraud",
-  "Corporate - Swiggy Money Codes Terms and Conditions",
-  "Corporate - Swiggy Discount Voucher Terms and Conditions",
+  'Terms & Conditions',
+  'Refund & Cancellation',
+  'Privacy Policy',
+  'Cookie Policy',
+  'Offer Terms',
+  'Phishing & Fraud',
+  'Corporate - Swiggy Money Codes Terms and Conditions',
+  'Corporate - Swiggy Discount Voucher Terms and Conditions',
 ];
 
 for (let i = 0; i < legalListElements.length; i++) {
-  const legal: HTMLLIElement = document.createElement("li");
-  const legalListButton: HTMLButtonElement = document.createElement("button");
+  const legal = document.createElement('li') as HTMLLIElement;
+  const legalListButton = document.createElement('button') as HTMLButtonElement;
   legalListButton.textContent = legalListElements[i];
-  legalListButton.classList.add("cList");
+  legalListButton.classList.add('cList');
   legal.appendChild(legalListButton);
-  if (legalList) {
-    legalList.appendChild(legal);
-  }
-}
 
+  legalList.appendChild(legal);
+}
 // We Deliver To section
 const numberOfPlaces: number = 100;
+
 fetch(`https://randomuser.me/api/?results=${numberOfPlaces}`)
-  .then((response) => response.json())
-  .then((data) => {
-    const placeNames: string[] = data.results.map((result: { name: { first: string } }) => result.name.first);
+  .then((response: Response) => response.json())
+  .then((data: { results: Array<{ name: { first: string } }> }) => {
+    const placeNames: string[] = data.results.map((result) => result.name.first);
     console.log(placeNames);
-    let y: number = 0;
+
+    let y = 0;
     for (let i = 1; i <= 4; i++) {
-      const weDeliverTo: HTMLElement | null = document.getElementById(`wedeliverList${i}`);
-      for (y; y < i * 25; y++) {
-        const wedeliverElement: HTMLLIElement = document.createElement("li");
-        const wedeliverListButton: HTMLButtonElement = document.createElement("button");
+      const weDeliverTo: HTMLUListElement = document.getElementById(`wedeliverList${i}`) as HTMLUListElement;
+      for (; y < i * 25; y++) {
+        const wedeliverElement: HTMLLIElement = document.createElement('li');
+        const wedeliverListButton: HTMLButtonElement = document.createElement('button');
         wedeliverListButton.textContent = placeNames[y];
-        wedeliverListButton.classList.add("cList");
+        wedeliverListButton.classList.add('cList');
         wedeliverElement.appendChild(wedeliverListButton);
+
         if (weDeliverTo) {
           weDeliverTo.appendChild(wedeliverElement);
         }
@@ -136,26 +153,30 @@ fetch(`https://randomuser.me/api/?results=${numberOfPlaces}`)
     // Best Places section
     y = 0;
     for (let i = 1; i <= 4; i++) {
-      const bestPlaces: HTMLElement | null = document.getElementById(`bestPlacesList${i}`);
-      for (y; y < i * 25; y++) {
-        const bestPlacesElement: HTMLLIElement = document.createElement("li");
-        const bestPlacesListButton: HTMLButtonElement = document.createElement("button");
+      const bestPlaces: HTMLUListElement = document.getElementById(`bestPlacesList${i}`) as HTMLUListElement;
+      for (; y < i * 25; y++) {
+        const bestPlacesElement: HTMLLIElement = document.createElement('li');
+        const bestPlacesListButton: HTMLButtonElement = document.createElement('button');
         bestPlacesListButton.textContent = `Best Restaurants In ${placeNames[y]}`;
-        bestPlacesListButton.classList.add("cList");
+        bestPlacesListButton.classList.add('cList');
         bestPlacesElement.appendChild(bestPlacesListButton);
+
         if (bestPlaces) {
           bestPlaces.appendChild(bestPlacesElement);
         }
       }
     }
   })
-  .catch((error) => console.error("Error:", error));
+  .catch((error: Error) => {
+    console.error('Error:', error);
+  });
 
 // BOTTOM SECTION
+
 // Bottom swiggy logo
 const scrollToTop = (): void => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth",
+    behavior: 'smooth',
   });
 };
