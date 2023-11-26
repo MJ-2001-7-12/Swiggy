@@ -1,17 +1,25 @@
-// Elements
-var SignUpContainer = document.getElementById("SignUpContainer");
-var modal = document.getElementById("modal");
-// Functions
-var redirectToSignup = function () {
-    if (SignUpContainer) {
-        SignUpContainer.classList.remove("hidden");
-    }
-    if (modal) {
-        modal.style.right = "0";
-    }
+
+const redirectToSignup = () => {
+  SignUpContainer.classList.remove("hidden");
+  modal.style.right = "0";
+  document.getElementById("username").value = "";
+  document.getElementById("password").value = "";
+  document.getElementById("signUp firstName").value = "";
+  document.getElementById("signUp lastName").value = "";
+  document.getElementById("signUp email").value = "";
+  document.getElementById("signUp username").value = "";
+  document.getElementById("signUp password").value = "";
 };
-// Changing headings
-var changingHeading = document.getElementById("changingHeading");
+function deleteCookie(name) {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+}
+deleteCookie("id");
+deleteCookie("firstName");
+
+//Changing headings
+var changingHeading = document.getElementById("changingHeading"); //The array elements are headings that are displayed
+
+
 var texts = [
     "Late night at office?",
     "Hungry?",
@@ -29,6 +37,7 @@ function changeHeading() {
 }
 // Set an interval to change the heading every 2 seconds (2000 milliseconds)
 setInterval(changeHeading, 2000);
+
 // Location sharing
 var submitForm = function (event) {
     event.preventDefault(); // Prevent the default form submission
@@ -38,6 +47,7 @@ var submitForm = function (event) {
         document.cookie = "deliveryLocation=".concat(deliveryLocation, ";");
         window.location.href = "home.html";
     }
+
 };
 // Footer section
 // Company section

@@ -435,13 +435,15 @@
                 <div class="form">
                   <input
                     id="password"
-                    type="text"
+                    type="password"
                     required
                     placeholder="Type"
                   />
-
                   <label for="">Password</label>
                 </div>
+                <p id="wrongCredentials" style="color: #ff4444; display: none">
+                  Wrong Credentials !!!
+                </p>
                 <button class="signinLogin-button" type="submit">Submit</button>
               </form>
             </div>
@@ -468,26 +470,32 @@
                 </div>
               </div>
 
-              <form>
+              <form id="signUpForm">
                 <div class="form">
-                  <input type="text" required placeholder="Type" />
-                  <label for="">First Name</label>
+                  <input id="signUp firstName" type="text" placeholder="Type" />
+                  <label for="" data-original-text="First Name"
+                    >First Name</label
+                  >
                 </div>
                 <div class="form">
-                  <input type="text" required placeholder="Type" />
-                  <label for="">Last Name</label>
+                  <input id="signUp lastName" type="text" placeholder="Type" />
+                  <label for="" data-original-text="Last Name">Last Name</label>
                 </div>
                 <div class="form">
-                  <input type="text" required placeholder="Type" />
-                  <label for="">Email</label>
+                  <input id="signUp email" type="text" placeholder="Type" />
+                  <label for="" data-original-text="Email">Email</label>
                 </div>
                 <div class="form">
-                  <input type="text" required placeholder="Type" />
-                  <label for="">Username</label>
+                  <input id="signUp username" type="text" placeholder="Type" />
+                  <label for="" data-original-text="Username">Username</label>
                 </div>
                 <div class="form">
-                  <input type="text" required placeholder="Type" />
-                  <label for="">Password</label>
+                  <input
+                    id="signUp password"
+                    type="password"
+                    placeholder="Type"
+                  />
+                  <label for="" data-original-text="Password">Password</label>
                 </div>
                 <button class="signinLogin-button" type="submit">Submit</button>
               </form>
@@ -501,8 +509,115 @@
       <!-- Root Ends  -->
     </div>
 
-    <script src="./assets/types/landingscript.js"></script>
+    <script src="./assets/js/signinLogin.js"></script>
+    <script src="./assets/js/landingscript.js"></script>
+    <script>
+      firstNameInput.addEventListener("click", () =>
+        resetStyles(firstNameInput)
+      );
+      lastNameInput.addEventListener("click", () => resetStyles(lastNameInput));
+      emailInput.addEventListener("click", () => resetStyles(emailInput));
+      usernameInput.addEventListener("click", () => resetStyles(usernameInput));
+      passwordInput.addEventListener("click", () => resetStyles(passwordInput));
+
+      const signUpFormid = document.getElementById("signUpForm");
+      signUpFormid.addEventListener("submit", function (event) {
+        event.preventDefault();
+        validateForm();
+      });
+
+      function validateForm() {
+        // Reset styles and error messages
+        removeWrongSignupStyle();
+        let isValid = true;
+
+        if (!validateRequired(firstNameInput)) {
+          isValid = false;
+          showError(firstNameInput, "First Name cannot be empty");
+        }
+
+        if (!validateRequired(lastNameInput)) {
+          isValid = false;
+          showError(lastNameInput, "Last Name cannot be empty");
+        }
+
+        if (!validateRequired(emailInput)) {
+          isValid = false;
+          showError(emailInput, "Email cannot be empty");
+        } else if (!validateEmail(emailInput.value)) {
+          isValid = false;
+          showError(emailInput, "Invalid email format");
+        }
+
+        if (!validateRequired(usernameInput)) {
+          isValid = false;
+          showError(usernameInput, "Username cannot be empty");
+        }
+
+        if (!validateRequired(passwordInput)) {
+          isValid = false;
+          showError(passwordInput, "Password cannot be empty");
+        } else if (!validatePassword(passwordInput.value)) {
+          isValid = false;
+          showError(passwordInput, "Password must be alphanumeric");
+        }
+
+        if (isValid) {
+          // Form is valid, you can proceed with form submission or other actions
+          console.log(window.location.pathname);
+
+          const isIndexPage = window.location.pathname.endsWith("index.html");
+          if (isIndexPage) {
+            window.location.href = "home.html";
+          }
+
+          console.log("Form is valid");
+          document.cookie = `id=${tempid++};`;
+          document.cookie = `firstName=${firstNameInput.value};`;
+          console.log(`cookie= ${document.cookie}`);
+          setFromCookie(firstNameInput.value);
+          SignUpContainer.classList.add("hidden");
+          clearForm();
+        }
+      }
+
+      function validateRequired(input) {
+        return input.value.trim() !== "";
+      }
+
+      function validateEmail(email) {
+        const emailRegex = /\S+@\S+\.\S+/;
+        return emailRegex.test(email);
+      }
+
+      function validatePassword(password) {
+        // Password must contain at least one letter and one number
+        const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)/;
+        return passwordRegex.test(password);
+      }
+
+      function showError(input, message) {
+        const label = input.nextElementSibling;
+        label.textContent = message;
+        label.style.color = "#ff4444"; // Light red color
+        input.style.borderColor = "#ff4444"; // Light red color
+      }
+      function removeWrongSignupStyle() {
+        resetStyles(firstNameInput);
+        resetStyles(lastNameInput);
+        resetStyles(emailInput);
+        resetStyles(usernameInput);
+        resetStyles(passwordInput);
+      }
+      function resetStyles(input) {
+        const label = input.nextElementSibling;
+        label.textContent = label.getAttribute("data-original-text");
+        label.style.color = "#a2a3a6";
+        input.style.borderColor = "#a2a3a6";
+      }
+    </script>
+
     <!--<script src="./assets/js/main.js"></script>-->
-    <script src="./assets/js/signin.js"></script>
+
   </body>
 </html>

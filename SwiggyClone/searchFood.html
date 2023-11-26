@@ -94,13 +94,18 @@
                   <div class="form">
                     <input
                       id="password"
-                      type="text"
+                      type="password"
                       required
                       placeholder="Type"
                     />
-
                     <label for="">Password</label>
                   </div>
+                  <p
+                    id="wrongCredentials"
+                    style="color: #ff4444; display: none"
+                  >
+                    Wrong Credentials !!!
+                  </p>
                   <button class="signinLogin-button" type="submit">
                     Submit
                   </button>
@@ -131,24 +136,44 @@
 
                 <form>
                   <div class="form">
-                    <input type="text" required placeholder="Type" />
-                    <label for="">First Name</label>
+                    <input
+                      id="signUp firstName"
+                      type="text"
+                      placeholder="Type"
+                    />
+                    <label for="" data-original-text="First Name"
+                      >First Name</label
+                    >
                   </div>
                   <div class="form">
-                    <input type="text" required placeholder="Type" />
-                    <label for="">Last Name</label>
+                    <input
+                      id="signUp lastName"
+                      type="text"
+                      placeholder="Type"
+                    />
+                    <label for="" data-original-text="Last Name"
+                      >Last Name</label
+                    >
                   </div>
                   <div class="form">
-                    <input type="text" required placeholder="Type" />
-                    <label for="">Email</label>
+                    <input id="signUp email" type="text" placeholder="Type" />
+                    <label for="" data-original-text="Email">Email</label>
                   </div>
                   <div class="form">
-                    <input type="text" required placeholder="Type" />
-                    <label for="">Username</label>
+                    <input
+                      id="signUp username"
+                      type="text"
+                      placeholder="Type"
+                    />
+                    <label for="" data-original-text="Username">Username</label>
                   </div>
                   <div class="form">
-                    <input type="text" required placeholder="Type" />
-                    <label for="">Password</label>
+                    <input
+                      id="signUp password"
+                      type="password"
+                      placeholder="Type"
+                    />
+                    <label for="" data-original-text="Password">Password</label>
                   </div>
                   <button class="signinLogin-button" type="submit">
                     Submit
@@ -180,7 +205,9 @@
           <div class="foodCardsFrame"></div>
         </div>
         <script src="./assets/js/searchFood.js"></script>
-        <script src="./assets/js/signin.js"></script>
+
+        <script src="./assets/js/signinLogin.js"></script>
+
       </body>
     </html>
   </body>

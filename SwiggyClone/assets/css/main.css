@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-  /* margin: 0;
-  padding: 0; */
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
@@ -963,7 +963,7 @@ header {
 }
 
 .login-signup-section button {
-  /* background-color: #007bff; */
+  background-color: #007bff;
   color: #fff;
   border: none;
   padding: 10px;
@@ -1000,16 +1000,6 @@ header {
   padding: 0 5px;
   pointer-events: none;
 }
-
-/* .login-signup-section .form input:focus ~ label,
-input:not(:placeholder-shown) + label {
-  top: -9px;
-  background-color: #ffffff;
-}
-
-.login-signup-section ::placeholder {
-  color: #ffffff;
-} */
 
 .login-signup-section .form input:focus ~ label,
 .login-signup-section input:not(:placeholder-shown) + label {
@@ -1180,10 +1170,9 @@ table.dataTable tbody tr:hover td {
 /*=============MENU============ */
 
 #menu-box-container {
-
-    display: block;
-    margin: 50px 100px 0px 150px;
-    font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
+  display: block;
+  margin: 50px 300px 0px 300px;
+  font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
 }
 
 #menu-box-container .menu-box {
@@ -1252,7 +1241,7 @@ table.dataTable tbody tr:hover td {
   box-shadow: 0 3px 8px #e9e9eb;
 }
 
-#menu-box-container img {
+
     width: 150px;
     height: 150px;
     border-radius: 5px;
@@ -1260,13 +1249,16 @@ table.dataTable tbody tr:hover td {
 }
 #menu-box-container img:hover {
   transform: scale(1.1); /* Scale up the image on hover */
+
 }
 /*===========================================================*/
 
 #menu-headings-container {
+
     display: block;
     margin: 120px 10px 0px 200px;
     font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
+
 }
 
 #menu-headings-container .menu-head {
@@ -1276,6 +1268,7 @@ table.dataTable tbody tr:hover td {
   margin: 20px;
   position: relative;
 }
+
 .menu-head .text-container, .menu-head .video-container{
     flex:1;
 }
@@ -1290,8 +1283,9 @@ table.dataTable tbody tr:hover td {
   .text-container{
     margin-right: 40px;
   }
+
 #menu-headings-container .menu-head .head-left-side {
-    max-width: 50%;
+  max-width: 60%;
 }
 
 #menu-headings-container .menu-head .head-left-side span {
@@ -1330,6 +1324,20 @@ table.dataTable tbody tr:hover td {
 } */
 
 #menu-headings-container .menu-head .head-right-side button {
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+  border: 1px solid #e9e9eb;
+  box-shadow: 0 1px 5px #f9f9f9;
+  border-radius: 6px;
+  text-align: center;
+  padding: 20px;
+  max-width: 100px;
+  float: right;
+  background-color: #fff;
+  color: rgb(61, 155, 109);
+}
+
 
     position: absolute;
     /* right: 400px; */
@@ -1394,16 +1402,28 @@ table.dataTable tbody tr:hover td {
     padding-bottom: 10px;
     border-radius: 5%;
     color:#93959f;
-}
-.coupon-3{
-    flex:1;
-    border: 1px solid #d3d3d7;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    border-radius: 5%;
-    color:#93959f;
 
+}
+
+.coupon-1 {
+  flex: 1;
+  border: 1px solid #d3d3d7;
+  margin-right: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  border-radius: 5%;
+  color: #93959f;
+}
+
+.coupon-2 {
+  flex: 1;
+  border: 1px solid #d3d3d7;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  border-radius: 5%;
+  color: #93959f;
 }
 
 /* 
@@ -1415,20 +1435,19 @@ table.dataTable tbody tr:hover td {
   } */
 
 .menu-headings-above-hr {
-
-    border: none;
-    border-top: 1px dashed rgba(100, 100, 111, 0.2);
-    margin-left: 5px;
-    margin-top: 50px;
-
+  border: none;
+  border-top: 1px dashed rgba(100, 100, 111, 0.2);
+  margin-left: 320px;
+  margin-right: 320px;
 }
 
-.menu-headings-under-hr{
-    border-top: 1px solid rgba(100, 100, 111, 0.2);
-    margin-left: 190px;
-    margin-right: 225px;
-    margin-top: 25px;
+.menu-headings-under-hr {
+  border-top: 1px solid rgba(100, 100, 111, 0.2);
+  margin-left: 320px;
+  margin-right: 320px;
+  margin-top: 25px;
 }
+
 
 #browse-btn {
   height: 40px;
@@ -1476,20 +1495,21 @@ table.dataTable tbody tr:hover td {
 }
 
 .menu-popup {
-    display: none;
-    /* Initially hide the menu */
-    position: absolute;
-    bottom: 30px;
-    /* Adjust the top value to position wrt the button */
-    z-index: -100;
-    /* control its stacking order */
-    max-height: 180px;
-    width: 350px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .3), 0 2px 1px 0 rgba(93, 141, 213, .2);
-    border-radius: 18px;
-    overflow: auto;
-    background: #fff;
-    text-align: left;
+  display: none;
+  /* Initially hide the menu */
+  position: absolute;
+  bottom: 30px;
+  /* Adjust the top value to position it below the button */
+  z-index: 100;
+  /* control its stacking order */
+  max-height: 180px;
+  width: 350px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3),
+    0 2px 1px 0 rgba(93, 141, 213, 0.2);
+  border-radius: 18px;
+  overflow: auto;
+  background: #fff;
+  text-align: left;
 }
 
 .menu-popup a {
@@ -1504,6 +1524,7 @@ table.dataTable tbody tr:hover td {
 }
 
 .menu-search-bar-container {
+
     position: absolute;
     top: 100px;
     right: 350px;
@@ -1533,6 +1554,7 @@ table.dataTable tbody tr:hover td {
   font-size: 20px;
   color: #fff;
 }
+
 
 
 .cart-modal {
@@ -1710,5 +1732,5 @@ table.dataTable tbody tr:hover td {
   font-weight: 400;
 }
  
-/* MERIN CSS ENDS */
 
+/* MERIN CSS ENDS */
