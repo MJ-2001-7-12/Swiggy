@@ -21,6 +21,8 @@
 
 /* ==============Navigation Bar========== */
 
+
+
 header {
   z-index: 99999;
   width: 100%;
@@ -28,18 +30,46 @@ header {
   top: 0;
   left: 0;
   backdrop-filter: blur(20px);
-  transition: 0.6s ease;
+  transition: .6s ease;
+  background: #fff;
 }
 
-.nav-bar-container {
+header.sticky {
+  /* background: #fff; */
+  box-shadow: var(--box-shadow);
+}
+
+
+
+.nav-bar {
+  position: relative;
+  height: calc(4rem + 1rem);
+  max-width: 1250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  transition: .6s ease;
+
+}
+
+header.sticky .nav-bar {
+  /*set to 2.5(3rem) if needed*/
+  height: calc(2.5rem + 1rem);
+}
+
+
+
+/* .navigation {
   display: flex;
   position: relative;
   background: rgb(255, 255, 255);
   height: 80px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  /* margin-bottom: 100px; */
-}
+} */
 
 .nav-bar .logo {
   position: absolute;
@@ -65,7 +95,6 @@ header {
   font-size: 16px;
   font-weight: 510;
   margin-top: 0;
-  /* margin-top: 15px; */
 }
 
 .nav-bar span {
@@ -75,7 +104,7 @@ header {
   color: var(--secondary-color);
 }
 
-.nav-bar .nav-items {
+.nav-items {
   display: flex;
   list-style: none;
   position: absolute;
@@ -84,25 +113,41 @@ header {
   color: var(--secondary-color);
 }
 
-.nav-bar .nav-items li {
+.nav-items li {
   margin-left: 45px;
   transition: 0.3s ease;
 }
 
-.nav-bar .nav-items i {
+.nav-items i {
   margin: 3px;
 }
 
-.nav-bar .address span i {
+.address span i {
   color: var(--primary-color);
   margin-left: 3px;
   font-weight: 650;
 }
 
-.nav-bar .nav-items :hover {
+.nav-items :hover {
   color: var(--primary-color);
   cursor: pointer;
 }
+
+
+
+/* added for test */
+#menu-btn {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+#menu-close {
+  display: none;
+}
+
+
+
 
 /* ==============Offers========== */
 
@@ -839,7 +884,7 @@ header {
   margin-top: 20px;
 }
 
-.landing-page-footer 
+.landing-page-footer
 /* MELWIN CSS ENDS == NEEDS OPTIMIZATION*/
 
 /* GEEVARGHESE */
@@ -1000,8 +1045,8 @@ header {
   pointer-events: none;
 }
 
-.login-signup-section .form input:focus ~ label,
-.login-signup-section input:not(:placeholder-shown) + label {
+.login-signup-section .form input:focus~label,
+.login-signup-section input:not(:placeholder-shown)+label {
   top: -9px;
   background-color: #ffffff;
 }
@@ -1249,9 +1294,12 @@ table.dataTable tbody tr:hover td {
   border-radius: 5px;
   transition: transform 0.3s ease;
 }
+
 #menu-box-container img:hover {
-  transform: scale(1.1); /* Scale up the image on hover */
+  transform: scale(1.1);
+  /* Scale up the image on hover */
 }
+
 /*===========================================================*/
 
 #menu-headings-container {
@@ -1267,21 +1315,26 @@ table.dataTable tbody tr:hover td {
   margin: 20px;
   position: relative;
 }
+
 .menu-head .text-container,
 .menu-head .video-container {
   flex: 1;
 }
+
 .video-element-container {
   border-radius: 10%;
   /* margin-left: 40px; */
   background-color: transparent;
 }
+
 .video-element-container:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
 .text-container {
   margin-right: 40px;
 }
+
 #menu-headings-container .menu-head .head-left-side {
   max-width: 50%;
 }
@@ -1347,10 +1400,12 @@ table.dataTable tbody tr:hover td {
   padding-top: 20px;
   display: flex;
 }
+
 .coupons img {
   width: 20px;
   height: 15px;
 }
+
 .coupon-p {
   font-weight: 600;
   font-size: 0.7rem;
@@ -1364,6 +1419,7 @@ table.dataTable tbody tr:hover td {
   float: left;
   margin-right: 10px;
 }
+
 .coupon-1 {
   flex: 1;
   border: 1px solid #d3d3d7;
@@ -1385,6 +1441,7 @@ table.dataTable tbody tr:hover td {
   border-radius: 5%;
   color: #93959f;
 }
+
 .coupon-3 {
   flex: 1;
   border: 1px solid #d3d3d7;
@@ -1523,7 +1580,8 @@ table.dataTable tbody tr:hover td {
 }
 
 .cart-modal {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   position: fixed;
   z-index: 1;
   right: 0;
@@ -1543,15 +1601,18 @@ table.dataTable tbody tr:hover td {
     background-size: 100% 100%;
     background-position: 50% 50%;
   }
+
   50% {
     background-size: 100% 200%;
     background-position: 50% 0%;
   }
+
   100% {
     background-size: 100% 200%;
     background-position: 50% 100%;
   }
 }
+
 .cart-modal-content {
   background-color: #fefefe;
   margin: 30% auto;
@@ -1605,9 +1666,11 @@ table.dataTable tbody tr:hover td {
 .cart-table tr:hover {
   background-color: #e9e9e9;
 }
+
 .total-price {
   font-weight: 700;
 }
+
 #viewCartBtn {
   color: var(--secondary-color);
   font-family: Poppins, sans-serif;
@@ -1615,15 +1678,18 @@ table.dataTable tbody tr:hover td {
   background: white;
   border: none;
 }
+
 #viewCartBtn:hover {
   color: var(--primary-color);
   cursor: pointer;
 }
+
 /* CSS for the moving cart animation */
 @keyframes moveCart {
   0% {
     transform: translateX(500%);
   }
+
   100% {
     transform: translateX(0%);
   }
@@ -1633,16 +1699,20 @@ table.dataTable tbody tr:hover td {
   color: #60b246;
   text-align: center;
 }
+
 /* Styling for the cart icon */
 .moving-cart {
   position: absolute;
   bottom: 350px;
   right: 500px;
-  width: 100px; /* Adjust the width as needed */
+  width: 100px;
+  /* Adjust the width as needed */
   height: auto;
   background-color: transparent;
-  animation: moveCart 10s infinite alternate; /* Adjust animation duration and properties */
+  animation: moveCart 10s infinite alternate;
+  /* Adjust animation duration and properties */
 }
+
 .delete-cart-item-button {
   color: white;
   background: white;
@@ -1697,3 +1767,777 @@ table.dataTable tbody tr:hover td {
 }
 
 /* MERIN CSS ENDS */
+
+
+
+
+
+/* TEST MODE */
+/*========Media query max-width 1070px========*/
+@media screen and (max-width: 1070px) {
+
+  /*========Header navigation menu========*/
+  .navigation {
+    position: fixed;
+    /* width: auto; */
+    max-width: 500px;
+    /* margin-left: 100px; */
+
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--transparent-color-01);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease;
+    position: absolute;
+  }
+
+  .navigation.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+
+  /* added for test  test success do not remove*/
+  #menu-btn {
+    display: initial;
+    /* added test */
+    font-size: 1.6rem;
+    padding: 20px 20 0px 0px;
+  }
+
+  #menu-close {
+    display: inline;
+    align-items: end;
+    padding: 10px;
+    font-size: 1.2rem;
+    top: 0;
+    right: 0;
+    position: absolute;
+    margin: 10px;
+  }
+
+  .nav-items {
+    position: relative;
+    background: #fdfdfd;
+    /* width: 100%; */
+    width: 600px;
+    max-width: 600px;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transform: translateY(-50px);
+    transition: .3s ease;
+  }
+
+  .navigation.active .nav-items {
+    transform: translateY(0);
+  }
+
+
+  .nav-items li {
+    margin: 15px 50px;
+  }
+
+}
+
+
+
+
+/*========Media query max-width 730px========*/
+@media screen and (max-width: 769px) {
+
+  .section {
+    padding: 30px 40px;
+  }
+
+
+  /* ==============Offers========== */
+
+  .offers {
+    margin-top: 50px;
+  }
+
+  .offer-container {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+  }
+
+  .offer-title {
+    margin: 18px 0;
+    font-size: 20px;
+  }
+
+  .offer-container .offer-box .offer-img {
+    width: 250px;
+    height: 150px;
+    margin-right: 15px;
+    /* padding: 20px; */
+    border-radius: 15px;
+    /* background-color: #000000; */
+  }
+
+  /*============== Whats on your mind ===================*/
+
+  .whats-on-container {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+  }
+
+  .whats-on-title {
+    margin: 16px 0;
+    font-size: 20px;
+  }
+
+  .whats-on-container .whats-on-box {
+    display: block;
+    align-items: center;
+    /* text-align: center; */
+  }
+
+  .whats-on-container .whats-on-box img {
+    width: 80px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 60px;
+  }
+
+
+
+  /*================ Top Restaurants =================*/
+
+  .top-rest-container {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+  }
+
+  .top-rest-title {
+    margin: 16px 0;
+    font-size: 20px;
+  }
+
+  .top-rest-container .top-rest-box {
+    display: block;
+    align-items: center;
+    /* text-align: center; */
+  }
+
+  .top-rest-container .top-rest-box img {
+    width: 140px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+
+  .top-rest-container .top-rest-box .item-name {
+    margin-top: 3px;
+    font-size: 16px;
+    margin-left: 6px;
+    color: #404041;
+  }
+
+  .top-rest-container .top-rest-box p i {
+    background-color: rgb(2, 129, 36);
+    padding: 4px;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    font-weight: 550;
+    margin-left: 6px;
+  }
+
+  .top-rest-container .top-rest-box .rating {
+    font-size: 14px;
+    font-weight: 515;
+  }
+
+  .top-rest-container .top-rest-box .category {
+    font-size: 15px;
+    margin-left: 6px;
+    color: var(--secondary-color);
+  }
+
+  .top-rest-container .top-rest-box .location {
+    font-size: 15px;
+    margin-left: 6px;
+    color: var(--secondary-color);
+  }
+
+
+
+
+
+
+
+
+  /*======== Restaurants With Online Delivery =========*/
+
+  .rest-online-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 20px;
+    /* overflow: scroll; */
+    /* overflow-y: hidden; */
+  }
+
+  .rest-online-title {
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-size: 23px;
+  }
+
+  .rest-online .filter-container {
+    display: none;
+  }
+
+
+  .rest-online-container .rest-online-box {
+    display: block;
+    align-items: center;
+    /* text-align: center; */
+  }
+
+  .rest-online-container .rest-online-box img {
+    width: 130px;
+    height: 80px;
+    border-radius: 10px;
+    margin-right: 30px;
+  }
+
+  .rest-online-container .rest-online-box .item-name {
+    margin-top: 3px;
+    font-size: 14px;
+    margin-left: 6px;
+    color: #404041;
+  }
+
+  .rest-online-container .rest-online-box p i {
+    background-color: rgb(2, 129, 36);
+    padding: 4px;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    font-weight: 550;
+    margin-left: 6px;
+  }
+
+  .rest-online-container .rest-online-box .rating {
+    font-size: 14px;
+    font-weight: 515;
+  }
+
+  .rest-online-container .rest-online-box .category {
+    font-size: 15px;
+    margin-left: 6px;
+    color: var(--secondary-color);
+  }
+
+  .rest-online-container .rest-online-box .location {
+    font-size: 15px;
+    margin-left: 6px;
+    color: var(--secondary-color);
+  }
+
+
+
+
+
+
+
+
+
+
+  /* ==========Footer=========== */
+
+  .footer .footer-container {
+    display: block;
+  }
+
+  .footer-container .top-section {
+    display: block;
+    background-color: rgb(240, 240, 245);
+    /* justify-content: center; */
+  }
+
+  .footer-container .top-section .top-left {
+
+    padding-top: 20px;
+    padding-bottom: 60px;
+
+
+  }
+
+  .footer-container .top-section .top-left h3 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: rgba(2, 6, 12, 0.75);
+  }
+
+  .footer-container .top-section .top-right {
+    display: flex;
+    margin-top: 70px;
+    /* right: 150px; */
+  }
+
+  .footer-container .top-section .top-right img {
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+  }
+
+
+
+
+  /* bottom section */
+  .footer-container .bottom-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(2, 6, 12);
+    /* position: relative; */
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+  }
+
+
+}
+
+
+
+
+
+
+/*========Media query max-width 450px========*/
+@media screen and (max-width: 450px) {
+
+  .section {
+    padding: 20px 15px;
+  }
+
+  .nav-bar .logo {
+    left: 6px;
+    top: 12px;
+  }
+
+  .nav-bar .logo img {
+    width: 30px;
+    left: 50px;
+  }
+
+  .nav-bar .address {
+    display: flex;
+    position: absolute;
+    left: 120px;
+    top: 24px;
+  }
+
+  .nav-bar p {
+    text-decoration: underline;
+    font-size: 13px;
+    font-weight: 510;
+    margin-top: 0;
+  }
+
+  .nav-bar span {
+    margin-top: 1px;
+    margin-left: 8px;
+    font-size: 15px;
+    color: var(--secondary-color);
+  }
+
+
+
+
+
+
+
+  /* ==============Offers========== */
+
+  .offers {
+    margin-top: 50px;
+  }
+
+  .offer-container {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+  }
+
+  .offer-title {
+    margin: 18px 0;
+    font-size: 16px;
+  }
+
+  .offer-container .offer-box .offer-img {
+    width: 230px;
+    height: 130px;
+    margin-right: 15px;
+    /* padding: 20px; */
+    border-radius: 15px;
+    /* background-color: #000000; */
+  }
+
+  /*============== Whats on your mind ===================*/
+
+  .whats-on-container {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+  }
+
+  .whats-on-title {
+    margin: 16px 0;
+    font-size: 16px;
+  }
+
+  .whats-on-container .whats-on-box {
+    display: block;
+    align-items: center;
+    /* text-align: center; */
+  }
+
+  .whats-on-container .whats-on-box img {
+    width: 80px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 30px;
+  }
+
+
+
+  /*================ Top Restaurants =================*/
+
+  .top-rest-container {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+  }
+
+  .top-rest-title {
+    margin: 12px 0;
+    font-size: 16px;
+  }
+
+  .top-rest-container .top-rest-box {
+    display: block;
+    align-items: center;
+    /* text-align: center; */
+  }
+
+  .top-rest-container .top-rest-box img {
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
+    margin-right: 15px;
+  }
+
+  .top-rest-container .top-rest-box .item-name {
+    margin-top: 3px;
+    font-size: 13x;
+    margin-left: 6px;
+    color: #404041;
+  }
+
+  .top-rest-container .top-rest-box p i {
+    background-color: rgb(2, 129, 36);
+    padding: 4px;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 8px;
+    font-weight: 550;
+    margin-left: 6px;
+  }
+
+  .top-rest-container .top-rest-box .rating {
+    font-size: 12px;
+    font-weight: 515;
+  }
+
+  .top-rest-container .top-rest-box .category {
+    font-size: 13px;
+    margin-left: 6px;
+    color: var(--secondary-color);
+  }
+
+  .top-rest-container .top-rest-box .location {
+    font-size: 13px;
+    margin-left: 6px;
+    color: var(--secondary-color);
+  }
+
+
+
+  /*======== Restaurants With Online Delivery =========*/
+
+  .rest-online-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 15px;
+    justify-content: space-between;
+    /* overflow: scroll; */
+    /* overflow-y: hidden; */
+  }
+
+  .rest-online-title {
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .rest-online .filter-container {
+    display: none;
+  }
+
+
+  .rest-online-container .rest-online-box {
+    display: block;
+    align-items: center;
+    /* text-align: center; */
+  }
+
+  .rest-online-container .rest-online-box img {
+    width: 175px;
+    height: 100px;
+    border-radius: 10px;
+    /* margin-right: 30px; */
+  }
+
+
+
+
+
+
+  /* =================Best Places to Eat =================*/
+
+  .best-places-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 15px;
+  }
+
+  .best-places-title {
+    margin-top: 18px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .best-places-container .best-places-box {
+    /* width: 150px; */
+    display: block;
+    align-items: center;
+    border: 1px solid #dadada;
+    /* margin-right: 15px; */
+    padding: 10px 20px;
+    margin-right: 14px;
+    border-radius: 10px;
+    /* text-align: center; */
+    cursor: pointer;
+  }
+
+  .best-places-container .best-places-box a {
+    font-size: 11.5px;
+    color: var(--secondary-color);
+  }
+
+  /* =================Best Cuisines =================*/
+
+  .best-cuisines-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 15px;
+  }
+
+  .best-cuisines-title {
+    margin-top: 18px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .best-cuisines-container .best-cuisines-box {
+    display: block;
+    align-items: center;
+    border: 1px solid #dadada;
+    /* margin-right: 15px; */
+    padding: 10px 20px;
+    margin-right: 14px;
+    border-radius: 10px;
+    /* text-align: center; */
+    cursor: pointer;
+  }
+
+  .best-cuisines-container .best-cuisines-box a {
+    font-size: 11.5px;
+    color: var(--secondary-color);
+  }
+
+
+
+
+
+  /* ==========Footer=========== */
+
+  .footer .footer-container {
+    display: block;
+  }
+
+  .footer-container .top-section {
+    display: block;
+    background-color: rgb(240, 240, 245);
+    /* justify-content: center; */
+  }
+
+  .footer-container .top-section .top-left {
+
+    padding-top: 20px;
+    padding-bottom: 60px;
+
+
+  }
+
+  .footer-container .top-section .top-left h3 {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: rgba(2, 6, 12, 0.75);
+  }
+
+  .footer-container .top-section .top-right {
+    display: flex;
+    margin-top: 100px;
+    /* right: 150px; */
+  }
+
+  .footer-container .top-section .top-right img {
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+  }
+
+
+
+
+  /* bottom section */
+  .footer-container .bottom-section {
+    display: block;
+    justify-content: space-between;
+    background-color: rgb(2, 6, 12);
+    /* position: relative; */
+    /* padding-left: 40px;
+    padding-right: 40px; */
+    padding-top: 40px;
+  }
+
+
+
+  .footer-container .bottom-section .bottom-1 .footer-branding {
+    display: flex;
+  }
+
+  .footer-container .bottom-section .bottom-1 img {
+    width: 30px;
+    /* margin-right: 15px; */
+    margin-bottom: 15px;
+    filter: grayscale(100%);
+  }
+
+  .footer-container .bottom-section .bottom-1 h2 {
+    font-size: 27px;
+    color: #fff;
+  }
+
+  .footer-container .bottom-section .bottom-1 p {
+    font-size: 14px;
+    color: var(--third-color);
+    margin-bottom: 20px;
+  }
+
+  .footer-container .bottom-section .bottom-2 {
+    display: flex;
+    flex-direction: column;
+    /* margin: 40px; */
+    margin-bottom: 20px;
+  }
+
+  .footer-container .bottom-section .bottom-2 h3 {
+    color: #dadada;
+    font-size: 17px;
+  }
+
+  .footer-container .bottom-section .bottom-2 a {
+    font-size: 14px;
+    color: var(--third-color);
+    text-decoration: none;
+    margin: 5px 0px;
+  }
+
+  .footer-container .bottom-section .bottom-3 {
+    display: flex;
+    flex-direction: column;
+    /* margin: 40px; */
+    margin-bottom: 20px;
+  }
+
+  .footer-container .bottom-section .bottom-3 h3 {
+    color: #dadada;
+    font-size: 17px;
+  }
+
+  .footer-container .bottom-section .bottom-3 a {
+    font-size: 14px;
+    color: var(--third-color);
+    text-decoration: none;
+    margin: 5px 0px;
+  }
+
+  .footer-container .bottom-section .bottom-3 .top {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .footer-container .bottom-section .bottom-3 .bottom {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    text-align: start;
+    /* margin-left: 20px; */
+  }
+
+  .footer-container .bottom-section .bottom-4 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    /* margin: 40px; */
+  }
+
+  .footer-container .bottom-section .bottom-4 h3 {
+    color: #dadada;
+    font-size: 17px;
+  }
+
+  .footer-container .bottom-section .bottom-4 a {
+    font-size: 14px;
+    color: var(--third-color);
+    text-decoration: none;
+    margin: 5px 0px;
+  }
+
+
+
+
+}
