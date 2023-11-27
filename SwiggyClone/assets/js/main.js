@@ -201,3 +201,19 @@ function getCookie(name) {
     .split("=")[1];
   return cookieValue ? decodeURIComponent(cookieValue) : null;
 }
+
+
+
+
+// Nav Bar
+$('#menu-btn').click(function () {
+  $('.navigation').addClass('active')
+});
+
+$('#menu-close').click(function () {
+  $('.navigation').removeClass('active')
+});
+
+$('.nav-items').click(function () {
+  $('.navigation').removeClass('active')
+});
