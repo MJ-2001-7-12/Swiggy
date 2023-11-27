@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swiggy Clone</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/signin.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -152,125 +153,45 @@
     <!-- gheevarghese ends -->
 
     <!--========Contact section========-->
-    <section class="contact section" id="contact">
+    <section class="contact-section py-5" id="contact">
       <div class="container flex-center">
-        <!-- <h2 class="section-title-02">Contact Us</h2> -->
-        <div class="content">
-          <div class="contact-left">
-            <h2>Get in Touch:</h2>
-            <ul class="contact-list">
-              <li>
-                <h3 class="item-title">
-                  <i class="fa-brands fa-twitter"></i>Twitter
-                </h3>
-                <span><a href="#" target="_blank">Swiggy</a></span>
-              </li>
-              <li>
-                <h3 class="item-title">
-                  <i class="fas fa-envelope"></i>Email Address
-                </h3>
-                <span
-                  ><a href="#" target="_blank">contact@swiggyclone.com</a></span
-                >
-              </li>
-
-              <li>
-                <h3 class="item-title">
-                  <i class="fa-brands fa-instagram"></i>Instagram
-                </h3>
-                <span><a href="#" target="_blank">swiggy</a></span>
-              </li>
-            </ul>
-          </div>
-          <div class="contact-right">
-            <p>
-              "Your Feedback, Our Secret Sauce:<br /><span
-                >"Reach Out Today"</span
-              >
-            </p>
-
-            <form action="" class="contact-form">
-              <div class="first-row">
-                <input type="text" placeholder="Name" />
+        <div class="row">
+              <div class="col-md-3">
+              <h3 class="fs-3 fw-bolder contactus-font"><br><br>Get in Touch:</h3>
+              <ul class="list-unstyled">
+                <h3 class="fw-bold fs-4 contactus-font"><li><i class="fab fa-twitter me-2 orange-text mt-4"></i>Twitter</h3><a href="https://twitter.com/SwiggyCares" target="_blank" class="orange-text ms-4 contactus-font">&nbsp #swiggy</a></li><br>
+                <h3 class="fw-bold fs-4 contactus-font"><li><i class="fas fa-envelope me-2 orange-text mt-4"></i>Email Address</h3><a href="https://www.swiggy.com/support" target="_blank" class="orange-text ms-4 contactus-font">&nbsp contact@swiggyclone.com</a></li><br>
+                <h3 class="fw-bold fs-4 contactus-font"><li><i class="fab fa-instagram me-2 orange-text mt-4"></i>Instagram</h3><a href="https://www.instagram.com/swiggyindia/" target="_blank" class="orange-text ms-4 contactus-font">&nbsp swiggy</a></li><br>
+              </ul>
               </div>
-              <div class="second-row">
-                <input type="email" placeholder="Email" />
-                <input type="text" placeholder="Subject" />
+              <div class="col-md-4 contactus-bg"></div>
+   
+          <div class="col-md-5">
+            <p class="fs-4 orange-text contactus-font">"Your Feedback, Our Secret Sauce:</p> <pre class="fs-3 orange-text fw-bolder contactus-font"><span>"Reach Out Today"</span></pre>
+            <form method="post" action="" class="contact-form" name="contact-form">
+              <!-- Textboxes with black background and orange text -->
+              <div class="mb-3">
+                <input type="text" class="form-control bg-dark orange-text" placeholder="Name" name="name">
               </div>
-              <div class="third-row">
-                <textarea
-                  name="message"
-                  id=""
-                  rows="7"
-                  placeholder="Message"
-                ></textarea>
+              <div class="mb-3">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <input type="email" class="form-control bg-dark orange-text" placeholder="Email" name="email">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <input type="text" class="form-control bg-dark orange-text" placeholder="Subject" name="subject">
+                  </div>
               </div>
-              <button class="btn" type="submit">
-                Shoot <i class="fas fa-paper-plane"></i>
-              </button>
+              <div class="mb-3">
+                <textarea class="form-control bg-dark orange-text" rows="5" placeholder="Message" name="message"></textarea>
+              </div>
+              <button type="submit" class="btn contactus-btn-orange" name="subject">Shoot <i class="fas fa-paper-plane"></i></button>
             </form>
           </div>
         </div>
       </div>
     </section>
 
-    <!--============= Best Places to Eat ==========-->
-    <section class="best-places section">
-      <h3 class="best-places-title">Best Places to Eat Across Cities</h3>
-
-      <div class="best-places-container" id="best-places-container">
-        <div class="best-places-box">
-          <a>Best Restaurants in Bangalore</a>
-        </div>
-
-        <div class="best-places-box">
-          <a>Best Restaurants in Bangalore</a>
-        </div>
-
-        <div class="best-places-box">
-          <a>Best Restaurants in Bangalore</a>
-        </div>
-
-        <div class="best-places-box">
-          <a>Best Restaurants in Bangalore</a>
-        </div>
-      </div>
-    </section>
-
-    <!--============= Best Cuisines Near Me ==========-->
-    <section class="best-cuisines section">
-      <h3 class="best-cuisines-title">Best Cuisines Near Me</h3>
-
-      <div class="best-cuisines-container" id="best-cuisines-container">
-        <div class="best-cuisines-box">
-          <a>Chinese Restaurant Near Me</a>
-        </div>
-        <div class="best-cuisines-box">
-          <a>Chinese Restaurant Near Me</a>
-        </div>
-
-        <div class="best-cuisines-box">
-          <a>Chinese Restaurant Near Me</a>
-        </div>
-        <div class="best-cuisines-box">
-          <a>Chinese Restaurant Near Me</a>
-        </div>
-
-        <div class="best-cuisines-box">
-          <a>Chinese Restaurant Near Me</a>
-        </div>
-        <div class="best-cuisines-box">
-          <a>Chinese Restaurant Near Me</a>
-        </div>
-
-        <div class="best-cuisines-box">
-          <a>Chinese Restaurant Near Me</a>
-        </div>
-        <div class="best-cuisines-box">
-          <a>Chinese Restaurant Near Me</a>
-        </div>
-      </div>
-    </section>
 
     <!-- ==============Footer================= -->
 
@@ -341,9 +262,11 @@
         </div>
       </div>
     </footer>
-
+    <script src="./assets/js/contact.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/login.js"></script>
     <script src="./assets/js/signup.js"></script>
+    
   </body>
 </html>
