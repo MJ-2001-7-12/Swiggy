@@ -52,6 +52,20 @@ var submitForm = function (event) {
         window.location.href = 'home.html';
     }
 };
+// Function to handle button click and set cookie
+function handleButtonClick(buttonId) {
+    var topPlacesButton = document.getElementById(buttonId);
+    if (topPlacesButton) {
+        topPlacesButton.addEventListener("click", function () {
+            var deliveryLocation = this.textContent;
+            document.cookie = "deliveryLocation=".concat(deliveryLocation);
+            window.location.href = "home.html";
+        });
+    }
+}
+for (var i = 1; i < 10; i++) {
+    handleButtonClick("topPlace".concat(i));
+}
 // Footer section
 // Company section
 var companyList = document.getElementById('companyList');
@@ -112,13 +126,14 @@ fetch("https://randomuser.me/api/?results=".concat(numberOfPlaces))
     .then(function (response) { return response.json(); })
     .then(function (data) {
     var placeNames = data.results.map(function (result) { return result.name.first; });
-    console.log(placeNames);
+    // console.log(placeNames);
     var y = 0;
     for (var i = 1; i <= 4; i++) {
         var weDeliverTo = document.getElementById("wedeliverList".concat(i));
         for (; y < i * 25; y++) {
             var wedeliverElement = document.createElement('li');
             var wedeliverListButton = document.createElement('button');
+            wedeliverListButton.id = "wedeliverButton".concat(y);
             wedeliverListButton.textContent = placeNames[y];
             wedeliverListButton.classList.add('cList');
             wedeliverElement.appendChild(wedeliverListButton);
@@ -127,6 +142,9 @@ fetch("https://randomuser.me/api/?results=".concat(numberOfPlaces))
             }
         }
     }
+    for (var i = 0; i < numberOfPlaces; i++) {
+        handleButtonClick("wedeliverButton".concat(i));
+    }
     // Best Places section
     y = 0;
     for (var i = 1; i <= 4; i++) {
@@ -134,6 +152,7 @@ fetch("https://randomuser.me/api/?results=".concat(numberOfPlaces))
         for (; y < i * 25; y++) {
             var bestPlacesElement = document.createElement('li');
             var bestPlacesListButton = document.createElement('button');
+            bestPlacesListButton.id = "bestPlacesButton".concat(y);
             bestPlacesListButton.textContent = "Best Restaurants In ".concat(placeNames[y]);
             bestPlacesListButton.classList.add('cList');
             bestPlacesElement.appendChild(bestPlacesListButton);
@@ -142,6 +161,9 @@ fetch("https://randomuser.me/api/?results=".concat(numberOfPlaces))
             }
         }
     }
+    // for(let i=0;i<100;i++){
+    //   handleButtonClick(`bestPlacesButton${i}`);
+    // }
 })
     .catch(function (error) {
     console.error('Error:', error);
