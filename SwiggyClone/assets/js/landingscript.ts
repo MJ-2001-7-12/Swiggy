@@ -62,6 +62,21 @@ const submitForm = (event: Event): void => {
   }
 };
 
+// Function to handle button click and set cookie
+function handleButtonClick(buttonId: string): void {
+  const topPlacesButton = document.getElementById(buttonId) as HTMLButtonElement | null;
+
+  if (topPlacesButton) {
+    topPlacesButton.addEventListener("click", function () {
+      const deliveryLocation = this.textContent;
+      document.cookie = `deliveryLocation=${deliveryLocation}`;
+      window.location.href = "home.html";
+    });
+  }
+}
+for(let i=1;i<10;i++){
+handleButtonClick(`topPlace${i}`);
+}
 // Footer section
 
 // Company section
@@ -132,7 +147,7 @@ fetch(`https://randomuser.me/api/?results=${numberOfPlaces}`)
   .then((response: Response) => response.json())
   .then((data: { results: Array<{ name: { first: string } }> }) => {
     const placeNames: string[] = data.results.map((result) => result.name.first);
-    console.log(placeNames);
+   // console.log(placeNames);
 
     let y = 0;
     for (let i = 1; i <= 4; i++) {
@@ -140,6 +155,7 @@ fetch(`https://randomuser.me/api/?results=${numberOfPlaces}`)
       for (; y < i * 25; y++) {
         const wedeliverElement: HTMLLIElement = document.createElement('li');
         const wedeliverListButton: HTMLButtonElement = document.createElement('button');
+        wedeliverListButton.id = `wedeliverButton${y}`;
         wedeliverListButton.textContent = placeNames[y];
         wedeliverListButton.classList.add('cList');
         wedeliverElement.appendChild(wedeliverListButton);
@@ -149,6 +165,9 @@ fetch(`https://randomuser.me/api/?results=${numberOfPlaces}`)
         }
       }
     }
+    for(let i=0;i<numberOfPlaces;i++){
+      handleButtonClick(`wedeliverButton${i}`);
+    }
 
     // Best Places section
     y = 0;
@@ -157,6 +176,7 @@ fetch(`https://randomuser.me/api/?results=${numberOfPlaces}`)
       for (; y < i * 25; y++) {
         const bestPlacesElement: HTMLLIElement = document.createElement('li');
         const bestPlacesListButton: HTMLButtonElement = document.createElement('button');
+        bestPlacesListButton.id = `bestPlacesButton${y}`;
         bestPlacesListButton.textContent = `Best Restaurants In ${placeNames[y]}`;
         bestPlacesListButton.classList.add('cList');
         bestPlacesElement.appendChild(bestPlacesListButton);
@@ -166,6 +186,9 @@ fetch(`https://randomuser.me/api/?results=${numberOfPlaces}`)
         }
       }
     }
+    // for(let i=0;i<100;i++){
+    //   handleButtonClick(`bestPlacesButton${i}`);
+    // }
   })
   .catch((error: Error) => {
     console.error('Error:', error);
